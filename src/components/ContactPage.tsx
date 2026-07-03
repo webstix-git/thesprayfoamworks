@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { TrustStatsBar } from '@/components/TrustStatsBar';
 import { SiteEnhancements } from '@/components/SiteEnhancements';
 import { SiteFooter } from '@/components/SiteFooter';
 import { SiteHeader } from '@/components/SiteHeader';
@@ -33,6 +34,8 @@ export function ContactPage() {
           </div>
         </div>
 
+        <TrustStatsBar />
+
         <section className="sfw-project-section sfw-project-section-light">
           <div className="sfw-project-inner sfw-contact-grid">
             <div className="sfw-contact-form-card">
@@ -40,12 +43,6 @@ export function ContactPage() {
             </div>
 
             <aside className="sfw-contact-sidebar">
-              <Link href="/testimonials" className="sfw-contact-testimonials-card">
-                <span className="sfw-contact-testimonials-label">Testimonials</span>
-                <p>Read what people are saying about The Sprayfoam Works.</p>
-                <span className="sfw-contact-testimonials-link">View testimonials →</span>
-              </Link>
-
               <div className="sfw-contact-sidebar-block">
                 <h3>Contact Sprayfoam Works, Inc.</h3>
                 <a href={siteConfig.phoneTel} className="sfw-contact-sidebar-phone">

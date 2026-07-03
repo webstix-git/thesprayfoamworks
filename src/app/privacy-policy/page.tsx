@@ -20,8 +20,8 @@ export default function PrivacyPolicy() {
 
       <h2>Information we collect</h2>
       <p>
-        We collect the information you choose to provide — such as your name, phone number, email
-        address, project address, and project details — when you submit a quote request, call, or
+        We collect the information you choose to provide, such as your name, phone number, email
+        address, project address, and project details, when you submit a quote request, call, or
         email us. We may also collect basic, non-identifying analytics about how visitors use our
         website, such as pages viewed and general location.
       </p>

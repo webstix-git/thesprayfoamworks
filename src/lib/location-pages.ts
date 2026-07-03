@@ -37,12 +37,12 @@ function buildLocation(input: LocationInput): ProjectPageData {
     slug: slug as unknown as ProjectPageData['slug'],
     route: `/${slug}`,
     metaTitle: `Spray Foam Insulation in ${name}, WI | The Sprayfoam Works`,
-    metaDescription: `Spray foam and fiberglass insulation for ${name}, Wisconsin homes and businesses. Direct pricing from a local, licensed Dane County crew — free quotes.`,
+    metaDescription: `Spray foam and fiberglass insulation for ${name}, Wisconsin homes and businesses. Direct pricing from a local Dane County crew with 17 years of experience, free quotes.`,
     hero: {
       eyebrow: 'Service Area',
       title: name,
       titleAccent: 'Insulation',
-      subtitle: `${input.distanceLine} We bring spray foam and fiberglass insulation to ${name} homes, shops, and businesses — with direct pricing and a crew that treats your project like it's next door.`,
+      subtitle: `${input.distanceLine} We bring spray foam and fiberglass insulation to ${name} homes, shops, and businesses, with direct pricing and a crew that treats your project like it's next door.`,
       image: input.heroImage,
       imageAlt: `Insulation work near ${name}, Wisconsin`,
     },
@@ -70,7 +70,7 @@ function buildLocation(input: LocationInput): ProjectPageData {
       eyebrow: 'Why Neighbors Choose Us',
       title: `The local advantage in ${name}`,
       subtitle:
-        'We are based right here in Dane County — not a franchise routing your call three states away.',
+        'We are based right here in Dane County, not a franchise routing your call three states away.',
       items: [
         {
           icon: 'shield',
@@ -79,8 +79,8 @@ function buildLocation(input: LocationInput): ProjectPageData {
         },
         {
           icon: 'quality',
-          title: 'Licensed, bonded & insured',
-          body: 'Fully covered on every project, whether it is one room or a full building.',
+          title: '17 years experience',
+          body: 'Spray foam takes practice. We keep learning, upgrading equipment, and refining how we work.',
         },
         {
           icon: 'comfort',
@@ -127,7 +127,7 @@ function buildLocation(input: LocationInput): ProjectPageData {
         },
         {
           title: 'Free Assessment',
-          body: 'We review the space, talk through your options, and give you a clear, honest quote — no pressure.',
+          body: 'We review the space, talk through your options, and give you a clear, honest quote, no pressure.',
         },
         {
           title: 'Clean Install',
@@ -141,10 +141,10 @@ function buildLocation(input: LocationInput): ProjectPageData {
       items: [
         {
           question: `Do you really serve ${name}?`,
-          answer: `Yes — ${name} is well within our regular service area. We are based in Cottage Grove and Madison and cover the greater Dane County region every week.`,
+          answer: `Yes, ${name} is well within our regular service area. We are based in Cottage Grove and Madison and cover the greater Dane County region every week.`,
         },
         {
-          question: 'Spray foam or fiberglass — which is right for me?',
+          question: 'Spray foam or fiberglass, which is right for me?',
           answer:
             'It depends on the space and your goals. Spray foam is unbeatable for air sealing and tough spots; fiberglass is a great value in standard framed cavities. We will recommend what actually makes sense.',
         },
@@ -177,7 +177,7 @@ export const locationPages: ProjectPageData[] = [
     badgeLabel: 'Where The Sprayfoam Works began',
     testimonial: {
       quote:
-        'Aaron did an excellent job on our project that included spray foam in our exterior walls and attic. Pleasant to work with, high quality, and timely — all for a good price. Highly recommend!',
+        'Aaron did an excellent job on our project that included spray foam in our exterior walls and attic. Pleasant to work with, high quality, and timely, all for a good price. Highly recommend!',
       name: 'Abby Sporel',
       role: 'Homeowner · Cottage Grove area',
     },
@@ -188,7 +188,7 @@ export const locationPages: ProjectPageData[] = [
     heroImage: img.hero2,
     distanceLine: 'Just up the road from our shop.',
     introParagraphs: [
-      'Sun Prairie is one of the fastest-growing communities in Dane County, with plenty of established neighborhoods and steady new construction. Both keep us busy — retrofitting older homes for comfort and insulating brand-new builds before the drywall goes up.',
+      'Sun Prairie is one of the fastest-growing communities in Dane County, with plenty of established neighborhoods and steady new construction. Both keep us busy, retrofitting older homes for comfort and insulating brand-new builds before the drywall goes up.',
       'Whether your Sun Prairie home has a drafty upstairs, a cold basement, or you are adding on, we will help you get the envelope right with the best material for the job.',
     ],
     badgeValue: 'Fast',
@@ -206,11 +206,11 @@ export const locationPages: ProjectPageData[] = [
     heroImage: img.hero1,
     distanceLine: 'A quick trip west for our crew.',
     introParagraphs: [
-      'Middleton blends charming older homes with newer, high-end construction — and both deserve an insulation system that performs. We help Middleton homeowners cut drafts and energy waste, and we work with builders getting the envelope right from day one.',
-      'Spray foam for air sealing and tricky spots, fiberglass where it makes sense on budget — we scope every Middleton project around how you actually use the space.',
+      'Middleton blends charming older homes with newer, high-end construction, and both deserve an insulation system that performs. We help Middleton homeowners cut drafts and energy waste, and we work with builders getting the envelope right from day one.',
+      'Spray foam for air sealing and tricky spots, fiberglass where it makes sense on budget, we scope every Middleton project around how you actually use the space.',
     ],
-    badgeValue: '100%',
-    badgeLabel: 'Licensed, bonded & insured',
+    badgeValue: '17 yrs',
+    badgeLabel: 'Experience that keeps evolving',
     testimonial: {
       quote:
         'Love the spray foam! Aaron does amazing work. Quality materials, done right, and easy to work with from start to finish.',
@@ -224,7 +224,7 @@ export const locationPages: ProjectPageData[] = [
     heroImage: img.hero2,
     distanceLine: 'Right in our regular service loop.',
     introParagraphs: [
-      'Verona has grown fast, and with growth comes plenty of new homes, additions, and shops that need to be insulated right. We also help longtime Verona homeowners fix the comfort problems that come with older housing stock — cold rooms, drafts, and high heating bills.',
+      'Verona has grown fast, and with growth comes plenty of new homes, additions, and shops that need to be insulated right. We also help longtime Verona homeowners fix the comfort problems that come with older housing stock, cold rooms, drafts, and high heating bills.',
       'As a local, direct-to-customer contractor, we give Verona homeowners and builders fair pricing and a standard of work we stand behind on every job.',
     ],
     badgeValue: 'Direct',
@@ -243,7 +243,7 @@ export const locationPages: ProjectPageData[] = [
     distanceLine: 'A short hop south of Madison.',
     introParagraphs: [
       'Fitchburg sits right between our two locations, so it is an easy area for us to serve quickly. From residential retrofits and remodels to commercial shells and pole barns, we bring spray foam and fiberglass insulation to Fitchburg projects of every size.',
-      'We will help you choose the right assembly, keep the job clean, and deliver comfort that lasts — all with the direct pricing that comes from cutting out the middleman.',
+      'We will help you choose the right assembly, keep the job clean, and deliver comfort that lasts, all with the direct pricing that comes from cutting out the middleman.',
     ],
     badgeValue: 'Any Size',
     badgeLabel: 'Homes to commercial in Fitchburg',

@@ -84,13 +84,13 @@ export const googleReviews: Testimonial[] = [
   {
     name: 'Garrett Mohr',
     initials: 'GM',
-    text: 'Five-star rating — thank you, Garrett!',
+    text: 'Five-star rating, thank you, Garrett!',
   },
   {
     name: 'Isthmus Wellness',
     initials: 'IW',
     location: 'Commercial · Madison',
-    text: 'Five-star rating — thank you, Isthmus Wellness!',
+    text: 'Five-star rating, thank you, Isthmus Wellness!',
   },
 ];
 
@@ -98,7 +98,7 @@ export const missionValues: ValueCard[] = [
   {
     title: 'Direct Pricing',
     description:
-      'You deal with us, not a chain of middlemen — fair, transparent quotes every time.',
+      'You deal with us, not a chain of middlemen, fair, transparent quotes every time.',
     icon: 'pricing',
   },
   {
@@ -127,7 +127,7 @@ export const missionValues: ValueCard[] = [
   },
   {
     title: 'Any Job Size',
-    description: 'One room or an entire new build — no project is too big or too small.',
+    description: 'One room or an entire new build, no project is too big or too small.',
     icon: 'scale',
   },
 ];
@@ -143,7 +143,7 @@ export const historyTimeline: TimelineItem[] = [
     year: '2009',
     title: 'The Sprayfoam Works is born',
     description:
-      'After six years in the industry, Aaron purchased the business and re-branded as The Sprayfoam Works, Inc. — a name rooted in his belief that spray foam is the best insulation choice for homes and commercial buildings.',
+      'After six years in the industry, Aaron purchased the business and re-branded as The Sprayfoam Works, Inc., a name rooted in his belief that spray foam is the best insulation choice for homes and commercial buildings.',
   },
   {
     year: '2010s',
@@ -155,7 +155,7 @@ export const historyTimeline: TimelineItem[] = [
     year: 'Today',
     title: '17 years of trusted service',
     description:
-      'Now serving Madison and Cottage Grove with direct-to-customer pricing, top-tier equipment, and a crew that treats every job — residential or commercial — with the same care.',
+      'Now serving Madison and Cottage Grove with direct-to-customer pricing, top-tier equipment, and a crew that treats every job, residential or commercial, with the same care.',
   },
 ];
 
@@ -168,11 +168,11 @@ export const teamMembers: TeamMember[] = [
     image: '/images/e623003f-d8fb-486c-9d38-70a8d134bc6a.jpg',
     bio: 'Aaron grew up in Cottage Grove working alongside his father in the insulation trade. In 2009 he founded The Sprayfoam Works, Inc. with a straightforward goal: help people create homes and buildings that are comfortable, efficient, and built to last. He leads every project with the same hands-on standard he learned growing up in the business.',
     quote:
-      'Every job gets the standard of work I\'d want in my own home — that\'s how my dad ran it, and that\'s how we still do.',
+      'Every job gets the standard of work I\'d want in my own home, that\'s how my dad ran it, and that\'s how we still do.',
   },
   {
     name: 'Field Crew',
-    role: 'Licensed spray foam installers',
+    role: 'Experienced spray foam installers',
     image: '/images/3ce463c3-81a1-428b-8839-3d576094c84e.jpg',
     bio: 'Our on-site team brings years of combined experience in spray foam and fiberglass installation. From attic retrofits to pole barns and commercial builds, they show up prepared, work clean, and leave every job site better than they found it.',
   },
@@ -180,7 +180,7 @@ export const teamMembers: TeamMember[] = [
     name: 'Project Support',
     role: 'Estimating & scheduling',
     image: '/images/461db213-76cf-42ce-834c-676cd8799b94.jpg',
-    bio: 'Behind every install is a team focused on clear communication, fair direct pricing, and getting you scheduled without the runaround. You talk to real people who know insulation — not a call center.',
+    bio: 'Behind every install is a team focused on clear communication, fair direct pricing, and getting you scheduled without the runaround. You talk to real people who know insulation, not a call center.',
   },
 ];
 
@@ -190,7 +190,7 @@ export const companyPages: CompanyPageData[] = [
     route: '/our-team',
     metaTitle: 'Our Team | The Sprayfoam Works',
     metaDescription:
-      'Meet the team behind The Sprayfoam Works — owner Aaron Hastings and a licensed, local crew serving Madison and Cottage Grove for 17 years.',
+      'Meet the team behind The Sprayfoam Works, owner Aaron Hastings and a licensed, local crew serving Madison and Cottage Grove for 17 years.',
     hero: {
       eyebrow: 'Our Team',
       title: 'The people behind',
@@ -211,7 +211,7 @@ export const companyPages: CompanyPageData[] = [
     route: '/history',
     metaTitle: 'Our History | The Sprayfoam Works',
     metaDescription:
-      'From a father-son apprenticeship to a trusted Dane County insulation contractor — the story of The Sprayfoam Works, Inc.',
+      'From a father-son apprenticeship to a trusted Dane County insulation contractor, the story of The Sprayfoam Works, Inc.',
     hero: {
       eyebrow: 'Our History',
       title: 'Two generations,',
@@ -238,7 +238,7 @@ export const companyPages: CompanyPageData[] = [
       title: 'Built on values,',
       titleAccent: 'not shortcuts',
       subtitle:
-        'We help create healthy, durable, comfortable environments — whether it\'s a home, office, shop, or commercial building. No job is too small or too large.',
+        'We help create healthy, durable, comfortable environments, whether it\'s a home, office, shop, or commercial building. No job is too small or too large.',
       image: '/images/7755b2ba-adfb-484a-a8dc-2ad98bab80fa.jpg',
       imageAlt: 'Spray foam insulation application',
     },
@@ -259,7 +259,7 @@ export const companyPages: CompanyPageData[] = [
       title: 'Neighbors who\'d',
       titleAccent: 'hire us again',
       subtitle:
-        'These reviews come directly from our Google customers — homeowners, property owners, and contractors across Dane County.',
+        'These reviews come directly from our Google customers, homeowners, property owners, and contractors across Dane County.',
       image: '/images/73ac49d9-3c3c-4436-bc98-d506b89106b6.jpg',
       imageAlt: 'Happy homeowner after insulation project',
     },

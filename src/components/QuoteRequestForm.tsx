@@ -1,6 +1,22 @@
+'use client';
+
+import type { FormEvent } from 'react';
+
 const WUFOO_ACTION = 'https://fireflymadison.wufoo.com/forms/r1euci3v1539v89/';
 
 export function QuoteRequestForm() {
+  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    const form = event.currentTarget;
+    const dateInput = form.elements.namedItem('service-date') as HTMLInputElement | null;
+
+    if (dateInput?.value) {
+      const [year, month, day] = dateInput.value.split('-');
+      (form.elements.namedItem('Field24') as HTMLInputElement).value = year;
+      (form.elements.namedItem('Field24-1') as HTMLInputElement).value = month;
+      (form.elements.namedItem('Field24-2') as HTMLInputElement).value = day;
+    }
+  }
+
   return (
     <>
       <span className="sfw-project-label">Request a Quote</span>
@@ -10,7 +26,7 @@ export function QuoteRequestForm() {
         Prefer to talk? Call or text us anytime.
       </p>
 
-      <form className="sfw-contact-form" action={WUFOO_ACTION} method="post">
+      <form className="sfw-contact-form" action={WUFOO_ACTION} method="post" onSubmit={handleSubmit}>
         <input type="hidden" name="idstamp" value="QQ4rupQQTQipmWeN1IXuxA==" />
 
         <fieldset className="sfw-contact-form-section">
@@ -122,41 +138,13 @@ export function QuoteRequestForm() {
             <textarea name="Field20" rows={5} placeholder="Space type, location, timeline, and what you need insulated." />
           </label>
 
-          <div className="sfw-contact-field">
+          <label className="sfw-contact-field">
             <span>Preferred date of service</span>
-            <div className="sfw-contact-date-row">
-              <input
-                type="text"
-                name="Field24-1"
-                maxLength={2}
-                inputMode="numeric"
-                placeholder="MM"
-                aria-label="Month"
-              />
-              <span className="sfw-contact-date-sep" aria-hidden="true">
-                /
-              </span>
-              <input
-                type="text"
-                name="Field24-2"
-                maxLength={2}
-                inputMode="numeric"
-                placeholder="DD"
-                aria-label="Day"
-              />
-              <span className="sfw-contact-date-sep" aria-hidden="true">
-                /
-              </span>
-              <input
-                type="text"
-                name="Field24"
-                maxLength={4}
-                inputMode="numeric"
-                placeholder="YYYY"
-                aria-label="Year"
-              />
-            </div>
-          </div>
+            <input type="date" name="service-date" className="sfw-contact-date-input" />
+            <input type="hidden" name="Field24" />
+            <input type="hidden" name="Field24-1" />
+            <input type="hidden" name="Field24-2" />
+          </label>
         </fieldset>
 
         <fieldset className="sfw-contact-form-section">

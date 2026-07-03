@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { GoogleReviewIcon } from '@/components/GoogleReviewIcon';
+import { TrustStatsBar } from '@/components/TrustStatsBar';
 import { SiteEnhancements } from '@/components/SiteEnhancements';
 import { SiteFooter } from '@/components/SiteFooter';
 import { SiteHeader } from '@/components/SiteHeader';
@@ -120,23 +122,7 @@ function Breadcrumb({ items }: { items: CompanyPageData['breadcrumb'] }) {
 }
 
 function StatsBar() {
-  const stats = [
-    { value: '17', label: 'Years of hands-on experience' },
-    { value: '100%', label: 'Licensed, bonded & insured' },
-    { value: '2', label: 'Locations in Dane County' },
-    { value: '$0', label: 'Middleman markup' },
-  ];
-
-  return (
-    <div className="sfw-company-stats">
-      {stats.map((stat) => (
-        <div key={stat.label} className="sfw-company-stat">
-          <div className="sfw-company-stat-value">{stat.value}</div>
-          <div className="sfw-company-stat-label">{stat.label}</div>
-        </div>
-      ))}
-    </div>
-  );
+  return <TrustStatsBar />;
 }
 
 function CtaBand() {
@@ -149,7 +135,7 @@ function CtaBand() {
             <br />
             with a team you trust?
           </h2>
-          <p>Get direct pricing on spray foam & fiberglass — no middleman, no pressure.</p>
+          <p>Get direct pricing on spray foam & fiberglass, no middleman, no pressure.</p>
         </div>
         <div className="sfw-company-cta-actions">
           <a href={siteConfig.phoneTel} className="btnfx sfw-company-cta-primary">
@@ -178,11 +164,11 @@ function OurTeamContent() {
             <p>
               The Sprayfoam Works is a family-owned insulation contractor based in Cottage Grove
               and Madison. We work directly with homeowners, remodeling companies, and commercial
-              contractors — no middleman, no inflated markups.
+              contractors, no middleman, no inflated markups.
             </p>
             <p>
               When you call, you talk to people who know your project. When we show up, we bring
-              licensed installers, professional equipment, and a standard of work we stand behind
+              experienced installers, professional equipment, and a standard of work we stand behind
               on every job size.
             </p>
           </div>
@@ -192,8 +178,8 @@ function OurTeamContent() {
               <span>Fair quotes without the middleman markup</span>
             </div>
             <div className="sfw-company-mini-card">
-              <strong>Fully licensed</strong>
-              <span>Licensed, bonded, and insured on every project</span>
+              <strong>17 years experience</strong>
+              <span>Hands-on since 2009, still learning on every job</span>
             </div>
             <div className="sfw-company-mini-card">
               <strong>17 years local</strong>
@@ -219,7 +205,7 @@ function OurTeamContent() {
             {aaron.quote ? <blockquote className="sfw-company-quote">{aaron.quote}</blockquote> : null}
             <p className="sfw-company-note">
               Aaron loves the outdoors and is an avid sportsman. When he is not on a job site, he
-              is building the kind of company he would want to hire himself — honest, prepared, and
+              is building the kind of company he would want to hire himself, honest, prepared, and
               easy to reach.
             </p>
             <a href={siteConfig.phoneTel} className="btnfx sfw-company-button">
@@ -270,7 +256,7 @@ function HistoryContent() {
             </p>
             <p>
               Aaron Hastings took the reins from his father and carried forward both the trade and
-              the reputation — practical, honest, and obsessed with doing the job right the first
+              the reputation, practical, honest, and obsessed with doing the job right the first
               time.
             </p>
           </div>
@@ -315,10 +301,10 @@ function HistoryContent() {
         <div className="sfw-company-section-inner sfw-company-quote-block">
           <blockquote>
             &ldquo;I&apos;ve always valued education and learning about the latest insulation and
-            building trends. That same curiosity drives how we serve customers today — staying
+            building trends. That same curiosity drives how we serve customers today, staying
             current, staying honest, and never cutting corners.&rdquo;
           </blockquote>
-          <cite>— Aaron Hastings, Owner</cite>
+          <cite>- Aaron Hastings, Owner</cite>
         </div>
       </section>
     </>
@@ -332,10 +318,10 @@ function MissionContent() {
         <div className="sfw-company-section-inner sfw-company-mission-grid">
           <div>
             <span className="sfw-company-label">Our Mission</span>
-            <h2>Healthy, durable, comfortable spaces — for everyone</h2>
+            <h2>Healthy, durable, comfortable spaces, for everyone</h2>
             <p>
               At The Sprayfoam Works, Inc., our mission is to provide value by helping create a
-              healthy, durable, and comfortable environment — whether that space is a home, an
+              healthy, durable, and comfortable environment, whether that space is a home, an
               office, a commercial business, or a small shop or shed.
             </p>
             <p>
@@ -347,7 +333,7 @@ function MissionContent() {
             <span className="sfw-company-mission-mark">&ldquo;</span>
             <p>
               We&apos;re here to help people create spaces that are healthy, durable, and
-              comfortable — and to do it honestly, on every job, at every size.
+              comfortable, and to do it honestly, on every job, at every size.
             </p>
             <div className="sfw-company-mission-sign">
               <strong>Aaron Hastings</strong>
@@ -374,7 +360,7 @@ function MissionContent() {
                     <ValueIcon icon={card.icon} />
                   </div>
                   <span className="sfw-company-value-num">
-                    {String(index + 1).padStart(2, '0')}
+                    {index + 1}
                   </span>
                 </div>
                 <h3>{card.title}</h3>
@@ -406,7 +392,7 @@ function TestimonialsContent() {
               </p>
             </div>
             <div className="sfw-company-google-badge">
-              <span className="sfw-company-google-g">G</span>
+              <GoogleReviewIcon className="sfw-company-google-g" size={24} />
               <div>
                 <div className="sfw-company-google-rating">
                   <strong>5.0</strong>
@@ -427,7 +413,7 @@ function TestimonialsContent() {
                   <strong>{featured.name}</strong>
                   {featured.location ? <span>{featured.location}</span> : null}
                 </div>
-                <span className="sfw-company-google-g sfw-company-google-g-sm">G</span>
+                <GoogleReviewIcon className="sfw-company-google-g sfw-company-google-g-sm" size={18} />
               </div>
             </div>
             <span className="sfw-company-review-featured-mark">&ldquo;</span>
@@ -445,7 +431,7 @@ function TestimonialsContent() {
                     <strong>{review.name}</strong>
                     {review.location ? <span>{review.location}</span> : null}
                   </div>
-                  <span className="sfw-company-google-g sfw-company-google-g-sm">G</span>
+                  <GoogleReviewIcon className="sfw-company-google-g sfw-company-google-g-sm" size={18} />
                 </div>
               </article>
             ))}
@@ -458,7 +444,7 @@ function TestimonialsContent() {
               rel="noopener noreferrer"
               className="btnfx sfw-company-google-button"
             >
-              <span className="sfw-company-google-g">G</span>
+              <GoogleReviewIcon className="sfw-company-google-g" size={24} />
               Read more reviews on Google →
             </a>
           </div>

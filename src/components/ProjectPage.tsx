@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { TrustStatsBar } from '@/components/TrustStatsBar';
 import { SiteEnhancements } from '@/components/SiteEnhancements';
 import { SiteFooter } from '@/components/SiteFooter';
 import { SiteHeader } from '@/components/SiteHeader';
@@ -145,6 +146,7 @@ export function ProjectPage({ page }: { page: ProjectPageData }) {
       <main>
         <Hero page={page} />
         <Breadcrumb items={page.breadcrumb} />
+        <TrustStatsBar />
 
         <section className="sfw-project-section sfw-project-section-light">
           <div className="sfw-project-inner sfw-project-intro">
@@ -247,7 +249,7 @@ export function ProjectPage({ page }: { page: ProjectPageData }) {
             <div className="sfw-project-steps">
               {page.process.steps.map((step, index) => (
                 <article key={step.title} className="sfw-project-step">
-                  <span className="sfw-project-step-num">{String(index + 1).padStart(2, '0')}</span>
+                  <span className="sfw-project-step-num">{index + 1}</span>
                   <div>
                     <h3>{step.title}</h3>
                     <p>{step.body}</p>

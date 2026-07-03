@@ -180,7 +180,7 @@ address,
 
 .sfw-page > div .sfw-core-service-badge,
 .sfw-page > div .sfw-core-service-badge[style*='font-size'] {
-  font-size: 14px !important;
+  font-size: 12px !important;
 }
 
 .sfw-service-page main :is(p, li, td, blockquote),

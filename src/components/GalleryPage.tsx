@@ -4,6 +4,7 @@ import { GalleryGrid, type GalleryItem } from '@/components/GalleryGrid';
 import { SiteEnhancements } from '@/components/SiteEnhancements';
 import { SiteFooter } from '@/components/SiteFooter';
 import { SiteHeader } from '@/components/SiteHeader';
+import { TrustStatsBar } from '@/components/TrustStatsBar';
 import { siteConfig } from '@/lib/site';
 
 const img = {
@@ -30,13 +31,6 @@ const items: GalleryItem[] = [
   { src: img.hero2, caption: 'New build framing' },
   { src: img.barn, caption: 'Warehouse deck' },
   { src: img.wall, caption: 'Cathedral ceiling' },
-];
-
-const stats = [
-  { value: '500+', label: 'Projects completed' },
-  { value: '17', label: 'Years on the job' },
-  { value: '2', label: 'Dane County locations' },
-  { value: '5★', label: 'Average review' },
 ];
 
 export function GalleryPage() {
@@ -95,20 +89,13 @@ export function GalleryPage() {
           <GalleryGrid items={items} />
         </section>
 
-        <div className="sfw-gal-stats">
-          {stats.map((stat) => (
-            <div key={stat.label} className="sfw-gal-stat">
-              <strong>{stat.value}</strong>
-              <span>{stat.label}</span>
-            </div>
-          ))}
-        </div>
+        <TrustStatsBar />
 
         <section id="quote" className="sfw-project-final-cta">
           <div className="sfw-project-final-inner">
             <div>
               <h2>Want your project to look like these?</h2>
-              <p>Get direct pricing on spray foam &amp; fiberglass — no middleman, no pressure.</p>
+              <p>Get direct pricing on spray foam &amp; fiberglass, no middleman, no pressure.</p>
             </div>
             <div className="sfw-project-final-actions">
               <Link href="/contact" className="btnfx sfw-project-final-primary">

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { TrustStatsBar } from '@/components/TrustStatsBar';
 import { SiteEnhancements } from '@/components/SiteEnhancements';
 import { SiteFooter } from '@/components/SiteFooter';
 import { SiteHeader } from '@/components/SiteHeader';
@@ -24,7 +25,7 @@ const coreServices = [
     title: 'Fiberglass Insulation',
     image: img.fiberglass,
     alt: 'Fiberglass batt insulation installed in a wall',
-    body: 'Cost-effective batt & blown-in coverage for attics, walls, and floors — expertly and evenly installed.',
+    body: 'Cost-effective batt & blown-in coverage for attics, walls, and floors, expertly and evenly installed.',
   },
 ];
 
@@ -71,22 +72,22 @@ const specialties: { href: string; title: string; body: string; icon: SpecIcon }
 
 const steps = [
   {
-    num: '01',
+    num: '1',
     title: 'Free assessment',
-    body: 'We inspect the space and recommend the right material — no pressure.',
+    body: 'We inspect the space and recommend the right material, no pressure.',
   },
   {
-    num: '02',
+    num: '2',
     title: 'Direct quote',
     body: 'Transparent, middleman-free pricing you can plan around.',
   },
   {
-    num: '03',
+    num: '3',
     title: 'Clean install',
     body: 'Masked, sprayed or set, and tidied up with pro-grade equipment.',
   },
   {
-    num: '04',
+    num: '4',
     title: 'Enjoy the savings',
     body: 'A tighter, quieter, cheaper-to-run building from day one.',
   },
@@ -178,7 +179,7 @@ export function ServicesPage() {
               <span className="sfw-project-accent">every way</span>
             </h1>
             <p>
-              From spray foam to full insulation removal — residential and commercial, across
+              From spray foam to full insulation removal, residential and commercial, across
               Madison, Cottage Grove, and greater Dane County.
             </p>
             <div className="sfw-project-hero-actions">
@@ -206,13 +207,15 @@ export function ServicesPage() {
           </div>
         </div>
 
+        <TrustStatsBar />
+
         <section className="sfw-project-section sfw-project-section-light">
           <div className="sfw-project-inner">
             <div className="sfw-srv-head">
               <div className="sfw-srv-eyebrow">What We Do</div>
               <h2>Core insulation services</h2>
               <p>
-                The two materials we install most — chosen and applied to fit your building and
+                The two materials we install most, chosen and applied to fit your building and
                 budget.
               </p>
             </div>
@@ -278,7 +281,7 @@ export function ServicesPage() {
             <div>
               <h2>Not sure which service you need?</h2>
               <p>
-                Tell us about your project and we will point you to the right fit — with direct
+                Tell us about your project and we will point you to the right fit, with direct
                 pricing.
               </p>
             </div>

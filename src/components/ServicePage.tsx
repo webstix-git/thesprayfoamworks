@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { TrustStatsBar } from '@/components/TrustStatsBar';
 import { SiteEnhancements } from '@/components/SiteEnhancements';
 import { SiteFooter } from '@/components/SiteFooter';
 import { SiteHeader } from '@/components/SiteHeader';
@@ -37,6 +38,8 @@ export function ServicePage({ page }: { page: ServicePageData }) {
               </span>
             </div>
           </section>
+
+          <TrustStatsBar />
 
           <section className="sfw-service-intro sfw-section sfw-grid sfw-grid-2">
             <div>
@@ -116,7 +119,7 @@ export function ServicePage({ page }: { page: ServicePageData }) {
             <div className="sfw-process-list">
               {page.process.map((step, index) => (
                 <article key={step.title}>
-                  <span>{String(index + 1).padStart(2, '0')}</span>
+                  <span>{index + 1}</span>
                   <div>
                     <h3>{step.title}</h3>
                     <p>{step.body}</p>

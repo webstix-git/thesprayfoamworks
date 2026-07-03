@@ -87,13 +87,13 @@ export const projectPages: ProjectPageData[] = [
     route: '/retrofitting',
     metaTitle: 'Retrofit Insulation for Existing Homes | The Sprayfoam Works',
     metaDescription:
-      'Retrofit insulation in Madison and Dane County. We air seal and add insulation to existing homes to stop drafts and cut energy bills — no full remodel required.',
+      'Retrofit insulation in Madison and Dane County. We air seal and add insulation to existing homes to stop drafts and cut energy bills, no full remodel required.',
     hero: {
       eyebrow: 'Existing Homes',
       title: 'Retrofit',
       titleAccent: 'Insulation',
       subtitle:
-        'Got an older Dane County home that never quite feels comfortable? We track down the drafts, seal the leaks, and add insulation where it actually counts — no full remodel required.',
+        'Got an older Dane County home that never quite feels comfortable? We track down the drafts, seal the leaks, and add insulation where it actually counts, no full remodel required.',
       image: img.attic,
       imageAlt: 'Retrofit insulation being added to an existing attic',
     },
@@ -107,7 +107,7 @@ export const projectPages: ProjectPageData[] = [
       title: 'Make an older home feel new again',
       paragraphs: [
         'Most homes built before modern energy codes are quietly leaking money through the attic, rim joists, and wall cavities. You feel it as cold floors in January, rooms that never warm up, and a furnace that runs and runs but never quite catches up.',
-        'We start by finding the weak spots, then build a practical plan around the house you already have. Usually that means targeted air sealing and added insulation — the upgrades that deliver real, noticeable comfort without tearing your home apart.',
+        'We start by finding the weak spots, then build a practical plan around the house you already have. Usually that means targeted air sealing and added insulation, the upgrades that deliver real, noticeable comfort without tearing your home apart.',
       ],
       bullets: [
         'Attic air sealing and added R-value',
@@ -124,7 +124,7 @@ export const projectPages: ProjectPageData[] = [
       eyebrow: 'What You Get',
       title: 'Comfort you can feel, savings you can measure',
       subtitle:
-        'Retrofitting is about fixing the right things in the right order — not just piling on more material and hoping.',
+        'Retrofitting is about fixing the right things in the right order, not just piling on more material and hoping.',
       items: [
         {
           icon: 'comfort',
@@ -139,7 +139,7 @@ export const projectPages: ProjectPageData[] = [
         {
           icon: 'clean',
           title: 'Minimal mess and demo',
-          body: 'We work through attics, basements, and rim joists whenever we can — with clean containment and careful access.',
+          body: 'We work through attics, basements, and rim joists whenever we can, with clean containment and careful access.',
         },
         {
           icon: 'shield',
@@ -161,7 +161,7 @@ export const projectPages: ProjectPageData[] = [
         },
         {
           title: 'Rim Joists',
-          body: 'One of the leakiest areas in most homes — sealed tight with closed-cell foam.',
+          body: 'One of the leakiest areas in most homes, sealed tight with closed-cell foam.',
           image: img.wall,
         },
         {
@@ -185,7 +185,7 @@ export const projectPages: ProjectPageData[] = [
         },
         {
           title: 'Install Cleanly',
-          body: 'Our crew protects the space, installs the right material, and leaves the area ready to use — not a mess to clean up.',
+          body: 'Our crew protects the space, installs the right material, and leaves the area ready to use, not a mess to clean up.',
         },
       ],
     },
@@ -201,7 +201,7 @@ export const projectPages: ProjectPageData[] = [
         {
           question: 'Is retrofitting worth it before I replace my HVAC?',
           answer:
-            'Very often, yes. Cutting air leakage and heat loss first can make your existing system perform better — and may even change the size of the equipment you actually need.',
+            'Very often, yes. Cutting air leakage and heat loss first can make your existing system perform better, and may even change the size of the equipment you actually need.',
         },
         {
           question: 'How disruptive is the work?',
@@ -218,7 +218,7 @@ export const projectPages: ProjectPageData[] = [
     },
     cta: {
       title: 'Ready to fix the drafty rooms?',
-      body: 'Tell us what feels uncomfortable and we will help you find the right retrofit plan — with straight-up pricing.',
+      body: 'Tell us what feels uncomfortable and we will help you find the right retrofit plan, with straight-up pricing.',
     },
   },
   {
@@ -226,13 +226,13 @@ export const projectPages: ProjectPageData[] = [
     route: '/remodels',
     metaTitle: 'Remodel Insulation in Madison, WI | The Sprayfoam Works',
     metaDescription:
-      'Insulation for remodels and renovations in Madison and Dane County. Spray foam and fiberglass installed at the right stage — before drywall and finishes go up.',
+      'Insulation for remodels and renovations in Madison and Dane County. Spray foam and fiberglass installed at the right stage, before drywall and finishes go up.',
     hero: {
       eyebrow: 'Renovations',
       title: 'Remodel',
       titleAccent: 'Insulation',
       subtitle:
-        'A remodel is your one clean shot at getting insulation right. While the walls are open, we seal and insulate so your finished space performs for decades — not just looks good on day one.',
+        'A remodel is your one clean shot at getting insulation right. While the walls are open, we seal and insulate so your finished space performs for decades, not just looks good on day one.',
       image: img.remodel,
       imageAlt: 'Remodel in progress with open walls ready for insulation',
     },
@@ -245,7 +245,7 @@ export const projectPages: ProjectPageData[] = [
       eyebrow: 'Timing Matters',
       title: 'Use the remodel window wisely',
       paragraphs: [
-        'A remodel is the best — and cheapest — time to fix insulation problems that would cost a fortune to reach later. Open walls, ceilings, rim joists, and new additions give us a real chance to air seal properly and install the right material without guessing.',
+        'A remodel is the best, and cheapest, time to fix insulation problems that would cost a fortune to reach later. Open walls, ceilings, rim joists, and new additions give us a real chance to air seal properly and install the right material without guessing.',
         'We work shoulder-to-shoulder with homeowners, remodelers, and general contractors to keep the insulation phase clean, predictable, and ready for inspection or the next trade. No surprises, no schedule blowups.',
       ],
       bullets: [
@@ -283,7 +283,7 @@ export const projectPages: ProjectPageData[] = [
         {
           icon: 'quality',
           title: 'Protects your investment',
-          body: 'You are paying for a beautiful remodel — the envelope behind it should be just as solid.',
+          body: 'You are paying for a beautiful remodel, the envelope behind it should be just as solid.',
         },
       ],
     },
@@ -320,7 +320,7 @@ export const projectPages: ProjectPageData[] = [
         },
         {
           title: 'Coordinate Timing',
-          body: 'We schedule after rough-ins are done and before drywall or finishes — so the sequence stays clean.',
+          body: 'We schedule after rough-ins are done and before drywall or finishes, so the sequence stays clean.',
         },
         {
           title: 'Install & Clean Up',
@@ -335,7 +335,7 @@ export const projectPages: ProjectPageData[] = [
         {
           question: 'When should insulation happen during a remodel?',
           answer:
-            'Usually right after framing, rough electrical, plumbing, and mechanical work are complete — but before drywall or finish panels go up. We help you time it so nothing gets held up.',
+            'Usually right after framing, rough electrical, plumbing, and mechanical work are complete, but before drywall or finish panels go up. We help you time it so nothing gets held up.',
         },
         {
           question: 'Can you help with soundproofing?',
@@ -371,7 +371,7 @@ export const projectPages: ProjectPageData[] = [
       title: 'New Construction',
       titleAccent: 'Insulation',
       subtitle:
-        'The best time to solve comfort and energy problems is before they ever start. We build high-performance insulation into the shell of your new home or building — clean, on schedule, and ready for inspection.',
+        'The best time to solve comfort and energy problems is before they ever start. We build high-performance insulation into the shell of your new home or building, clean, on schedule, and ready for inspection.',
       image: img.install,
       imageAlt: 'Spray foam insulation being installed in new construction',
     },
@@ -384,7 +384,7 @@ export const projectPages: ProjectPageData[] = [
       eyebrow: 'Performance First',
       title: 'Build the envelope before you decorate it',
       paragraphs: [
-        'New construction is your chance to get insulation right the first time — before a single comfort complaint or high energy bill ever shows up. We help builders and owners choose the right mix of spray foam, fiberglass, and air sealing for the building and the budget.',
+        'New construction is your chance to get insulation right the first time, before a single comfort complaint or high energy bill ever shows up. We help builders and owners choose the right mix of spray foam, fiberglass, and air sealing for the building and the budget.',
         'From custom homes to additions, post-frame buildings, and light commercial interiors, our focus is clean coverage, builder-friendly scheduling, and assemblies that keep performing long after move-in day.',
       ],
       bullets: [
@@ -402,7 +402,7 @@ export const projectPages: ProjectPageData[] = [
       eyebrow: 'Why Build With Us',
       title: 'Comfort built into the structure',
       subtitle:
-        'Get the envelope right and everything downstream — HVAC, comfort, energy bills — gets easier.',
+        'Get the envelope right and everything downstream, HVAC, comfort, energy bills, gets easier.',
       items: [
         {
           icon: 'comfort',
@@ -430,7 +430,7 @@ export const projectPages: ProjectPageData[] = [
       eyebrow: 'What We Build',
       title: 'From custom homes to commercial shells',
       subtitle:
-        'We scope every project around its plans, assemblies, and performance goals — not a one-size-fits-all spec.',
+        'We scope every project around its plans, assemblies, and performance goals, not a one-size-fits-all spec.',
       items: [
         {
           title: 'Custom Homes',
@@ -459,7 +459,7 @@ export const projectPages: ProjectPageData[] = [
         },
         {
           title: 'Material Selection',
-          body: 'You get clear options for foam, fiberglass, or a hybrid system — with the trade-offs explained in plain English.',
+          body: 'You get clear options for foam, fiberglass, or a hybrid system, with the trade-offs explained in plain English.',
         },
         {
           title: 'Jobsite Execution',
@@ -474,7 +474,7 @@ export const projectPages: ProjectPageData[] = [
         {
           question: 'Do you work directly with builders?',
           answer:
-            'Yes — constantly. We coordinate with contractors, remodelers, and owner-builders throughout Dane County and keep our phase predictable and documented.',
+            'Yes, constantly. We coordinate with contractors, remodelers, and owner-builders throughout Dane County and keep our phase predictable and documented.',
         },
         {
           question: 'Is a hybrid insulation package worth it?',

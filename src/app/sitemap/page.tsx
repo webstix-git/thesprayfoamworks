@@ -11,7 +11,7 @@ import { siteConfig } from '@/lib/site';
 export const metadata: Metadata = {
   title: 'Sitemap | The Sprayfoam Works',
   description:
-    'Browse every page on The Sprayfoam Works website — services, service areas, company pages, and more.',
+    'Browse every page on The Sprayfoam Works website, services, service areas, company pages, and more.',
   alternates: { canonical: `${siteConfig.url}/sitemap` },
 };
 

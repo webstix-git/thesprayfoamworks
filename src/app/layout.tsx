@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     template: '%s | The Sprayfoam Works',
   },
   description:
-    'Professional spray foam and fiberglass insulation in Madison and Cottage Grove, Wisconsin. Licensed, bonded, and insured.',
+    'Professional spray foam and fiberglass insulation in Madison and Cottage Grove, Wisconsin. 17 years of hands-on experience.',
   openGraph: {
     type: 'website',
     locale: 'en_US',

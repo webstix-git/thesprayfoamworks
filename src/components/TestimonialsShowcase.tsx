@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import { GoogleReviewIcon } from '@/components/GoogleReviewIcon';
+import { TrustStatsBar } from '@/components/TrustStatsBar';
 import { SiteEnhancements } from '@/components/SiteEnhancements';
 import { SiteFooter } from '@/components/SiteFooter';
 import { SiteHeader } from '@/components/SiteHeader';
@@ -120,10 +122,12 @@ export function TestimonialsShowcase() {
           </div>
         </div>
 
+        <TrustStatsBar />
+
         <section className="sfw-tm-statbar">
           <div className="sfw-tm-statbar-inner">
             <div className="sfw-tm-google">
-              <div className="sfw-tm-google-mark">G</div>
+              <GoogleReviewIcon className="sfw-tm-google-mark" size={24} />
               <div>
                 <div className="sfw-tm-google-score">
                   <strong>5.0</strong>
@@ -156,14 +160,14 @@ export function TestimonialsShowcase() {
                     <strong>{review.name}</strong>
                     <span>{review.role}</span>
                   </div>
-                  <span className="sfw-tm-g">G</span>
+                  <GoogleReviewIcon className="sfw-tm-g" size={18} />
                 </div>
               </article>
             ))}
           </div>
           <div className="sfw-tm-more">
             <a href={googleReviewsUrl} target="_blank" rel="noopener" className="btnfx">
-              <span className="sfw-tm-g">G</span>Read more reviews on Google →
+              <GoogleReviewIcon size={20} /> Read more reviews on Google →
             </a>
           </div>
         </section>
@@ -172,7 +176,7 @@ export function TestimonialsShowcase() {
           <div className="sfw-project-final-inner">
             <div>
               <h2>Ready to join our list of happy neighbors?</h2>
-              <p>Get direct pricing on spray foam &amp; fiberglass — no middleman, no pressure.</p>
+              <p>Get direct pricing on spray foam &amp; fiberglass, no middleman, no pressure.</p>
             </div>
             <div className="sfw-project-final-actions">
               <Link href="/contact" className="btnfx sfw-project-final-primary">

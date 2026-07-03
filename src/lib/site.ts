@@ -79,7 +79,7 @@ const PAGES: PageMeta[] = [
     route: '/about',
     title: 'About SFW | The Sprayfoam Works',
     description:
-      'Meet The Sprayfoam Works — a family-owned Wisconsin insulation contractor serving Dane County for 17 years.',
+      'Meet The Sprayfoam Works, a family-owned Wisconsin insulation contractor serving Dane County for 17 years.',
     showTrustBar: false,
   },
   {
@@ -111,7 +111,7 @@ const PAGES: PageMeta[] = [
     route: '/our-team',
     title: 'Our Team | The Sprayfoam Works',
     description:
-      'Meet the team behind The Sprayfoam Works — owner Aaron Hastings and a licensed, local crew serving Madison and Cottage Grove.',
+      'Meet the team behind The Sprayfoam Works, owner Aaron Hastings and a licensed, local crew serving Madison and Cottage Grove.',
     showTrustBar: false,
   },
   {
@@ -119,7 +119,7 @@ const PAGES: PageMeta[] = [
     route: '/history',
     title: 'Our History | The Sprayfoam Works',
     description:
-      'From a father-son apprenticeship to a trusted Dane County insulation contractor — the story of The Sprayfoam Works, Inc.',
+      'From a father-son apprenticeship to a trusted Dane County insulation contractor, the story of The Sprayfoam Works, Inc.',
     showTrustBar: false,
   },
   {
@@ -175,7 +175,7 @@ const PAGES: PageMeta[] = [
     route: '/cottage-grove',
     title: 'Spray Foam Insulation in Cottage Grove, WI | The Sprayfoam Works',
     description:
-      'Spray foam and fiberglass insulation for Cottage Grove, WI — our home base. Direct pricing from a local, licensed Dane County crew.',
+      'Spray foam and fiberglass insulation for Cottage Grove, WI, our home base. Direct pricing from a local, licensed Dane County crew.',
     showTrustBar: false,
   },
   {
@@ -207,7 +207,7 @@ const PAGES: PageMeta[] = [
     route: '/fitchburg',
     title: 'Spray Foam Insulation in Fitchburg, WI | The Sprayfoam Works',
     description:
-      'Spray foam and fiberglass insulation for Fitchburg, WI — residential and commercial. Direct pricing from a local Dane County team.',
+      'Spray foam and fiberglass insulation for Fitchburg, WI, residential and commercial. Direct pricing from a local Dane County team.',
     showTrustBar: false,
   },
   {
@@ -215,7 +215,7 @@ const PAGES: PageMeta[] = [
     route: '/sitemap',
     title: 'Sitemap | The Sprayfoam Works',
     description:
-      'Browse every page on The Sprayfoam Works website — services, service areas, company pages, and more.',
+      'Browse every page on The Sprayfoam Works website, services, service areas, company pages, and more.',
     showTrustBar: false,
   },
   {
@@ -248,3 +248,15 @@ export const siteConfig = {
   email: 'sprayfoamworks@gmail.com',
   url: process.env.NEXT_PUBLIC_SITE_URL || 'https://www.sprayfoamworks.com',
 };
+
+export type SiteTrustStat = {
+  value: string;
+  label: string;
+};
+
+export const siteTrustStats: SiteTrustStat[] = [
+  { value: '17', label: 'Years of hands-on experience' },
+  { value: '100%', label: 'Commitment to Better Results' },
+  { value: '2', label: 'Madison & Cottage Grove' },
+  { value: '$0', label: 'Middleman markup, direct pricing' },
+];

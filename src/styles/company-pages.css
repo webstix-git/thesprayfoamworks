@@ -403,6 +403,13 @@
   line-height: 1;
 }
 
+.sfw-company-stat-value-text {
+  font-family: var(--font-archivo), sans-serif;
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
 .sfw-company-stat-label {
   color: #ffd9db;
   font-size: 14px;
@@ -706,23 +713,18 @@
   background: #fff;
   border: 1px solid #e6e7ea;
   border-radius: 50%;
-  color: #4285f4;
   display: flex;
-  font-family: var(--font-archivo), sans-serif;
-  font-size: 24px;
-  font-weight: 800;
+  flex-shrink: 0;
   height: 44px;
   justify-content: center;
-  line-height: 1;
   width: 44px;
 }
 
 .sfw-company-google-g-sm {
-  font-size: 18px;
-  height: auto;
-  width: auto;
   background: transparent;
   border: 0;
+  height: auto;
+  width: auto;
 }
 
 .sfw-company-google-rating {

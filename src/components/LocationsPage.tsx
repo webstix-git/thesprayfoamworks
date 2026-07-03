@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { TrustStatsBar } from '@/components/TrustStatsBar';
 import { SiteEnhancements } from '@/components/SiteEnhancements';
 import { SiteFooter } from '@/components/SiteFooter';
 import { SiteHeader } from '@/components/SiteHeader';
@@ -105,6 +106,8 @@ export function LocationsPage() {
             </span>
           </div>
         </div>
+
+        <TrustStatsBar />
 
         <section className="sfw-loc-offices">
           <div className="sfw-loc-offices-inner">
