@@ -178,7 +178,8 @@ address,
   font-size: 18px !important;
 }
 
-.sfw-core-service-badge {
+.sfw-page > div .sfw-core-service-badge,
+.sfw-page > div .sfw-core-service-badge[style*='font-size'] {
   font-size: 14px !important;
 }
 
