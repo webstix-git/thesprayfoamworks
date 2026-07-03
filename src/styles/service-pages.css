@@ -849,8 +849,7 @@
   }
 
   .sfw-service-hero-content {
-    min-height: 560px !important;
-    padding: 160px 32px 48px !important;
+    min-height: 0 !important;
   }
 
   .sfw-service-intro,

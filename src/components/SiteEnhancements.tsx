@@ -166,7 +166,15 @@ function markResponsiveTargets(page: HTMLElement) {
   });
 
   page.querySelectorAll('.hero-rise').forEach((node) => {
-    (node as HTMLElement).classList.add('sfw-hero-content');
+    const el = node as HTMLElement;
+    el.classList.add('sfw-hero-content');
+
+    const hero = el.closest('.sfw-hero');
+    const heroStyle = hero?.getAttribute('style') ?? '';
+    if (hero && !heroStyle.includes('890px')) {
+      hero.classList.add('sfw-inner-hero');
+      el.classList.add('sfw-inner-hero-content');
+    }
   });
 
   page.querySelectorAll('[style*="padding:88px"], [style*="padding: 88px"]').forEach((node) => {

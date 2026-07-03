@@ -273,8 +273,8 @@ body.mobile-nav-open .mobile-nav-toggle span:nth-child(3) {
     margin-top: -80px !important;
   }
 
-  .sfw-hero-content,
-  .sfw-hero .hero-rise {
+  .sfw-hero[style*='890px'] .sfw-hero-content,
+  .sfw-hero[style*='890px'] .hero-rise {
     justify-content: flex-start !important;
     min-height: 560px !important;
     padding: 160px 32px 48px !important;
@@ -282,12 +282,31 @@ body.mobile-nav-open .mobile-nav-toggle span:nth-child(3) {
     top: 0 !important;
   }
 
+  .sfw-inner-hero,
+  .sfw-service-hero,
+  .sfw-project-hero,
+  .sfw-company-hero,
+  .sfw-loc-hero {
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: 640px !important;
+  }
+
+  .sfw-inner-hero-content,
   .sfw-project-hero-content,
   .sfw-company-hero-content,
   .sfw-loc-hero-content,
   .sfw-service-hero-content {
-    justify-content: flex-start !important;
-    padding-top: 160px !important;
+    align-items: flex-start !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex: 1 1 auto !important;
+    flex-direction: column !important;
+    justify-content: flex-end !important;
+    min-height: 0 !important;
+    padding: 120px 32px 48px !important;
+    padding-left: 32px !important;
+    top: 0 !important;
   }
 
   /* CTA sections — tighter content-to-button spacing */
@@ -365,18 +384,28 @@ body.mobile-nav-open .mobile-nav-toggle span:nth-child(3) {
     margin-top: -72px !important;
   }
 
-  .sfw-hero-content,
-  .sfw-hero .hero-rise {
+  .sfw-inner-hero,
+  .sfw-service-hero,
+  .sfw-project-hero,
+  .sfw-company-hero,
+  .sfw-loc-hero {
+    min-height: 480px !important;
+  }
+
+  .sfw-hero[style*='890px'] .sfw-hero-content,
+  .sfw-hero[style*='890px'] .hero-rise {
     min-height: 420px !important;
     padding: 148px 20px 36px !important;
     padding-left: 20px !important;
   }
 
+  .sfw-inner-hero-content,
   .sfw-project-hero-content,
   .sfw-company-hero-content,
   .sfw-loc-hero-content,
   .sfw-service-hero-content {
-    padding-top: 148px !important;
+    padding: 112px 20px 40px !important;
+    padding-left: 20px !important;
   }
 
   .sfw-hero .hero-rise p,
@@ -518,15 +547,17 @@ body.mobile-nav-open .mobile-nav-toggle span:nth-child(3) {
     font-size: 28px !important;
   }
 
-  .sfw-hero-content,
-  .sfw-hero .hero-rise {
+  .sfw-hero[style*='890px'] .sfw-hero-content,
+  .sfw-hero[style*='890px'] .hero-rise {
     padding-top: 132px !important;
   }
 
+  .sfw-inner-hero-content,
   .sfw-project-hero-content,
   .sfw-company-hero-content,
   .sfw-loc-hero-content,
   .sfw-service-hero-content {
-    padding-top: 132px !important;
+    padding: 104px 20px 36px !important;
+    padding-left: 20px !important;
   }
 }

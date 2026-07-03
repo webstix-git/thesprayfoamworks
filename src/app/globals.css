@@ -178,6 +178,10 @@ address,
   font-size: 18px !important;
 }
 
+.sfw-core-service-badge {
+  font-size: 14px !important;
+}
+
 .sfw-service-page main :is(p, li, td, blockquote),
 .sfw-company-page main :is(p, li, td, blockquote),
 .sfw-project-page main :is(p, li, td, blockquote),

@@ -1115,13 +1115,12 @@
 
   .sfw-company-hero,
   .sfw-company-hero-content {
-    min-height: 480px;
+    min-height: 0;
   }
 
   .sfw-company-hero-content {
     padding-left: 32px;
     padding-right: 32px;
-    padding-top: 148px;
   }
 
   .sfw-company-section {

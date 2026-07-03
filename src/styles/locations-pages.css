@@ -346,13 +346,12 @@
 @media (max-width: 768px) {
   .sfw-loc-hero,
   .sfw-loc-hero-content {
-    min-height: 480px;
+    min-height: 0;
   }
 
   .sfw-loc-hero-content {
     padding-left: 32px;
     padding-right: 32px;
-    padding-top: 148px;
   }
 
   .sfw-loc-offices,
