@@ -1,0 +1,186 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import '../styles/site.css';
+@import '../styles/responsive.css';
+@import '../styles/service-pages.css';
+@import '../styles/company-pages.css';
+@import '../styles/project-pages.css';
+@import '../styles/showcase-pages.css';
+@import '../styles/locations-pages.css';
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #0b0b0c;
+  font-family: var(--font-hanken), sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ── Global button system ─────────────────────────────── */
+/* No shadow or lift on hover */
+.btnfx:hover {
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+/* Reusable button styles */
+.btn-red,
+.btn-solid {
+  border-radius: 9px;
+  display: inline-block;
+  font-family: var(--font-archivo), sans-serif;
+  font-weight: 800;
+  padding: 15px 28px;
+  text-align: center;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Red & white button — hover black */
+.btn-red {
+  background: #e4141b;
+  color: #fff;
+}
+
+.btn-red:hover {
+  background: #0b0b0c !important;
+  color: #fff !important;
+}
+
+/* Solid button — hover white */
+.btn-solid {
+  background: #0b0b0c;
+  color: #fff;
+}
+
+.btn-solid:hover {
+  background: #fff !important;
+  color: #0b0b0c !important;
+}
+
+/* Red CTA buttons — hover black */
+.sfw-nav-cta,
+.sfw-primary-button,
+.sfw-company-button,
+.sfw-project-cta-primary,
+.sfw-project-button,
+.sfw-contact-submit {
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.sfw-nav-cta:hover,
+.sfw-primary-button:hover,
+.sfw-company-button:hover,
+.sfw-project-cta-primary:hover,
+.sfw-project-button:hover,
+.sfw-contact-submit:hover {
+  background: #0b0b0c !important;
+  color: #fff !important;
+  box-shadow: none !important;
+}
+
+/* Sticky header — Get a Quote hovers white for contrast */
+#siteHeader.sfw-header-scrolled .sfw-nav-cta:hover {
+  background: #fff !important;
+  color: #0b0b0c !important;
+  box-shadow: none !important;
+}
+
+/* Red CTA band — white primary button hovers black */
+.sfw-company-cta-primary:hover,
+.sfw-service-cta a:first-child:hover,
+.sfw-project-final-primary:hover,
+.sfw-page [style*='background:#E4141B'][style*='padding:80px'] .btnfx[style*='background:#fff']:hover,
+.sfw-page [style*='background: #E4141B'][style*='padding:80px'] .btnfx[style*='background:#fff']:hover,
+.sfw-page [style*='background:#E4141B'][style*='padding:80px'] .btnfx[style*='background: #fff']:hover {
+  background: #0b0b0c !important;
+  color: #fff !important;
+  box-shadow: none !important;
+}
+
+/* Red CTA band — outline secondary button hovers white */
+.sfw-company-cta-secondary:hover,
+.sfw-project-final-secondary:hover,
+.sfw-service-cta a:last-child:hover,
+.sfw-page [style*='background:#E4141B'][style*='padding:80px'] .btnfx[style*='transparent']:hover,
+.sfw-page [style*='background: #E4141B'][style*='padding:80px'] .btnfx[style*='transparent']:hover {
+  background: #fff !important;
+  border-color: #fff !important;
+  color: #0b0b0c !important;
+  box-shadow: none !important;
+}
+/* Hero / outline buttons — hover white with black text */
+.sfw-secondary-button:hover,
+.sfw-project-cta-ghost:hover,
+.sfw-hero .btnfx[style*='rgba(255']:hover,
+.sfw-hero .btnfx[style*='transparent']:hover,
+.sfw-hero-content .btnfx[style*='rgba(255']:hover,
+.sfw-hero-content .btnfx[style*='transparent']:hover,
+.hero-rise .btnfx[style*='rgba(255']:hover,
+.hero-rise .btnfx[style*='transparent']:hover {
+  background: #fff !important;
+  border-color: #fff !important;
+  color: #0b0b0c !important;
+  box-shadow: none !important;
+}
+
+/* Hero red buttons — hover black */
+.sfw-hero .btnfx[style*='#E4141B']:hover,
+.sfw-hero .btnfx[style*='#e4141b']:hover,
+.sfw-hero-content .btnfx[style*='#E4141B']:hover,
+.sfw-hero-content .btnfx[style*='#e4141b']:hover,
+.hero-rise .btnfx[style*='#E4141B']:hover,
+.hero-rise .btnfx[style*='#e4141b']:hover {
+  background: #0b0b0c !important;
+  color: #fff !important;
+  box-shadow: none !important;
+}
+
+/* ── Normalize italics site-wide ──────────────────────── */
+em,
+i,
+cite,
+blockquote,
+address,
+.sfw-company-quote,
+.sfw-company-quote-block blockquote,
+.sfw-company-mission-statement p,
+.sfw-company-review-featured p,
+.sfw-project-testimonial blockquote,
+[style*='italic'] {
+  font-style: normal !important;
+}
+
+/* ── Global 18px body text (excludes header & footer) ─ */
+.sfw-page > div [style*='font-size:14px'],
+.sfw-page > div [style*='font-size: 14px'],
+.sfw-page > div [style*='font-size:14.5px'],
+.sfw-page > div [style*='font-size: 14.5px'],
+.sfw-page > div [style*='font-size:15px'],
+.sfw-page > div [style*='font-size: 15px'],
+.sfw-page > div [style*='font-size:15.5px'],
+.sfw-page > div [style*='font-size: 15.5px'],
+.sfw-page > div [style*='font-size:16px'],
+.sfw-page > div [style*='font-size: 16px'] {
+  font-size: 18px !important;
+}
+
+.sfw-service-page main :is(p, li, td, blockquote),
+.sfw-company-page main :is(p, li, td, blockquote),
+.sfw-project-page main :is(p, li, td, blockquote),
+.sfw-showcase-page main :is(p, li, td, blockquote) {
+  font-size: 18px !important;
+}

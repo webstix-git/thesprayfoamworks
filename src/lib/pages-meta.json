@@ -1,0 +1,44 @@
+[
+  {
+    "slug": "home",
+    "route": "/",
+    "title": "The Sprayfoam Works | Professional Spray Foam Insulation in Madison, WI",
+    "description": "Direct-to-customer spray foam and fiberglass insulation for homes, pole barns, and commercial builds across Madison and Cottage Grove, Wisconsin.",
+    "showTrustBar": true
+  },
+  {
+    "slug": "spray-foam-insulation",
+    "route": "/spray-foam-insulation",
+    "title": "Spray Foam Insulation | The Sprayfoam Works",
+    "description": "Professional spray foam insulation services in Dane County. Closed-cell and open-cell foam for attics, walls, pole barns, and commercial buildings.",
+    "showTrustBar": false
+  },
+  {
+    "slug": "about",
+    "route": "/about",
+    "title": "About SFW | The Sprayfoam Works",
+    "description": "Meet The Sprayfoam Works — a family-owned Wisconsin insulation contractor serving Dane County for 17 years.",
+    "showTrustBar": false
+  },
+  {
+    "slug": "madison",
+    "route": "/madison",
+    "title": "Spray Foam Insulation Madison, WI | The Sprayfoam Works",
+    "description": "Local spray foam and fiberglass insulation for Madison homes and businesses. Direct pricing from a Dane County-based team.",
+    "showTrustBar": false
+  },
+  {
+    "slug": "commercial",
+    "route": "/commercial",
+    "title": "Commercial Insulation | The Sprayfoam Works",
+    "description": "Commercial spray foam insulation for warehouses, shops, and new construction across Dane County, Wisconsin.",
+    "showTrustBar": false
+  },
+  {
+    "slug": "residential",
+    "route": "/residential",
+    "title": "Residential Insulation | The Sprayfoam Works",
+    "description": "Residential spray foam and fiberglass insulation for homes, remodels, and retrofits in Madison and Cottage Grove.",
+    "showTrustBar": false
+  }
+]

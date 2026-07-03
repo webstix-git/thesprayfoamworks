@@ -1,0 +1,4 @@
+{
+  "buildCommand": "npm run extract && npm run build",
+  "installCommand": "npm install"
+}
