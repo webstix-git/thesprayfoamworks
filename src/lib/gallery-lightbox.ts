@@ -62,10 +62,10 @@ function ensureLightbox(): LightboxState {
 
   root.querySelector('.sfw-lightbox-close')?.addEventListener('click', closeLightbox);
   root.querySelector('.sfw-lightbox-prev')?.addEventListener('click', () => {
-    if (lightbox?.active !== null) showLightbox(lightbox.active - 1);
+    if (lightbox && lightbox.active !== null) showLightbox(lightbox.active - 1);
   });
   root.querySelector('.sfw-lightbox-next')?.addEventListener('click', () => {
-    if (lightbox?.active !== null) showLightbox(lightbox.active + 1);
+    if (lightbox && lightbox.active !== null) showLightbox(lightbox.active + 1);
   });
 
   root.addEventListener('click', (event) => {
