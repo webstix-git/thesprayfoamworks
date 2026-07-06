@@ -1,3 +1,5 @@
+import { testimonialReviews } from './testimonials';
+
 export type CompanyPageSlug = 'our-team' | 'history' | 'mission' | 'testimonials';
 
 export type BreadcrumbItem = {
@@ -58,41 +60,12 @@ export type CompanyPageData = {
 const GOOGLE_REVIEWS_URL =
   'https://www.google.com/search?q=The+Spray+Foam+Works,+Inc+Reviews';
 
-export const googleReviews: Testimonial[] = [
-  {
-    name: 'Abby Sporel',
-    initials: 'AS',
-    location: 'Homeowner · Dane County',
-    text: 'Aaron did an excellent job on our project that included adding spray foam to our exterior walls and attic in a seasonal cottage we are converting to year-round use. He was very pleasant to work with, high quality work and materials and timely in getting the job done, all for a good price. We\'d highly recommend Aaron for any project!!',
-  },
-  {
-    name: 'Jim Koski',
-    initials: 'JK',
-    location: 'Homeowner · Madison area',
-    text: 'Spray Foam Works did an excellent job in my attic. Aaron was thorough and timely. I would highly recommend them to any individual considering spray foam for insulation.',
-  },
-  {
-    name: 'Arianna',
-    initials: 'AR',
-    text: 'Quality work!! Definitely recommend them to anyone!',
-  },
-  {
-    name: 'Steve Reupert',
-    initials: 'SR',
-    text: 'Love the spray foam!!! Aaron does amazing work!',
-  },
-  {
-    name: 'Garrett Mohr',
-    initials: 'GM',
-    text: 'Five-star rating, thank you, Garrett!',
-  },
-  {
-    name: 'Isthmus Wellness',
-    initials: 'IW',
-    location: 'Commercial · Madison',
-    text: 'Five-star rating, thank you, Isthmus Wellness!',
-  },
-];
+export const googleReviews: Testimonial[] = testimonialReviews.map((review) => ({
+  name: review.name,
+  initials: review.initials,
+  location: review.role,
+  text: review.text,
+}));
 
 export const missionValues: ValueCard[] = [
   {

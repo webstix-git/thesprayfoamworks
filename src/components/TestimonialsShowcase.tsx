@@ -4,71 +4,8 @@ import { TrustStatsBar } from '@/components/TrustStatsBar';
 import { SiteEnhancements } from '@/components/SiteEnhancements';
 import { SiteFooter } from '@/components/SiteFooter';
 import { SiteHeader } from '@/components/SiteHeader';
+import { testimonialReviews } from '@/lib/testimonials';
 import { siteConfig } from '@/lib/site';
-
-type Review = {
-  initials: string;
-  name: string;
-  role: string;
-  text: string;
-};
-
-const reviews: Review[] = [
-  {
-    initials: 'JM',
-    name: 'Jenna M.',
-    role: 'Homeowner · Madison',
-    text: 'Aaron\u2019s crew sealed our attic and the upstairs finally holds heat. Fair quote, no upsell, done in a day.',
-  },
-  {
-    initials: 'S&',
-    name: 'Sarah & Ben K.',
-    role: 'Homeowners · Sun Prairie',
-    text: 'They removed our old, moldy fiberglass and re-foamed the crawl space. The musty smell is completely gone.',
-  },
-  {
-    initials: 'GP',
-    name: 'Greg P.',
-    role: 'Homeowner · Fitchburg',
-    text: 'Professional from the quote to cleanup. You can tell this is a family business that actually cares.',
-  },
-  {
-    initials: 'RT',
-    name: 'Rick T.',
-    role: 'Property Owner · Cottage Grove',
-    text: 'We foamed a 40x60 pole barn shop. Holds temperature through Wisconsin winters now. Highly recommend.',
-  },
-  {
-    initials: 'ML',
-    name: 'Marcus L.',
-    role: 'Homeowner · Middleton',
-    text: 'Direct pricing was noticeably better than the big companies, and the work was cleaner. Couldn\u2019t be happier.',
-  },
-  {
-    initials: 'JH',
-    name: 'Jim H.',
-    role: 'Commercial Owner · Madison',
-    text: 'Our warehouse energy bills dropped noticeably after they spray-foamed the metal roof deck. Great crew.',
-  },
-  {
-    initials: 'DC',
-    name: 'Dave C.',
-    role: 'Remodeling Contractor',
-    text: 'As a remodeler I sub my insulation to SFW on every project. Reliable, clean, and priced right every time.',
-  },
-  {
-    initials: 'TR',
-    name: 'Tina R.',
-    role: 'New Construction · Verona',
-    text: 'Insulated our new build from framing. On schedule, on budget, and the house is dead quiet and efficient.',
-  },
-  {
-    initials: 'AD',
-    name: 'Angela D.',
-    role: 'Homeowner · Cottage Grove',
-    text: 'Quick to respond, honest about what we did and didn\u2019t need. Rare to find a contractor like this.',
-  },
-];
 
 const googleReviewsUrl = 'https://www.google.com/search?q=The+Sprayfoam+Works+Inc+reviews';
 
@@ -149,7 +86,7 @@ export function TestimonialsShowcase() {
 
         <section className="sfw-tm-wrap">
           <div className="sfw-tm-grid">
-            {reviews.map((review) => (
+            {testimonialReviews.map((review) => (
               <article key={review.name} className="sfw-tm-card">
                 <div className="sfw-tm-quote-mark">&ldquo;</div>
                 <div className="sfw-tm-card-stars">★★★★★</div>
