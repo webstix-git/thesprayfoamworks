@@ -3,10 +3,10 @@ import { TrustStatsBar } from '@/components/TrustStatsBar';
 import { SiteEnhancements } from '@/components/SiteEnhancements';
 import { SiteFooter } from '@/components/SiteFooter';
 import { SiteHeader } from '@/components/SiteHeader';
-import { ContactForm } from '@/components/ContactForm';
+import { QuoteRequestForm } from '@/components/QuoteRequestForm';
 import { ContactSidebar } from '@/components/ContactSidebar';
 
-export function ContactPage() {
+export function GetAQuotePage() {
   return (
     <div className="sfw-project-page sfw-contact-page">
       <SiteHeader />
@@ -16,7 +16,7 @@ export function ContactPage() {
         <div className="sfw-project-hero sfw-contact-hero">
           <div className="sfw-project-hero-overlay" />
           <div className="sfw-project-hero-content hero-rise sfw-contact-hero-content">
-            <h1>Contact Us</h1>
+            <h1>Get a Quote</h1>
           </div>
         </div>
 
@@ -29,7 +29,7 @@ export function ContactPage() {
             </span>
             <span className="sfw-project-crumb">
               <span className="sfw-project-crumb-sep">/</span>
-              <span className="sfw-project-crumb-current">Contact</span>
+              <span className="sfw-project-crumb-current">Get a Quote</span>
             </span>
           </div>
         </div>
@@ -39,7 +39,7 @@ export function ContactPage() {
         <section className="sfw-project-section sfw-project-section-light">
           <div className="sfw-project-inner sfw-contact-grid">
             <div className="sfw-contact-form-card">
-              <ContactForm />
+              <QuoteRequestForm />
             </div>
             <ContactSidebar />
           </div>

@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react';
 import { setupGalleryLightbox } from '@/lib/gallery-lightbox';
-import { htmlLinkRoutes } from '@/lib/nav-links';
+import { resolveLinkRoute } from '@/lib/wire-html-links';
 
 type SiteEnhancementsProps = {
   sticky?: boolean;
@@ -113,14 +113,9 @@ function setupMobileNav(header: HTMLElement) {
 }
 
 function wireServiceLinks(page: HTMLElement) {
-  page.querySelectorAll('a').forEach((link) => {
-    const label = link.textContent?.replace(/→/g, '').trim();
-    if (!label || !(label in htmlLinkRoutes)) return;
-
-    const href = link.getAttribute('href');
-    if (!href || href === '#') {
-      link.setAttribute('href', htmlLinkRoutes[label]);
-    }
+  page.querySelectorAll('a[href="#"]').forEach((link) => {
+    const route = resolveLinkRoute(link.innerHTML, link.textContent ?? undefined);
+    if (route) link.setAttribute('href', route);
   });
 }
 

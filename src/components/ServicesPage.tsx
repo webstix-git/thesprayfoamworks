@@ -183,9 +183,9 @@ export function ServicesPage() {
               Madison, Cottage Grove, and greater Dane County.
             </p>
             <div className="sfw-project-hero-actions">
-              <a href={siteConfig.phoneTel} className="btnfx sfw-project-cta-primary">
+              <Link href="/get-a-quote" className="btnfx sfw-project-cta-primary">
                 Get a Free Quote
-              </a>
+              </Link>
               <Link href="/gallery" className="btnfx sfw-project-cta-ghost">
                 See Our Work
               </Link>
@@ -286,7 +286,7 @@ export function ServicesPage() {
               </p>
             </div>
             <div className="sfw-project-final-actions">
-              <Link href="/contact" className="btnfx sfw-project-final-primary">
+              <Link href="/get-a-quote" className="btnfx sfw-project-final-primary">
                 Request a Quote
               </Link>
               <a href={siteConfig.phoneTel} className="btnfx sfw-project-final-secondary">

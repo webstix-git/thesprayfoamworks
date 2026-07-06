@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import { wireHtmlLinks } from './wire-html-links';
 
 export type PageMeta = {
   slug: string;
@@ -167,7 +168,15 @@ const PAGES: PageMeta[] = [
     route: '/contact',
     title: 'Contact Us | The Sprayfoam Works',
     description:
-      'Contact The Sprayfoam Works for spray foam and fiberglass insulation across Dane County, WI. Call or text (608) 279-0088 for a free quote.',
+      'Contact The Sprayfoam Works for spray foam and fiberglass insulation across Dane County, WI. Call or text (608) 279-0088.',
+    showTrustBar: false,
+  },
+  {
+    slug: 'get-a-quote',
+    route: '/get-a-quote',
+    title: 'Get a Quote | The Sprayfoam Works',
+    description:
+      'Request a free insulation quote from The Sprayfoam Works. Spray foam and fiberglass for homes, pole barns, and commercial builds across Dane County, WI.',
     showTrustBar: false,
   },
   {
@@ -226,6 +235,22 @@ const PAGES: PageMeta[] = [
       'Privacy policy for The Sprayfoam Works, Inc. Learn how we collect, use, and protect the information you share with us.',
     showTrustBar: false,
   },
+  {
+    slug: 'ai-policy',
+    route: '/ai-policy',
+    title: 'AI Policy | The Sprayfoam Works',
+    description:
+      'AI policy for The Sprayfoam Works, Inc. Learn how we use artificial intelligence on our website and in customer communications.',
+    showTrustBar: false,
+  },
+  {
+    slug: 'service-index',
+    route: '/service-index',
+    title: 'Service Index | The Sprayfoam Works',
+    description:
+      'Index of insulation services from The Sprayfoam Works: spray foam, fiberglass, retrofitting, pole barns, remodels, new construction, and insulation removal.',
+    showTrustBar: false,
+  },
 ];
 
 export function getAllPages(): PageMeta[] {
@@ -238,7 +263,8 @@ export function getPageBySlug(slug: string): PageMeta | undefined {
 
 export function readPageHtml(slug: string): string {
   const filePath = path.join(process.cwd(), 'src', 'content', `${slug}.html`);
-  return fs.readFileSync(filePath, 'utf8');
+  const raw = fs.readFileSync(filePath, 'utf8');
+  return wireHtmlLinks(raw);
 }
 
 export const siteConfig = {

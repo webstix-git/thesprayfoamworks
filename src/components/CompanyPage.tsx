@@ -138,9 +138,9 @@ function CtaBand() {
           <p>Get direct pricing on spray foam & fiberglass, no middleman, no pressure.</p>
         </div>
         <div className="sfw-company-cta-actions">
-          <a href={siteConfig.phoneTel} className="btnfx sfw-company-cta-primary">
+          <Link href="/get-a-quote" className="btnfx sfw-company-cta-primary">
             Request a Quote
-          </a>
+          </Link>
           <a href={siteConfig.phoneTel} className="btnfx sfw-company-cta-secondary">
             {siteConfig.phone}
           </a>
@@ -208,9 +208,9 @@ function OurTeamContent() {
               is building the kind of company he would want to hire himself, honest, prepared, and
               easy to reach.
             </p>
-            <a href={siteConfig.phoneTel} className="btnfx sfw-company-button">
+            <Link href="/get-a-quote" className="btnfx sfw-company-button">
               Work with our team →
-            </a>
+            </Link>
           </div>
         </div>
       </section>

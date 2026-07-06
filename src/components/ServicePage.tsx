@@ -150,9 +150,9 @@ export function ServicePage({ page }: { page: ServicePageData }) {
               <p>{page.ctaBody}</p>
             </div>
             <div>
-              <a href={siteConfig.phoneTel} className="btnfx">
+              <Link href="/get-a-quote" className="btnfx">
                 Request a Quote
-              </a>
+              </Link>
               <a href={siteConfig.phoneTel} className="btnfx">
                 {siteConfig.phone}
               </a>

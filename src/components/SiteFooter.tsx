@@ -112,6 +112,18 @@ export function SiteFooter() {
             <span className="sfw-footer-legal-sep" aria-hidden="true">
               |
             </span>
+            <Link href="/service-index" className="navlink">
+              Service Index
+            </Link>
+            <span className="sfw-footer-legal-sep" aria-hidden="true">
+              |
+            </span>
+            <Link href="/ai-policy" className="navlink">
+              AI Policy
+            </Link>
+            <span className="sfw-footer-legal-sep" aria-hidden="true">
+              |
+            </span>
             <Link href="/privacy-policy" className="navlink">
               Privacy Policy
             </Link>

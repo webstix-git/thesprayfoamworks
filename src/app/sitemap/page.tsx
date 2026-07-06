@@ -24,6 +24,7 @@ const sitemapGroups: { heading: string; links: { label: string; href: string }[]
       { label: 'Residential', href: '/residential' },
       { label: 'Commercial', href: '/commercial' },
       { label: 'Gallery', href: '/gallery' },
+      { label: 'Get a Quote', href: '/get-a-quote' },
       { label: 'Contact Us', href: '/contact' },
     ],
   },
@@ -43,6 +44,8 @@ const sitemapGroups: { heading: string; links: { label: string; href: string }[]
     heading: 'Legal',
     links: [
       { label: 'Sitemap', href: '/sitemap' },
+      { label: 'Service Index', href: '/service-index' },
+      { label: 'AI Policy', href: '/ai-policy' },
       { label: 'Privacy Policy', href: '/privacy-policy' },
     ],
   },

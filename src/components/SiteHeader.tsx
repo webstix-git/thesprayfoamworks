@@ -105,7 +105,7 @@ export function SiteHeader() {
               ))}
             </div>
           </div>
-          <Link href="/contact" className="btnfx sfw-nav-cta">
+          <Link href="/get-a-quote" className="btnfx sfw-nav-cta">
             Get a Quote
           </Link>
         </nav>

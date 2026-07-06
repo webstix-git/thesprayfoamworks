@@ -242,9 +242,9 @@ export function ProjectPage({ page }: { page: ProjectPageData }) {
                 Every project runs on the same three priorities: the right material, a clean
                 install window, and direct communication from a local crew.
               </p>
-              <a href={siteConfig.phoneTel} className="btnfx sfw-project-button">
+              <Link href="/get-a-quote" className="btnfx sfw-project-button">
                 Talk to us →
-              </a>
+              </Link>
             </div>
             <div className="sfw-project-steps">
               {page.process.steps.map((step, index) => (
@@ -296,9 +296,9 @@ export function ProjectPage({ page }: { page: ProjectPageData }) {
               <p>{page.cta.body}</p>
             </div>
             <div className="sfw-project-final-actions">
-              <a href={siteConfig.phoneTel} className="btnfx sfw-project-final-primary">
+              <Link href="/get-a-quote" className="btnfx sfw-project-final-primary">
                 Request a Quote
-              </a>
+              </Link>
               <a href={siteConfig.phoneTel} className="btnfx sfw-project-final-secondary">
                 {siteConfig.phone}
               </a>

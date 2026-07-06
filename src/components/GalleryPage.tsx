@@ -61,9 +61,9 @@ export function GalleryPage() {
               completed across Dane County.
             </p>
             <div className="sfw-project-hero-actions">
-              <a href={siteConfig.phoneTel} className="btnfx sfw-project-cta-primary">
+              <Link href="/get-a-quote" className="btnfx sfw-project-cta-primary">
                 Get a Free Quote
-              </a>
+              </Link>
               <Link href="/services" className="btnfx sfw-project-cta-ghost">
                 View Services
               </Link>
@@ -98,7 +98,7 @@ export function GalleryPage() {
               <p>Get direct pricing on spray foam &amp; fiberglass, no middleman, no pressure.</p>
             </div>
             <div className="sfw-project-final-actions">
-              <Link href="/contact" className="btnfx sfw-project-final-primary">
+              <Link href="/get-a-quote" className="btnfx sfw-project-final-primary">
                 Request a Quote
               </Link>
               <a href={siteConfig.phoneTel} className="btnfx sfw-project-final-secondary">

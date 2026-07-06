@@ -57,11 +57,14 @@ export function QuoteRequestForm() {
             </label>
 
             <div className="sfw-contact-field">
-              <span>Phone</span>
+              <span>
+                Phone <em className="sfw-contact-required">*</em>
+              </span>
               <div className="sfw-contact-phone-row">
                 <input
                   type="tel"
                   name="Field11"
+                  required
                   maxLength={3}
                   inputMode="numeric"
                   placeholder="608"
@@ -73,6 +76,7 @@ export function QuoteRequestForm() {
                 <input
                   type="tel"
                   name="Field11-1"
+                  required
                   maxLength={3}
                   inputMode="numeric"
                   placeholder="279"
@@ -84,6 +88,7 @@ export function QuoteRequestForm() {
                 <input
                   type="tel"
                   name="Field11-2"
+                  required
                   maxLength={4}
                   inputMode="numeric"
                   placeholder="0088"
