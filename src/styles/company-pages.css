@@ -656,14 +656,8 @@
 }
 
 .sfw-company-value-icon {
-  align-items: center;
-  background: rgba(228, 20, 27, 0.12);
-  border-radius: 12px;
   color: #e4141b;
-  display: flex;
-  height: 52px;
-  justify-content: center;
-  width: 52px;
+  line-height: 0;
 }
 
 .sfw-company-value-num {

@@ -363,16 +363,9 @@
 }
 
 .sfw-card-icon {
-  align-items: center;
-  background: rgba(228, 20, 27, 0.12);
-  border-radius: 11px;
   color: #e4141b;
-  display: flex;
-  font-size: 18px;
-  height: 48px;
-  justify-content: center;
+  line-height: 0;
   margin-bottom: 18px;
-  width: 48px;
 }
 
 .sfw-card-grid h3,

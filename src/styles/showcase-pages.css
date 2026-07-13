@@ -350,15 +350,9 @@
 }
 
 .sfw-srv-icon {
-  align-items: center;
-  background: rgba(228, 20, 27, 0.12);
-  border-radius: 12px;
   color: #e4141b;
-  display: flex;
-  height: 52px;
-  justify-content: center;
+  line-height: 0;
   margin-bottom: 18px;
-  width: 52px;
 }
 
 .sfw-srv-spec-card h3 {

@@ -311,15 +311,9 @@
 }
 
 .sfw-project-feature-icon {
-  align-items: center;
-  background: rgba(228, 20, 27, 0.16);
-  border-radius: 12px;
   color: #ff5158;
-  display: flex;
-  height: 54px;
-  justify-content: center;
+  line-height: 0;
   margin-bottom: 22px;
-  width: 54px;
 }
 
 .sfw-project-feature-card h3 {
@@ -989,15 +983,9 @@ a.sfw-contact-method:hover {
 }
 
 .sfw-contact-method-icon {
-  align-items: center;
-  background: rgba(228, 20, 27, 0.12);
-  border-radius: 12px;
   color: #e4141b;
-  display: flex;
   flex-shrink: 0;
-  height: 50px;
-  justify-content: center;
-  width: 50px;
+  line-height: 0;
 }
 
 .sfw-contact-method h3 {
