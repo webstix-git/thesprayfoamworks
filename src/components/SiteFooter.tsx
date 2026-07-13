@@ -92,9 +92,6 @@ export function SiteFooter() {
             <Link href="/commercial" className="navlink">
               Commercial
             </Link>
-            <Link href="/contact" className="navlink">
-              Contact SFW
-            </Link>
           </div>
         </div>
       </div>

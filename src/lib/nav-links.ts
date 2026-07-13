@@ -38,6 +38,7 @@ export const footerCompanyLinks = [
   { label: 'Mission & Values', href: '/mission' },
   { label: 'Gallery', href: '/gallery' },
   { label: 'Testimonials', href: '/testimonials' },
+  { label: 'Contact Us', href: '/contact' },
 ];
 
 /** Label → route mapa for HTML page link auto-wiring */
