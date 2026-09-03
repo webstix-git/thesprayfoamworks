@@ -16,6 +16,7 @@ import {
   type ValueCard,
 } from '@/lib/company-pages';
 import { siteConfig } from '@/lib/site';
+import { photos } from '@/lib/project-photos';
 
 function ValueIcon({ icon }: { icon: ValueCard['icon'] }) {
   const props = {
@@ -192,7 +193,7 @@ function OurTeamContent() {
       <section className="sfw-company-section sfw-company-section-dark" id={aaron.id}>
         <div className="sfw-company-section-inner sfw-company-profile">
           <div className="sfw-company-profile-image">
-            <Image src={aaron.image} alt={aaron.name} fill className="sfw-company-image-fill" sizes="(max-width: 1024px) 100vw, 50vw" />
+            <Image src={aaron.image} alt="Spray foam insulation project by The Sprayfoam Works" fill className="sfw-company-image-fill" sizes="(max-width: 1024px) 100vw, 50vw" />
             <div className="sfw-company-profile-badge">
               <strong>{aaron.name}</strong>
               <span>{aaron.role}</span>
@@ -262,7 +263,7 @@ function HistoryContent() {
           </div>
           <div className="sfw-company-intro-image">
             <Image
-              src="/images/24e3b785-3caa-4c8c-a281-2512afdab1ff.jpg"
+              src={photos.garageShop}
               alt="The Sprayfoam Works insulation project"
               fill
               className="sfw-company-image-fill"

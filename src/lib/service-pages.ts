@@ -1,3 +1,5 @@
+import { photos } from './project-photos';
+
 export type ServicePageData = {
   slug: string;
   route: string;
@@ -24,16 +26,6 @@ export type ServicePageData = {
   ctaBody: string;
 };
 
-const sharedImages = {
-  attic: '/images/8771310d-a8c4-4f6a-990d-295c3376faa9.jpg',
-  wall: '/images/55880224-e572-4cf2-8156-f9aacb587114.jpg',
-  barn: '/images/02d84b2a-3938-456f-9253-60e2dfaeb254.jpg',
-  install: '/images/e521596f-176e-48b0-84d8-6b7b614ac354.jpg',
-  fiberglass: '/images/461db213-76cf-42ce-834c-676cd8799b94.jpg',
-  remodel: '/images/992ac372-2add-4a21-a5e1-5b1143f7651a.jpg',
-  crew: '/images/73ac49d9-3c3c-4436-bc98-d506b89106b6.jpg',
-};
-
 export const servicePages: ServicePageData[] = [
   {
     slug: 'retrofitting',
@@ -45,7 +37,7 @@ export const servicePages: ServicePageData[] = [
       'Upgrade comfort and efficiency in an existing home without turning the whole house into a construction zone.',
     metaDescription:
       'Insulation retrofitting for existing homes in Madison and Dane County. Improve comfort, drafts, and energy performance without a major remodel.',
-    heroImage: sharedImages.attic,
+    heroImage: photos.atticEaveSeal,
     imageAlt: 'Retrofitting insulation in an existing attic',
     stats: [
       { value: 'Targeted', label: 'Air leak and comfort fixes' },
@@ -66,7 +58,7 @@ export const servicePages: ServicePageData[] = [
         'Cold room and hot room troubleshooting',
         'Older home upgrades before HVAC replacement',
       ],
-      image: sharedImages.wall,
+      image: photos.wallAndFiberglassCeiling,
     },
     benefits: [
       {
@@ -87,9 +79,9 @@ export const servicePages: ServicePageData[] = [
       },
     ],
     applications: [
-      { title: 'Attics', body: 'Seal bypasses, improve R-value, and stop heat loss at the top of the home.', image: sharedImages.attic },
-      { title: 'Rim Joists', body: 'One of the leakiest areas in many homes, sealed tight with foam.', image: sharedImages.wall },
-      { title: 'Additions', body: 'Bring bonus rooms and older additions up to the comfort of the rest of the house.', image: sharedImages.remodel },
+      { title: 'Attics', body: 'Seal bypasses, improve R-value, and stop heat loss at the top of the home.', image: photos.atticFloor },
+      { title: 'Rim Joists', body: 'One of the leakiest areas in many homes, sealed tight with foam.', image: photos.basementWalls },
+      { title: 'Additions', body: 'Bring bonus rooms and older additions up to the comfort of the rest of the house.', image: photos.atticRoom },
     ],
     process: [
       { title: 'Inspect', body: 'We look for heat loss patterns, access points, ventilation concerns, and moisture risks.' },
@@ -119,7 +111,7 @@ export const servicePages: ServicePageData[] = [
       'Turn a cold metal or post-frame building into a usable, efficient shop, storage space, or work area year-round.',
     metaDescription:
       'Pole barn insulation in Dane County. Spray foam and fiberglass options for shops, garages, steel buildings, and post-frame buildings.',
-    heroImage: sharedImages.barn,
+    heroImage: photos.poleBarn,
     imageAlt: 'Insulated pole barn shop',
     stats: [
       { value: 'Year-Round', label: 'Usable shops and workspaces' },
@@ -140,7 +132,7 @@ export const servicePages: ServicePageData[] = [
         'Condensation and air leakage control',
         'Direct pricing for owner-builders and contractors',
       ],
-      image: sharedImages.install,
+      image: photos.garageShop,
     },
     benefits: [
       { title: 'Controls condensation', body: 'Closed-cell foam helps stop warm interior air from hitting cold steel and dripping back into the building.' },
@@ -149,9 +141,9 @@ export const servicePages: ServicePageData[] = [
       { title: 'Built for large areas', body: 'Our equipment and crews are set up for open spans, tall walls, and high-volume insulation work.' },
     ],
     applications: [
-      { title: 'Heated Shops', body: 'Insulation packages for workshops, garages, and hobby buildings.', image: sharedImages.barn },
-      { title: 'Equipment Storage', body: 'Protect farm equipment, trailers, tools, and seasonal gear.', image: sharedImages.install },
-      { title: 'Steel Buildings', body: 'Foam directly to metal panels for air sealing and condensation control.', image: sharedImages.wall },
+      { title: 'Heated Shops', body: 'Insulation packages for workshops, garages, and hobby buildings.', image: photos.garageShop },
+      { title: 'Equipment Storage', body: 'Protect farm equipment, trailers, tools, and seasonal gear.', image: photos.poleBarn },
+      { title: 'Steel Buildings', body: 'Foam directly to metal panels for air sealing and condensation control.', image: photos.metalRoof },
     ],
     process: [
       { title: 'Confirm Usage', body: 'We ask how the building will be heated, ventilated, and used before recommending materials.' },
@@ -181,7 +173,7 @@ export const servicePages: ServicePageData[] = [
       'Insulation upgrades timed with your remodel so walls, ceilings, and additions perform before they get closed back up.',
     metaDescription:
       'Insulation for remodels and renovations in Madison, WI. Spray foam and fiberglass installed during kitchen, basement, attic, and whole-home projects.',
-    heroImage: sharedImages.remodel,
+    heroImage: photos.basement,
     imageAlt: 'Remodel insulation project',
     stats: [
       { value: 'Right Stage', label: 'Installed before drywall and finishes' },
@@ -202,7 +194,7 @@ export const servicePages: ServicePageData[] = [
         'Sound control between rooms and floors',
         'Coordination with framing, trades, and drywall',
       ],
-      image: sharedImages.crew,
+      image: photos.metalStuds,
     },
     benefits: [
       { title: 'Fixes comfort at the source', body: 'Open assemblies let us seal gaps and cavities before finishes hide them again.' },
@@ -211,9 +203,9 @@ export const servicePages: ServicePageData[] = [
       { title: 'Protects the investment', body: 'New finishes deserve a wall system that performs behind the drywall.' },
     ],
     applications: [
-      { title: 'Basement Finishing', body: 'Comfortable lower levels with foam, batts, or hybrid assemblies.', image: sharedImages.wall },
-      { title: 'Additions', body: 'Efficient new rooms tied into older homes correctly.', image: sharedImages.remodel },
-      { title: 'Interior Sound Control', body: 'Quiet bedrooms, offices, bathrooms, and shared walls.', image: sharedImages.fiberglass },
+      { title: 'Basement Finishing', body: 'Comfortable lower levels with foam, batts, or hybrid assemblies.', image: photos.basement },
+      { title: 'Additions', body: 'Efficient new rooms tied into older homes correctly.', image: photos.atticRoom },
+      { title: 'Interior Sound Control', body: 'Quiet bedrooms, offices, bathrooms, and shared walls.', image: photos.foamAndFiberglass },
     ],
     process: [
       { title: 'Review Plans', body: 'We look at drawings, photos, or jobsite conditions to plan the right material.' },
@@ -243,7 +235,7 @@ export const servicePages: ServicePageData[] = [
       'High-performance insulation packages for new homes, additions, shops, and commercial spaces across Dane County.',
     metaDescription:
       'New construction insulation in Madison and Dane County. Spray foam, fiberglass, and hybrid insulation packages for efficient new builds.',
-    heroImage: sharedImages.install,
+    heroImage: photos.vaultedNewBuild,
     imageAlt: 'New construction insulation installation',
     stats: [
       { value: 'Plan-Based', label: 'Scope matched to assemblies' },
@@ -264,7 +256,7 @@ export const servicePages: ServicePageData[] = [
         'Builder-friendly scheduling and documentation',
         'Residential and light commercial projects',
       ],
-      image: sharedImages.attic,
+      image: photos.vaultedTruss,
     },
     benefits: [
       { title: 'Fewer comfort complaints', body: 'A tighter envelope prevents many hot room, cold room, and draft issues before occupancy.' },
@@ -273,9 +265,9 @@ export const servicePages: ServicePageData[] = [
       { title: 'Flexible material choices', body: 'Not every cavity needs the same product. We match the material to the assembly.' },
     ],
     applications: [
-      { title: 'Custom Homes', body: 'High-comfort insulation packages for efficient living spaces.', image: sharedImages.remodel },
-      { title: 'Additions', body: 'New square footage insulated right before finishes go in.', image: sharedImages.install },
-      { title: 'Commercial Shells', body: 'Warehouses, offices, and shop spaces sealed to practical specs.', image: sharedImages.barn },
+      { title: 'Custom Homes', body: 'High-comfort insulation packages for efficient living spaces.', image: photos.newBuildRoom },
+      { title: 'Additions', body: 'New square footage insulated right before finishes go in.', image: photos.vaultedAttic },
+      { title: 'Commercial Shells', body: 'Warehouses, offices, and shop spaces sealed to practical specs.', image: photos.poleBarn },
     ],
     process: [
       { title: 'Plan Review', body: 'We review plans, cavities, roof details, and performance goals.' },
@@ -305,7 +297,7 @@ export const servicePages: ServicePageData[] = [
       'Remove old, damaged, contaminated, or underperforming insulation so the space can be sealed and rebuilt correctly.',
     metaDescription:
       'Insulation removal services in Madison and Dane County. Clean out old attic or cavity insulation before air sealing and new insulation.',
-    heroImage: sharedImages.crew,
+    heroImage: photos.atticBefore,
     imageAlt: 'Insulation removal preparation',
     stats: [
       { value: 'Clean Slate', label: 'Old material removed before upgrades' },
@@ -326,7 +318,7 @@ export const servicePages: ServicePageData[] = [
         'Preparation before spray foam or fiberglass upgrades',
         'Access for air sealing and ventilation corrections',
       ],
-      image: sharedImages.attic,
+      image: photos.atticBefore,
     },
     benefits: [
       { title: 'Finds hidden issues', body: 'Removal can reveal air leaks, moisture stains, pest paths, and gaps buried under old material.' },
@@ -335,9 +327,9 @@ export const servicePages: ServicePageData[] = [
       { title: 'Sets up air sealing', body: 'A clear attic or cavity lets us seal the actual leaks before adding R-value.' },
     ],
     applications: [
-      { title: 'Attic Cleanouts', body: 'Remove old blown-in or batt insulation before sealing and replacement.', image: sharedImages.attic },
-      { title: 'Water Damage', body: 'Clear wet or compromised material that no longer performs.', image: sharedImages.wall },
-      { title: 'Pre-Retrofit Prep', body: 'Create access for a better insulation upgrade.', image: sharedImages.crew },
+      { title: 'Attic Cleanouts', body: 'Remove old blown-in or batt insulation before sealing and replacement.', image: photos.atticBefore },
+      { title: 'Water Damage', body: 'Clear wet or compromised material that no longer performs.', image: photos.atticBefore },
+      { title: 'Pre-Retrofit Prep', body: 'Create access for a better insulation upgrade.', image: photos.atticBefore },
     ],
     process: [
       { title: 'Assess Condition', body: 'We identify what needs to come out and why.' },
@@ -367,7 +359,7 @@ export const servicePages: ServicePageData[] = [
       'A practical, cost-effective insulation option for attics, walls, ceilings, and sound control when installed with care.',
     metaDescription:
       'Fiberglass insulation installation in Madison and Dane County. Batt and blown-in insulation for attics, walls, remodels, and new construction.',
-    heroImage: sharedImages.fiberglass,
+    heroImage: photos.foamAndFiberglass,
     imageAlt: 'Fiberglass insulation installed in framing',
     stats: [
       { value: 'Cost-Smart', label: 'Strong value for large areas' },
@@ -388,7 +380,7 @@ export const servicePages: ServicePageData[] = [
         'Interior sound control',
         'Hybrid systems with targeted spray foam',
       ],
-      image: sharedImages.wall,
+      image: photos.wallAndFiberglassCeiling,
     },
     benefits: [
       { title: 'Budget-friendly coverage', body: 'Fiberglass can cover large areas efficiently while still delivering strong thermal value.' },
@@ -397,9 +389,9 @@ export const servicePages: ServicePageData[] = [
       { title: 'Pairs well with foam', body: 'Use foam for air sealing and fiberglass for economical R-value where it makes sense.' },
     ],
     applications: [
-      { title: 'Attic Top-Offs', body: 'Add blown-in depth where existing insulation is low but clean.', image: sharedImages.attic },
-      { title: 'Framed Walls', body: 'Batt installs for new builds, remodels, and additions.', image: sharedImages.fiberglass },
-      { title: 'Interior Acoustics', body: 'Reduce sound transfer in bedrooms, offices, and basements.', image: sharedImages.remodel },
+      { title: 'Attic Top-Offs', body: 'Add blown-in depth where existing insulation is low but clean.', image: photos.wallAndFiberglassCeiling },
+      { title: 'Framed Walls', body: 'Batt installs for new builds, remodels, and additions.', image: photos.foamAndFiberglass },
+      { title: 'Interior Acoustics', body: 'Reduce sound transfer in bedrooms, offices, and basements.', image: photos.foamAndFiberglass },
     ],
     process: [
       { title: 'Measure The Cavity', body: 'We match product type and thickness to the space and performance goal.' },

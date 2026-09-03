@@ -1,4 +1,5 @@
 import { testimonialReviews } from './testimonials';
+import { photos } from './project-photos';
 
 export type CompanyPageSlug = 'our-team' | 'history' | 'mission' | 'testimonials';
 
@@ -138,7 +139,7 @@ export const teamMembers: TeamMember[] = [
     name: 'Aaron Hastings',
     role: 'Owner · Second-generation installer',
     featured: true,
-    image: '/images/e623003f-d8fb-486c-9d38-70a8d134bc6a.jpg',
+    image: photos.vaultedNewBuild,
     bio: 'Aaron grew up in Cottage Grove working alongside his father in the insulation trade. In 2009 he founded The Sprayfoam Works, Inc. with a straightforward goal: help people create homes and buildings that are comfortable, efficient, and built to last. He leads every project with the same hands-on standard he learned growing up in the business.',
     quote:
       'Every job gets the standard of work I\'d want in my own home, that\'s how my dad ran it, and that\'s how we still do.',
@@ -146,13 +147,13 @@ export const teamMembers: TeamMember[] = [
   {
     name: 'Field Crew',
     role: 'Experienced spray foam installers',
-    image: '/images/3ce463c3-81a1-428b-8839-3d576094c84e.jpg',
+    image: photos.garageShop,
     bio: 'Our on-site team brings years of combined experience in spray foam and fiberglass installation. From attic retrofits to pole barns and commercial builds, they show up prepared, work clean, and leave every job site better than they found it.',
   },
   {
     name: 'Project Support',
     role: 'Estimating & scheduling',
-    image: '/images/461db213-76cf-42ce-834c-676cd8799b94.jpg',
+    image: photos.wallWindow,
     bio: 'Behind every install is a team focused on clear communication, fair direct pricing, and getting you scheduled without the runaround. You talk to real people who know insulation, not a call center.',
   },
 ];
@@ -170,8 +171,8 @@ export const companyPages: CompanyPageData[] = [
       titleAccent: 'every insulated wall',
       subtitle:
         'A family-owned crew with multi-generational expertise, direct pricing, and a reputation built one honest job at a time.',
-      image: '/images/e623003f-d8fb-486c-9d38-70a8d134bc6a.jpg',
-      imageAlt: 'The Sprayfoam Works crew at a job site',
+      image: photos.vaultedNewBuild,
+      imageAlt: 'Spray foam insulation on a Sprayfoam Works job site',
     },
     breadcrumb: [
       { label: 'Home', href: '/' },
@@ -191,7 +192,7 @@ export const companyPages: CompanyPageData[] = [
       titleAccent: 'one standard',
       subtitle:
         'What started as a family trade in Cottage Grove became a trusted name in spray foam and fiberglass across Madison and Dane County.',
-      image: '/images/24e3b785-3caa-4c8c-a281-2512afdab1ff.jpg',
+      image: photos.garageShop,
       imageAlt: 'Insulation work in progress',
     },
     breadcrumb: [
@@ -212,7 +213,7 @@ export const companyPages: CompanyPageData[] = [
       titleAccent: 'not shortcuts',
       subtitle:
         'We help create healthy, durable, comfortable environments, whether it\'s a home, office, shop, or commercial building. No job is too small or too large.',
-      image: '/images/7755b2ba-adfb-484a-a8dc-2ad98bab80fa.jpg',
+      image: photos.wallCloseup,
       imageAlt: 'Spray foam insulation application',
     },
     breadcrumb: [
@@ -233,8 +234,8 @@ export const companyPages: CompanyPageData[] = [
       titleAccent: 'hire us again',
       subtitle:
         'These reviews come directly from our Google customers, homeowners, property owners, and contractors across Dane County.',
-      image: '/images/73ac49d9-3c3c-4436-bc98-d506b89106b6.jpg',
-      imageAlt: 'Happy homeowner after insulation project',
+      image: photos.peakedAttic,
+      imageAlt: 'Completed attic spray foam project',
     },
     breadcrumb: [
       { label: 'Home', href: '/' },

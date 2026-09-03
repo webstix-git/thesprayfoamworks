@@ -4,12 +4,13 @@ import { TrustStatsBar } from '@/components/TrustStatsBar';
 import { SiteEnhancements } from '@/components/SiteEnhancements';
 import { SiteFooter } from '@/components/SiteFooter';
 import { SiteHeader } from '@/components/SiteHeader';
+import { photos } from '@/lib/project-photos';
 import { siteConfig } from '@/lib/site';
 
 const img = {
-  install: '/images/e521596f-176e-48b0-84d8-6b7b614ac354.jpg',
-  fiberglass: '/images/461db213-76cf-42ce-834c-676cd8799b94.jpg',
-  hero: '/images/e623003f-d8fb-486c-9d38-70a8d134bc6a.jpg',
+  install: photos.wallCloseup,
+  fiberglass: photos.foamAndFiberglass,
+  hero: photos.vaultedNewBuild,
 };
 
 const coreServices = [

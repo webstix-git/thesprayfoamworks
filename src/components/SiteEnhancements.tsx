@@ -189,6 +189,55 @@ function markResponsiveTargets(page: HTMLElement) {
   });
 }
 
+function setupHeroSlideshow(page: HTMLElement) {
+  const hero = page.querySelector('.sfw-hero-slideshow') as HTMLElement | null;
+  if (!hero || hero.dataset.slideshowReady === 'true') return;
+
+  const slides = Array.from(hero.querySelectorAll('.sfw-hero-slide'));
+  const dots = Array.from(hero.querySelectorAll('.sfw-hero-dot'));
+  if (slides.length < 2 || slides.length !== dots.length) return;
+
+  hero.dataset.slideshowReady = 'true';
+
+  let index = Math.max(0, slides.findIndex((slide) => slide.classList.contains('is-active')));
+  let timer: number | undefined;
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  const show = (next: number) => {
+    index = ((next % slides.length) + slides.length) % slides.length;
+    slides.forEach((slide, i) => slide.classList.toggle('is-active', i === index));
+    dots.forEach((dot, i) => {
+      const active = i === index;
+      dot.classList.toggle('is-active', active);
+      dot.setAttribute('aria-selected', active ? 'true' : 'false');
+    });
+  };
+
+  const stop = () => {
+    if (timer !== undefined) {
+      window.clearInterval(timer);
+      timer = undefined;
+    }
+  };
+
+  const start = () => {
+    if (reduceMotion) return;
+    stop();
+    timer = window.setInterval(() => show(index + 1), 5500);
+  };
+
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => {
+      show(i);
+      start();
+    });
+  });
+
+  hero.addEventListener('mouseenter', stop);
+  hero.addEventListener('mouseleave', start);
+  start();
+}
+
 export function SiteEnhancements({ sticky = true }: SiteEnhancementsProps) {
   useEffect(() => {
     const header = document.getElementById('siteHeader');
@@ -198,6 +247,9 @@ export function SiteEnhancements({ sticky = true }: SiteEnhancementsProps) {
       page.dataset.enhanced = 'true';
       markResponsiveTargets(page);
       setupGalleryLightbox(page);
+      setupHeroSlideshow(page);
+    } else if (page) {
+      setupHeroSlideshow(page);
     }
 
     if (header) {

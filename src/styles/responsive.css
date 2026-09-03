@@ -273,6 +273,14 @@ body.mobile-nav-open .mobile-nav-toggle span:nth-child(3) {
     margin-top: -80px !important;
   }
 
+  .sfw-hero-dots {
+    bottom: 20px;
+  }
+
+  .sfw-hero-slideshow .hero-rise {
+    padding-bottom: 72px !important;
+  }
+
   .sfw-hero[style*='890px'] .sfw-hero-content,
   .sfw-hero[style*='890px'] .hero-rise {
     justify-content: flex-start !important;
@@ -382,6 +390,10 @@ body.mobile-nav-open .mobile-nav-toggle span:nth-child(3) {
   .sfw-hero {
     min-height: 480px !important;
     margin-top: -72px !important;
+  }
+
+  .sfw-hero-slideshow .hero-rise {
+    padding-bottom: 64px !important;
   }
 
   .sfw-inner-hero,

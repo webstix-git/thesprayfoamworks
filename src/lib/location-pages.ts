@@ -1,4 +1,5 @@
 import type { ProjectPageData } from '@/lib/project-pages';
+import { photos } from '@/lib/project-photos';
 
 export type LocationPageSlug =
   | 'cottage-grove'
@@ -8,15 +9,15 @@ export type LocationPageSlug =
   | 'fitchburg';
 
 const img = {
-  attic: '/images/8771310d-a8c4-4f6a-990d-295c3376faa9.jpg',
-  wall: '/images/55880224-e572-4cf2-8156-f9aacb587114.jpg',
-  barn: '/images/02d84b2a-3938-456f-9253-60e2dfaeb254.jpg',
-  install: '/images/e521596f-176e-48b0-84d8-6b7b614ac354.jpg',
-  fiberglass: '/images/461db213-76cf-42ce-834c-676cd8799b94.jpg',
-  remodel: '/images/992ac372-2add-4a21-a5e1-5b1143f7651a.jpg',
-  crew: '/images/73ac49d9-3c3c-4436-bc98-d506b89106b6.jpg',
-  hero1: '/images/e623003f-d8fb-486c-9d38-70a8d134bc6a.jpg',
-  hero2: '/images/24e3b785-3caa-4c8c-a281-2512afdab1ff.jpg',
+  attic: photos.peakedAttic,
+  wall: photos.wallWindow,
+  barn: photos.poleBarn,
+  install: photos.vaultedNewBuild,
+  fiberglass: photos.foamAndFiberglass,
+  remodel: photos.newBuildRoom,
+  crew: photos.garageShop,
+  hero1: photos.vaultedNewBuild,
+  hero2: photos.garageShop,
 };
 
 type LocationInput = {

@@ -1,37 +1,12 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { GalleryGrid, type GalleryItem } from '@/components/GalleryGrid';
+import { GalleryGrid } from '@/components/GalleryGrid';
 import { SiteEnhancements } from '@/components/SiteEnhancements';
 import { SiteFooter } from '@/components/SiteFooter';
 import { SiteHeader } from '@/components/SiteHeader';
 import { TrustStatsBar } from '@/components/TrustStatsBar';
+import { galleryPhotos, photos } from '@/lib/project-photos';
 import { siteConfig } from '@/lib/site';
-
-const img = {
-  wall: '/images/55880224-e572-4cf2-8156-f9aacb587114.jpg',
-  attic: '/images/8771310d-a8c4-4f6a-990d-295c3376faa9.jpg',
-  barn: '/images/02d84b2a-3938-456f-9253-60e2dfaeb254.jpg',
-  remodel: '/images/992ac372-2add-4a21-a5e1-5b1143f7651a.jpg',
-  install: '/images/e521596f-176e-48b0-84d8-6b7b614ac354.jpg',
-  fiberglass: '/images/461db213-76cf-42ce-834c-676cd8799b94.jpg',
-  hero1: '/images/e623003f-d8fb-486c-9d38-70a8d134bc6a.jpg',
-  hero2: '/images/24e3b785-3caa-4c8c-a281-2512afdab1ff.jpg',
-};
-
-const items: GalleryItem[] = [
-  { src: img.wall, caption: 'Closed-cell wall foam', tall: true },
-  { src: img.attic, caption: 'Attic air-sealing' },
-  { src: img.barn, caption: 'Steel building' },
-  { src: img.remodel, caption: 'Remodel insulation' },
-  { src: img.hero1, caption: 'New construction', tall: true },
-  { src: img.fiberglass, caption: 'Blown-in attic' },
-  { src: img.barn, caption: 'Pole barn shop', tall: true },
-  { src: img.install, caption: 'Rim joist seal' },
-  { src: img.remodel, caption: 'Basement remodel' },
-  { src: img.hero2, caption: 'New build framing' },
-  { src: img.barn, caption: 'Warehouse deck' },
-  { src: img.wall, caption: 'Cathedral ceiling' },
-];
 
 export function GalleryPage() {
   return (
@@ -42,7 +17,7 @@ export function GalleryPage() {
       <main>
         <div className="sfw-project-hero">
           <Image
-            src={img.hero2}
+            src={photos.vaultedTruss}
             alt="SFW project gallery"
             fill
             priority
@@ -86,7 +61,7 @@ export function GalleryPage() {
         </div>
 
         <section className="sfw-gal-wrap">
-          <GalleryGrid items={items} />
+          <GalleryGrid items={galleryPhotos} />
         </section>
 
         <TrustStatsBar />

@@ -1,3 +1,5 @@
+import { photos } from './project-photos';
+
 export type ProjectFeatureIcon =
   | 'comfort'
   | 'savings'
@@ -69,18 +71,6 @@ export type ProjectPageData = {
   };
 };
 
-const img = {
-  attic: '/images/8771310d-a8c4-4f6a-990d-295c3376faa9.jpg',
-  wall: '/images/55880224-e572-4cf2-8156-f9aacb587114.jpg',
-  barn: '/images/02d84b2a-3938-456f-9253-60e2dfaeb254.jpg',
-  install: '/images/e521596f-176e-48b0-84d8-6b7b614ac354.jpg',
-  fiberglass: '/images/461db213-76cf-42ce-834c-676cd8799b94.jpg',
-  remodel: '/images/992ac372-2add-4a21-a5e1-5b1143f7651a.jpg',
-  crew: '/images/73ac49d9-3c3c-4436-bc98-d506b89106b6.jpg',
-  hero1: '/images/e623003f-d8fb-486c-9d38-70a8d134bc6a.jpg',
-  hero2: '/images/24e3b785-3caa-4c8c-a281-2512afdab1ff.jpg',
-};
-
 export const projectPages: ProjectPageData[] = [
   {
     slug: 'retrofitting',
@@ -94,7 +84,7 @@ export const projectPages: ProjectPageData[] = [
       titleAccent: 'Insulation',
       subtitle:
         'Got an older Dane County home that never quite feels comfortable? We track down the drafts, seal the leaks, and add insulation where it actually counts, no full remodel required.',
-      image: img.attic,
+      image: photos.atticEaveSeal,
       imageAlt: 'Retrofit insulation being added to an existing attic',
     },
     breadcrumb: [
@@ -115,7 +105,7 @@ export const projectPages: ProjectPageData[] = [
         'Cold-room and hot-room troubleshooting',
         'Smart upgrades before a new furnace or AC',
       ],
-      image: img.wall,
+      image: photos.wallAndFiberglassCeiling,
       imageAlt: 'Insulation upgrade inside an existing wall cavity',
       badgeValue: '17 yrs',
       badgeLabel: 'Improving Dane County homes',
@@ -157,17 +147,17 @@ export const projectPages: ProjectPageData[] = [
         {
           title: 'Attics',
           body: 'Seal the hidden bypasses and add R-value to stop heat from escaping at the top of the house.',
-          image: img.attic,
+          image: photos.atticFloor,
         },
         {
           title: 'Rim Joists',
           body: 'One of the leakiest areas in most homes, sealed tight with closed-cell foam.',
-          image: img.wall,
+          image: photos.basementWalls,
         },
         {
           title: 'Additions & Bonus Rooms',
           body: 'Bring older additions and over-garage rooms up to the comfort of the rest of the home.',
-          image: img.remodel,
+          image: photos.atticRoom,
         },
       ],
     },
@@ -233,7 +223,7 @@ export const projectPages: ProjectPageData[] = [
       titleAccent: 'Insulation',
       subtitle:
         'A remodel is your one clean shot at getting insulation right. While the walls are open, we seal and insulate so your finished space performs for decades, not just looks good on day one.',
-      image: img.remodel,
+      image: photos.basement,
       imageAlt: 'Remodel in progress with open walls ready for insulation',
     },
     breadcrumb: [
@@ -254,8 +244,8 @@ export const projectPages: ProjectPageData[] = [
         'Sound control between rooms and floors',
         'Coordinated with framing, trades, and drywall',
       ],
-      image: img.crew,
-      imageAlt: 'The Sprayfoam Works crew working a remodel project',
+      image: photos.metalStuds,
+      imageAlt: 'Open remodel walls insulated with spray foam',
       badgeValue: 'On Time',
       badgeLabel: 'Built around your remodel schedule',
     },
@@ -296,17 +286,17 @@ export const projectPages: ProjectPageData[] = [
         {
           title: 'Basement Finishing',
           body: 'Warm, dry, comfortable lower levels using foam, batts, or a smart hybrid assembly.',
-          image: img.wall,
+          image: photos.basement,
         },
         {
           title: 'Additions',
           body: 'New square footage tied into an older home the right way, so it never feels like the cold room.',
-          image: img.remodel,
+          image: photos.atticRoom,
         },
         {
           title: 'Interior Sound Control',
           body: 'Quiet bedrooms, home offices, bathrooms, and shared walls where privacy matters.',
-          image: img.fiberglass,
+          image: photos.foamAndFiberglass,
         },
       ],
     },
@@ -372,7 +362,7 @@ export const projectPages: ProjectPageData[] = [
       titleAccent: 'Insulation',
       subtitle:
         'The best time to solve comfort and energy problems is before they ever start. We build high-performance insulation into the shell of your new home or building, clean, on schedule, and ready for inspection.',
-      image: img.install,
+      image: photos.vaultedNewBuild,
       imageAlt: 'Spray foam insulation being installed in new construction',
     },
     breadcrumb: [
@@ -393,7 +383,7 @@ export const projectPages: ProjectPageData[] = [
         'Builder-friendly scheduling and documentation',
         'Residential and light commercial projects',
       ],
-      image: img.attic,
+      image: photos.vaultedTruss,
       imageAlt: 'New construction attic insulated with spray foam',
       badgeValue: 'Code-Ready',
       badgeLabel: 'Clean installs for inspection',
@@ -435,17 +425,17 @@ export const projectPages: ProjectPageData[] = [
         {
           title: 'Custom Homes',
           body: 'High-comfort, high-efficiency insulation packages designed around the way the home is built.',
-          image: img.remodel,
+          image: photos.newBuildRoom,
         },
         {
           title: 'Additions',
           body: 'New square footage insulated correctly before finishes go in, so it matches the main house.',
-          image: img.install,
+          image: photos.vaultedAttic,
         },
         {
           title: 'Commercial Shells',
           body: 'Warehouses, offices, and shop spaces air sealed and insulated to practical, real-world specs.',
-          image: img.barn,
+          image: photos.poleBarn,
         },
       ],
     },

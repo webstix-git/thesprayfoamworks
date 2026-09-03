@@ -5,14 +5,15 @@ import { SiteEnhancements } from '@/components/SiteEnhancements';
 import { SiteFooter } from '@/components/SiteFooter';
 import { SiteHeader } from '@/components/SiteHeader';
 import { locationNavLinks } from '@/lib/nav-links';
+import { photos } from '@/lib/project-photos';
 import { siteConfig } from '@/lib/site';
 
 const img = {
-  hero: '/images/e623003f-d8fb-486c-9d38-70a8d134bc6a.jpg',
-  cottageGrove: '/images/e623003f-d8fb-486c-9d38-70a8d134bc6a.jpg',
-  madison: '/images/24e3b785-3caa-4c8c-a281-2512afdab1ff.jpg',
-  community: '/images/992ac372-2add-4a21-a5e1-5b1143f7651a.jpg',
-  local: '/images/992ac372-2add-4a21-a5e1-5b1143f7651a.jpg',
+  hero: photos.vaultedNewBuild,
+  cottageGrove: photos.garageShop,
+  madison: photos.newBuildRoom,
+  community: photos.wallWindow,
+  local: photos.wallWindow,
 };
 
 const offices = [
@@ -77,7 +78,7 @@ export function LocationsPage() {
 
       <main>
         <div className="sfw-loc-hero">
-          <Image src={img.hero} alt="Dane County service area" fill priority sizes="100vw" />
+          <Image src={img.hero} alt="Spray foam insulation across Dane County" fill priority sizes="100vw" />
           <div className="sfw-loc-hero-overlay" />
           <div className="sfw-loc-hero-content hero-rise">
             <span className="sfw-loc-eyebrow">Service Areas</span>
@@ -175,7 +176,7 @@ export function LocationsPage() {
         <section className="sfw-loc-why">
           <div className="sfw-loc-why-inner">
             <div className="sfw-loc-why-image">
-              <Image src={img.local} alt="Local insulation crew at work" fill sizes="(max-width: 1024px) 100vw, 50vw" />
+              <Image src={img.local} alt="Spray foam insulation in a Dane County home" fill sizes="(max-width: 1024px) 100vw, 50vw" />
             </div>
             <div>
               <span className="sfw-loc-label">Why Local Matters</span>

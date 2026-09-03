@@ -82,9 +82,13 @@
       </header>
 
       <!-- hero -->
-      <div style="position: relative; min-height: 890px; margin-top: -152px; overflow: hidden; height: 890px">
-        <img src="/images/183c4163-0348-41dc-a820-33a1711c1094.jpg" alt="Spray foam insulation in attic" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
-        <div style="position:absolute;inset:0;background:linear-gradient(100deg,rgba(6,6,7,.94) 0%,rgba(6,6,7,.82) 42%,rgba(6,6,7,.28) 100%);"></div>
+      <div class="sfw-hero sfw-hero-slideshow" style="position: relative; min-height: 890px; margin-top: -152px; overflow: hidden; height: 890px">
+        <div class="sfw-hero-slides" aria-hidden="true">
+          <img class="sfw-hero-slide is-active" src="/images/hero/slide-1.jpg" alt="" width="1920" height="1080">
+          <img class="sfw-hero-slide" src="/images/hero/slide-2.jpg" alt="" width="1920" height="1080">
+          <img class="sfw-hero-slide" src="/images/hero/slide-3.jpg" alt="" width="1920" height="1080">
+        </div>
+        <div class="sfw-hero-slideshow-overlay" aria-hidden="true"></div>
         <div style="position: absolute; left: 0; bottom: 0; width: 6px; height: 100%; background: #E4141B; display: none"></div>
         <div class="hero-rise" style="position: relative; min-height: 840px; display: flex; flex-direction: column; justify-content: center; padding: 152px 72px 60px; max-width: calc(900px + max(0px,calc((100% - 1380px)/2))); padding-left: max(72px,calc((100% - 1380px)/2)); top: 40px">
           <div style="display:inline-flex;align-items:center;gap:10px;margin-bottom:22px;">
@@ -102,6 +106,11 @@
             <div style="display: flex; align-items: center; gap: 9px; color: #e9eaee; font-size: 16px; font-weight: 600"><span style="color:#E4141B;font-size:17px;">✓</span>Direct pricing, no middleman</div>
             <div style="display: flex; align-items: center; gap: 9px; color: #e9eaee; font-size: 16px; font-weight: 600"><span style="color:#E4141B;font-size:17px;">✓</span>Any job size, big or small</div>
           </div>
+        </div>
+        <div class="sfw-hero-dots" role="tablist" aria-label="Hero photos">
+          <button type="button" class="sfw-hero-dot is-active" role="tab" aria-selected="true" aria-label="Uninsulated attic"></button>
+          <button type="button" class="sfw-hero-dot" role="tab" aria-selected="false" aria-label="Insulated attic"></button>
+          <button type="button" class="sfw-hero-dot" role="tab" aria-selected="false" aria-label="Insulated shop"></button>
         </div>
       </div>
 
@@ -135,7 +144,7 @@
         </div>
         <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;">
           <a href="#" class="scard lift" style="grid-column:span 1;position:relative;border-radius:14px;overflow:hidden;min-height:320px;display:block;">
-            <img class="gimg" src="/images/3ce463c3-81a1-428b-8839-3d576094c84e.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+            <img class="gimg" src="/images/projects/wall-cavity-closeup.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
             <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15),rgba(0,0,0,.9));"></div>
             <div class="sfw-core-service-badge" style="position: absolute; top: 16px; left: 16px; background: #E4141B; color: #fff; font-family: 'Archivo'; font-weight: 800; font-size: 12px; letter-spacing: .12em; padding: 6px 11px; border-radius: 5px">CORE SERVICE</div>
             <div style="position:absolute;left:22px;right:22px;bottom:22px;">
@@ -144,7 +153,7 @@
             </div>
           </a>
           <a href="#" class="scard lift" style="position:relative;border-radius:14px;overflow:hidden;min-height:320px;display:block;">
-            <img class="gimg" src="/images/461db213-76cf-42ce-834c-676cd8799b94.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+            <img class="gimg" src="/images/projects/foam-and-fiberglass.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
             <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15),rgba(0,0,0,.9));"></div>
             <div class="sfw-core-service-badge" style="position: absolute; top: 16px; left: 16px; background: #E4141B; color: #fff; font-family: 'Archivo'; font-weight: 800; font-size: 12px; letter-spacing: .12em; padding: 6px 11px; border-radius: 5px">CORE SERVICE</div>
             <div style="position:absolute;left:22px;right:22px;bottom:22px;">
@@ -153,7 +162,7 @@
             </div>
           </a>
           <a href="#" class="scard lift" style="position:relative;border-radius:14px;overflow:hidden;min-height:320px;display:block;">
-            <img class="gimg" src="/images/7755b2ba-adfb-484a-a8dc-2ad98bab80fa.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+            <img class="gimg" src="/images/projects/pole-barn-interior.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
             <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15),rgba(0,0,0,.9));"></div>
             <div style="position:absolute;left:22px;right:22px;bottom:22px;">
               <h3 style="font-family:'Oswald',sans-serif;font-weight:600;color:#fff;font-size:26px;margin:0 0 8px;">Pole Barns</h3>
@@ -191,7 +200,7 @@
       <!-- why us / founder -->
       <div style="background:#131417;padding:88px max(56px,calc((100% - 1380px)/2));display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;">
         <div style="position:relative;border-radius:16px;overflow:hidden;height:520px;">
-          <img src="/images/73ac49d9-3c3c-4436-bc98-d506b89106b6.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+          <img src="/images/projects/garage-shop-foam.jpg" alt="Insulated shop project" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
           <div style="position:absolute;left:24px;bottom:24px;right:24px;background:rgba(11,11,12,.86);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:22px 24px;">
             <div style="color:#fff;font-family:'Archivo';font-weight:800;font-size:19px;">Aaron Hastings</div>
             <div style="color: #C1C1C1; font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; margin-top: 3px">Owner · Second-generation installer</div>
@@ -220,7 +229,7 @@
         </div>
         <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:22px;">
           <a href="#" class="scard lift" style="position:relative;border-radius:16px;overflow:hidden;height:380px;display:block;">
-            <img class="gimg" src="/images/992ac372-2add-4a21-a5e1-5b1143f7651a.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+            <img class="gimg" src="/images/projects/new-build-room.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
             <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.1),rgba(0,0,0,.88));"></div>
             <div style="position:absolute;left:26px;right:26px;bottom:26px;">
               <h3 style="font-family:'Oswald',sans-serif;font-weight:600;color:#fff;font-size:32px;margin:0 0 8px;text-transform:uppercase;">Residential</h3>
@@ -229,7 +238,7 @@
             </div>
           </a>
           <a href="#" class="scard lift" style="position:relative;border-radius:16px;overflow:hidden;height:380px;display:block;">
-            <img class="gimg" src="/images/461db213-76cf-42ce-834c-676cd8799b94.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+            <img class="gimg" src="/images/projects/attic-eave-seal.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
             <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.1),rgba(0,0,0,.88));"></div>
             <div style="position:absolute;left:26px;right:26px;bottom:26px;">
               <h3 style="font-family:'Oswald',sans-serif;font-weight:600;color:#fff;font-size:32px;margin:0 0 8px;text-transform:uppercase;">Retrofit</h3>
@@ -238,7 +247,7 @@
             </div>
           </a>
           <a href="#" class="scard lift" style="position:relative;border-radius:16px;overflow:hidden;height:380px;display:block;">
-            <img class="gimg" src="/images/7755b2ba-adfb-484a-a8dc-2ad98bab80fa.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+            <img class="gimg" src="/images/projects/commercial-wall-foam.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
             <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.1),rgba(0,0,0,.88));"></div>
             <div style="position:absolute;left:26px;right:26px;bottom:26px;">
               <h3 style="font-family:'Oswald',sans-serif;font-weight:600;color:#fff;font-size:32px;margin:0 0 8px;text-transform:uppercase;">Commercial</h3>
@@ -256,11 +265,11 @@
           <h2 style="font-family:'Oswald',sans-serif;font-weight:600;color:#0B0B0C;font-size:48px;line-height:1;margin:0;text-transform:uppercase;">Straight from the job site</h2>
         </div>
         <div style="display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:220px 220px;gap:14px;">
-          <div class="gcell" style="grid-row:span 2;border-radius:14px;overflow:hidden;position:relative;"><img class="gimg" src="/images/3ce463c3-81a1-428b-8839-3d576094c84e.jpg" style="width:100%;height:100%;object-fit:cover;"></div>
-          <div class="gcell" style="border-radius:14px;overflow:hidden;"><img class="gimg" src="/images/461db213-76cf-42ce-834c-676cd8799b94.jpg" style="width:100%;height:100%;object-fit:cover;"></div>
-          <div class="gcell" style="border-radius:14px;overflow:hidden;"><img class="gimg" src="/images/7755b2ba-adfb-484a-a8dc-2ad98bab80fa.jpg" style="width:100%;height:100%;object-fit:cover;"></div>
-          <div class="gcell" style="border-radius:14px;overflow:hidden;"><img class="gimg" src="/images/73ac49d9-3c3c-4436-bc98-d506b89106b6.jpg" style="width:100%;height:100%;object-fit:cover;"></div>
-          <div class="gcell" style="border-radius:14px;overflow:hidden;"><img class="gimg" src="/images/992ac372-2add-4a21-a5e1-5b1143f7651a.jpg" style="width:100%;height:100%;object-fit:cover;"></div>
+          <div class="gcell" style="grid-row:span 2;border-radius:14px;overflow:hidden;position:relative;"><img class="gimg" src="/images/projects/vaulted-new-build.jpg" alt="Vaulted new construction spray foam" style="width:100%;height:100%;object-fit:cover;"></div>
+          <div class="gcell" style="border-radius:14px;overflow:hidden;"><img class="gimg" src="/images/projects/wall-window-foam.jpg" alt="Residential wall spray foam" style="width:100%;height:100%;object-fit:cover;"></div>
+          <div class="gcell" style="border-radius:14px;overflow:hidden;"><img class="gimg" src="/images/projects/pole-barn-interior.jpg" alt="Pole barn spray foam" style="width:100%;height:100%;object-fit:cover;"></div>
+          <div class="gcell" style="border-radius:14px;overflow:hidden;"><img class="gimg" src="/images/projects/peaked-attic-foam.jpg" alt="Attic roof-deck spray foam" style="width:100%;height:100%;object-fit:cover;"></div>
+          <div class="gcell" style="border-radius:14px;overflow:hidden;"><img class="gimg" src="/images/projects/basement-foam.jpg" alt="Basement remodel spray foam" style="width:100%;height:100%;object-fit:cover;"></div>
         </div>
         <div style="display:flex;justify-content:center;margin-top:36px;">
           <a href="/gallery" class="btnfx sfw-company-button" style="display:inline-block;background:#E4141B;color:#fff;font-family:'Archivo';font-weight:800;font-size:15px;padding:15px 28px;border-radius:9px;">View more photos</a>

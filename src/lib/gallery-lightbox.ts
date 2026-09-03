@@ -1,9 +1,9 @@
 const CAPTIONS: Record<string, string> = {
-  '/images/3ce463c3-81a1-428b-8839-3d576094c84e.jpg': 'Spray foam installation',
-  '/images/461db213-76cf-42ce-834c-676cd8799b94.jpg': 'Blown-in attic',
-  '/images/7755b2ba-adfb-484a-a8dc-2ad98bab80fa.jpg': 'Wall insulation',
-  '/images/73ac49d9-3c3c-4436-bc98-d506b89106b6.jpg': 'Rim joist seal',
-  '/images/992ac372-2add-4a21-a5e1-5b1143f7651a.jpg': 'Remodel insulation',
+  '/images/projects/vaulted-new-build.jpg': 'Vaulted new construction',
+  '/images/projects/wall-window-foam.jpg': 'Residential wall spray foam',
+  '/images/projects/pole-barn-interior.jpg': 'Pole barn spray foam',
+  '/images/projects/peaked-attic-foam.jpg': 'Attic roof-deck spray foam',
+  '/images/projects/basement-foam.jpg': 'Basement remodel spray foam',
 };
 
 type LightboxState = {
