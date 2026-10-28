@@ -2,7 +2,7 @@ const { execSync, spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-const PORT = 3000;
+const PORT = Number(process.env.PORT || 3001);
 const root = path.join(__dirname, '..');
 
 function run(command) {
@@ -34,7 +34,7 @@ function killPort(port) {
   }
 }
 
-for (const port of [3000, 3001, 3002, 3003]) {
+for (const port of [PORT, 3000, 3001, 3002, 3003]) {
   killPort(port);
 }
 

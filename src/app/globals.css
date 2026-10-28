@@ -10,11 +10,44 @@
 @import '../styles/showcase-pages.css';
 @import '../styles/locations-pages.css';
 
+/* Original site typography, served locally so it is consistent and fast. */
+@font-face {
+  font-family: 'Anton';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/images/bd4faaa7-2665-4351-86c1-ef4a08b04259.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url('/images/db6cc3ce-ba3f-4466-b92a-4a28cefe65a0.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: swap;
+  src: url('/images/8738f6cd-01ac-46d5-ac0b-3eb3cd61dddb.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('/images/49dea1f2-d0d8-491e-a335-f75687e9c583.woff2') format('woff2');
+}
+
 :root {
-  --font-anton: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  --font-archivo: Arial, Helvetica, sans-serif;
-  --font-hanken: Arial, Helvetica, sans-serif;
-  --font-oswald: 'Arial Narrow', Arial, Helvetica, sans-serif;
+  --font-anton: 'Anton', sans-serif;
+  --font-archivo: 'Archivo', sans-serif;
+  --font-hanken: 'Hanken Grotesk', sans-serif;
+  --font-oswald: 'Oswald', sans-serif;
 }
 
 html {
