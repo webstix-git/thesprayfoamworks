@@ -34,5 +34,36 @@ export function stripSiteChrome(html: string): string {
     }
   }
 
-  return result.trim();
+  return optimizeEmbeddedImages(result.trim());
+}
+
+/**
+ * The legacy page content is rendered from HTML strings, so those images do
+ * not pass through Next's image component. Keep the first hero frame eager,
+ * but defer every other embedded image until it is near the viewport.
+ */
+function optimizeEmbeddedImages(html: string): string {
+  let firstHeroSeen = false;
+
+  return html.replace(/<img\b[^>]*>/gi, (tag) => {
+    const isHero = /class=["'][^"']*\bsfw-hero-slide\b/i.test(tag);
+    const isFirstHero = isHero && !firstHeroSeen;
+
+    if (isHero) {
+      firstHeroSeen = true;
+    }
+
+    let optimized = tag;
+    if (!/\sloading\s*=/i.test(optimized)) {
+      optimized = optimized.replace(/\s*\/?>(\s*)$/i, ` loading="${isFirstHero ? 'eager' : 'lazy'}"$&`);
+    }
+    if (!/\sdecoding\s*=/i.test(optimized)) {
+      optimized = optimized.replace(/\s*\/?>(\s*)$/i, ' decoding="async"$&');
+    }
+    if (isFirstHero && !/\sfetchpriority\s*=/i.test(optimized)) {
+      optimized = optimized.replace(/\s*\/?>(\s*)$/i, ' fetchpriority="high"$&');
+    }
+
+    return optimized;
+  });
 }
