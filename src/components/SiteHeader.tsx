@@ -90,7 +90,7 @@ export function SiteHeader() {
           <Link href="/gallery" className="navlink">
             Gallery
           </Link>
-          <div className="has-dd">
+          <div className="has-dd" hidden>
             <Link href="/locations" className="navlink">
               Locations <span className="sfw-dd-caret">▼</span>
             </Link>

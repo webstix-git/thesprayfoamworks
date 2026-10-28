@@ -10,6 +10,13 @@
 @import '../styles/showcase-pages.css';
 @import '../styles/locations-pages.css';
 
+:root {
+  --font-anton: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  --font-archivo: Arial, Helvetica, sans-serif;
+  --font-hanken: Arial, Helvetica, sans-serif;
+  --font-oswald: 'Arial Narrow', Arial, Helvetica, sans-serif;
+}
+
 html {
   scroll-behavior: smooth;
 }

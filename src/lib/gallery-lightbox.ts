@@ -9,7 +9,6 @@ const CAPTIONS: Record<string, string> = {
 type LightboxState = {
   root: HTMLDivElement;
   img: HTMLImageElement;
-  cap: HTMLDivElement;
   items: { src: string; caption: string }[];
   active: number | null;
 };
@@ -37,7 +36,6 @@ function showLightbox(index: number) {
   const item = lb.items[next];
   lb.img.src = item.src;
   lb.img.alt = item.caption;
-  lb.cap.textContent = item.caption;
   lb.root.classList.add('open');
   lb.root.setAttribute('aria-hidden', 'false');
   document.body.style.overflow = 'hidden';
@@ -54,11 +52,9 @@ function ensureLightbox(): LightboxState {
     <button type="button" class="sfw-lightbox-btn sfw-lightbox-nav sfw-lightbox-prev" aria-label="Previous image">‹</button>
     <button type="button" class="sfw-lightbox-btn sfw-lightbox-nav sfw-lightbox-next" aria-label="Next image">›</button>
     <img class="sfw-lightbox-img" alt="" />
-    <div class="sfw-lightbox-cap"></div>
   `;
 
   const img = root.querySelector('.sfw-lightbox-img') as HTMLImageElement;
-  const cap = root.querySelector('.sfw-lightbox-cap') as HTMLDivElement;
 
   root.querySelector('.sfw-lightbox-close')?.addEventListener('click', closeLightbox);
   root.querySelector('.sfw-lightbox-prev')?.addEventListener('click', () => {
@@ -79,7 +75,7 @@ function ensureLightbox(): LightboxState {
     else if (event.key === 'ArrowLeft') showLightbox(lightbox.active - 1);
   });
 
-  lightbox = { root, img, cap, items: [], active: null };
+  lightbox = { root, img, items: [], active: null };
   document.body.appendChild(root);
   return lightbox;
 }

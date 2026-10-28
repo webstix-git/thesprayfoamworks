@@ -53,6 +53,7 @@ body.mobile-nav-open #siteHeader {
   .site-nav-logo img,
   .site-nav-logo .sfw-logo {
     height: 72px !important;
+    margin-top: 0 !important;
     padding: 6px !important;
     width: auto !important;
   }
@@ -418,6 +419,27 @@ body.mobile-nav-open .mobile-nav-toggle span:nth-child(3) {
   .sfw-service-hero-content {
     padding: 112px 20px 40px !important;
     padding-left: 20px !important;
+  }
+
+  .sfw-thank-you-hero,
+  .sfw-thank-you-content {
+    min-height: 480px;
+  }
+
+  .sfw-thank-you-content {
+    padding: 112px 20px 40px !important;
+  }
+
+  .sfw-thank-you-section {
+    padding: 64px 20px !important;
+  }
+
+  .sfw-thank-you-message h2 {
+    font-size: 42px;
+  }
+
+  .sfw-thank-you-message p {
+    font-size: 17px;
   }
 
   .sfw-hero .hero-rise p,

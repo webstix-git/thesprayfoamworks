@@ -455,19 +455,6 @@
   transition: opacity 0.25s ease;
 }
 
-.sfw-gal-cap {
-  bottom: 16px;
-  color: #fff;
-  font-family: var(--font-oswald), sans-serif;
-  font-size: 19px;
-  font-weight: 600;
-  left: 18px;
-  opacity: 0;
-  position: absolute;
-  right: 18px;
-  transition: opacity 0.25s ease;
-}
-
 .sfw-gal-zoom {
   align-items: center;
   backdrop-filter: blur(4px);
@@ -486,7 +473,6 @@
 }
 
 .sfw-gal-cell:hover .sfw-gal-shade,
-.sfw-gal-cell:hover .sfw-gal-cap,
 .sfw-gal-cell:hover .sfw-gal-zoom {
   opacity: 1;
 }
@@ -553,19 +539,6 @@
 
 .sfw-lightbox.open .sfw-lightbox-img {
   transform: scale(1);
-}
-
-.sfw-lightbox-cap {
-  bottom: 34px;
-  color: #fff;
-  font-family: var(--font-oswald), sans-serif;
-  font-size: 20px;
-  font-weight: 600;
-  left: 0;
-  letter-spacing: 0.02em;
-  position: absolute;
-  right: 0;
-  text-align: center;
 }
 
 .sfw-lightbox-btn {

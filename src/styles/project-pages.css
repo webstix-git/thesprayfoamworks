@@ -612,6 +612,49 @@
 }
 
 /* ── Contact page ─────────────────────────────────────── */
+.sfw-thank-you-hero {
+  background:
+    linear-gradient(100deg, rgba(6, 6, 7, 0.94) 0%, rgba(6, 6, 7, 0.76) 48%, rgba(6, 6, 7, 0.42) 100%),
+    url('/images/hero/slide-2.jpg') center / cover;
+  min-height: 620px;
+}
+
+.sfw-thank-you-content {
+  min-height: 620px;
+}
+
+.sfw-thank-you-section {
+  padding-bottom: 116px;
+  padding-top: 96px;
+}
+
+.sfw-thank-you-message {
+  max-width: 1380px;
+}
+
+.sfw-thank-you-message h2 {
+  color: #0b0b0c;
+  font-family: var(--font-anton), sans-serif;
+  font-size: 58px;
+  font-weight: 400;
+  line-height: 0.98;
+  margin: 0;
+  text-transform: none;
+}
+
+.sfw-thank-you-message p {
+  color: #4a4c52;
+  font-size: 20px;
+  line-height: 1.6;
+  margin: 22px 0 0;
+}
+
+.sfw-thank-you-cta {
+  background:
+    linear-gradient(90deg, rgba(11, 11, 12, 0.96) 0%, rgba(11, 11, 12, 0.8) 55%, rgba(11, 11, 12, 0.5) 100%),
+    url('/images/projects/garage-shop-foam.jpg') center / cover;
+}
+
 .sfw-contact-hero {
   background:
     radial-gradient(120% 120% at 12% 0%, rgba(228, 20, 27, 0.25) 0%, rgba(228, 20, 27, 0) 55%),
@@ -672,6 +715,50 @@
   margin: 0 0 32px;
 }
 
+.sfw-contact-phone-link {
+  color: #e4141b;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.sfw-contact-phone-prompt {
+  display: inline-block;
+  margin-top: 12px;
+}
+
+.sfw-contact-phone-link:hover {
+  color: #0b0b0c;
+}
+
+.sfw-contact-form-success {
+  background: #f1f8f2;
+  border-left: 4px solid #2f8f46;
+  color: #245c31;
+  font-size: 17px;
+  line-height: 1.6;
+  margin: 0 0 28px;
+  padding: 18px 20px;
+}
+
+.sfw-contact-form-error {
+  background: #fff1f1;
+  border-left: 4px solid #e4141b;
+  color: #8b171b;
+  font-size: 17px;
+  line-height: 1.6;
+  margin: 0 0 28px;
+  padding: 18px 20px;
+}
+
+.sfw-contact-form-error a {
+  color: #e4141b;
+  font-weight: 700;
+}
+
+.sfw-contact-submit-frame {
+  display: none;
+}
+
 .sfw-contact-form {
   border: 0;
   display: flex;
@@ -707,6 +794,55 @@
   text-transform: uppercase;
 }
 
+.sfw-contact-form-section > .sfw-contact-section-title {
+  font-size: 20px;
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+}
+
+.sfw-contact-choice-fieldset {
+  border: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+}
+
+.sfw-contact-choice-fieldset > legend {
+  margin-bottom: 0;
+}
+
+.sfw-contact-choice-fieldset > legend::after,
+.sfw-contact-field > span::after {
+  content: ':';
+}
+
+.sfw-contact-choice-grid {
+  display: grid;
+  gap: 10px 18px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.sfw-contact-choice {
+  align-items: center;
+  color: #4a4c52;
+  display: flex;
+  font-size: 16px;
+  gap: 9px;
+}
+
+.sfw-contact-choice input {
+  accent-color: #e4141b;
+  height: 17px;
+  margin: 0;
+  width: 17px;
+}
+
+.sfw-contact-other-field {
+  max-width: 360px;
+}
+
 .sfw-contact-field-row {
   display: grid;
   gap: 18px;
@@ -725,7 +861,7 @@
 .sfw-contact-field {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
 }
 
 .sfw-contact-field > span {
@@ -1112,6 +1248,10 @@ a.sfw-contact-method:hover {
 
   .sfw-contact-field-row,
   .sfw-contact-field-row-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .sfw-contact-choice-grid {
     grid-template-columns: 1fr;
   }
 

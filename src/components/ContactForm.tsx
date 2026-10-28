@@ -1,27 +1,43 @@
 'use client';
 
-import type { FormEvent } from 'react';
+import { useState, type FormEvent } from 'react';
 
-const WUFOO_ACTION = 'https://fireflymadison.wufoo.com/forms/r1euci3v1539v89/';
-
-function splitPhoneDigits(value: string, form: HTMLFormElement) {
-  const digits = value.replace(/\D/g, '');
-  const area = digits.slice(0, 3);
-  const prefix = digits.slice(3, 6);
-  const line = digits.slice(6, 10);
-
-  (form.elements.namedItem('Field11') as HTMLInputElement).value = area;
-  (form.elements.namedItem('Field11-1') as HTMLInputElement).value = prefix;
-  (form.elements.namedItem('Field11-2') as HTMLInputElement).value = line;
-}
+const FORM_SUBMIT_ACTION =
+  'https://ywwxvriolxwuqcwjaluh.supabase.co/functions/v1/form-submit/37471101-5436-487b-a7a2-9bbf7ebd2793';
 
 export function ContactForm() {
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
-    const form = event.currentTarget;
-    const phoneInput = form.elements.namedItem('phone') as HTMLInputElement | null;
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState(false);
 
-    if (phoneInput?.value) {
-      splitPhoneDigits(phoneInput.value, form);
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const form = event.currentTarget;
+
+    setSubmitting(true);
+    setSubmitError(false);
+
+    try {
+      const formData = new FormData(form);
+      const honeypot = formData.get('comment');
+
+      if (typeof honeypot === 'string' && honeypot.trim()) {
+        setSubmitting(false);
+        return;
+      }
+
+      formData.delete('comment');
+      formData.set('form_submitted_from', window.location.href);
+
+      const response = await fetch(FORM_SUBMIT_ACTION, {
+        method: 'POST',
+        body: formData,
+      });
+
+      if (!response.ok) throw new Error('Form submission failed');
+      window.location.assign('/contact/thank-you');
+    } catch {
+      setSubmitting(false);
+      setSubmitError(true);
     }
   }
 
@@ -34,12 +50,18 @@ export function ContactForm() {
         Call or text us anytime.
       </p>
 
-      <form className="sfw-contact-form" action={WUFOO_ACTION} method="post" onSubmit={handleSubmit}>
-        <input type="hidden" name="idstamp" value="QQ4rupQQTQipmWeN1IXuxA==" />
-        <input type="hidden" name="Field11" />
-        <input type="hidden" name="Field11-1" />
-        <input type="hidden" name="Field11-2" />
+      {submitError && (
+        <p className="sfw-contact-form-error" role="alert">
+          Something went wrong while sending your message. Please try again or call us directly.
+        </p>
+      )}
 
+      <form
+        className="sfw-contact-form"
+        action={FORM_SUBMIT_ACTION}
+        method="post"
+        onSubmit={handleSubmit}
+      >
         <fieldset className="sfw-contact-form-section">
           <legend>Contact information</legend>
 
@@ -47,14 +69,14 @@ export function ContactForm() {
             <span>
               Name <em className="sfw-contact-required">*</em>
             </span>
-            <input type="text" name="Field2" required maxLength={255} autoComplete="name" />
+            <input type="text" name="name" required maxLength={255} autoComplete="name" />
           </label>
 
           <label className="sfw-contact-field">
             <span>
               Email <em className="sfw-contact-required">*</em>
             </span>
-            <input type="email" name="Field10" required maxLength={255} autoComplete="email" />
+            <input type="email" name="email" required maxLength={255} autoComplete="email" />
           </label>
 
           <label className="sfw-contact-field">
@@ -67,7 +89,7 @@ export function ContactForm() {
           <label className="sfw-contact-field">
             <span>Questions or comments</span>
             <textarea
-              name="Field22"
+              name="message"
               rows={6}
               placeholder="How can we help you?"
             />
@@ -79,8 +101,8 @@ export function ContactForm() {
           <textarea id="contact-comment" name="comment" tabIndex={-1} autoComplete="off" />
         </div>
 
-        <button type="submit" className="btnfx sfw-contact-submit">
-          Send message
+        <button type="submit" className="btnfx sfw-contact-submit" disabled={submitting}>
+          {submitting ? 'Sending…' : 'Send message'}
         </button>
       </form>
     </>

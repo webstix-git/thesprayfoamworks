@@ -6,19 +6,26 @@
 
 .sfw-nav-shell {
   align-items: center;
+  box-sizing: border-box;
   display: flex;
   font-family: var(--font-archivo), sans-serif;
-  height: 104px;
+  height: auto;
   justify-content: space-between;
+  min-height: 104px;
   padding: 0 max(44px, calc((100% - 1380px) / 2));
 }
 
 .sfw-logo {
   display: block;
-  height: 120px;
+  height: 150px;
   mix-blend-mode: screen;
   padding: 10px;
+  padding-top: 15px;
   width: auto;
+}
+
+#siteHeader.sfw-header-scrolled .sfw-logo {
+  height: 110px;
 }
 
 .sfw-nav-links {
@@ -577,7 +584,7 @@
 .sfw-site-footer .sfw-footer-grid {
   display: grid;
   gap: 36px;
-  grid-template-columns: 1.4fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .sfw-site-footer h3 {
@@ -855,6 +862,10 @@
 }
 
 @media (max-width: 1024px) {
+  #siteHeader.sfw-header-scrolled .sfw-logo {
+    height: 72px !important;
+  }
+
   .sfw-nav-shell {
     height: 80px !important;
     overflow: visible !important;

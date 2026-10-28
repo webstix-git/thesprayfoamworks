@@ -69,7 +69,7 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <div>
+        <div hidden>
           <h3>Locations</h3>
           <div className="sfw-footer-links">
             {locationNavLinks.map((location) => (

@@ -68,7 +68,6 @@ export function GalleryGrid({ items }: { items: GalleryItem[] }) {
           >
             <Image src={item.src} alt={item.caption} fill sizes="(max-width: 720px) 50vw, 25vw" />
             <span className="sfw-gal-shade" />
-            <span className="sfw-gal-cap">{item.caption}</span>
             <span className="sfw-gal-zoom">
               <ZoomIcon />
             </span>
@@ -111,7 +110,6 @@ export function GalleryGrid({ items }: { items: GalleryItem[] }) {
           // eslint-disable-next-line @next/next/no-img-element
           <img className="sfw-lightbox-img" src={items[active].src} alt={items[active].caption} />
         )}
-        <div className="sfw-lightbox-cap">{active !== null ? items[active].caption : ''}</div>
       </div>
     </>
   );

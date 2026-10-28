@@ -1,35 +1,6 @@
 import type { Metadata } from 'next';
-import { Anton, Archivo, Hanken_Grotesk, Oswald } from 'next/font/google';
 import './globals.css';
 import { siteConfig } from '@/lib/site';
-
-const anton = Anton({
-  weight: '400',
-  subsets: ['latin'],
-  variable: '--font-anton',
-  display: 'swap',
-});
-
-const archivo = Archivo({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800', '900'],
-  variable: '--font-archivo',
-  display: 'swap',
-});
-
-const hanken = Hanken_Grotesk({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800'],
-  variable: '--font-hanken',
-  display: 'swap',
-});
-
-const oswald = Oswald({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-  variable: '--font-oswald',
-  display: 'swap',
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -62,7 +33,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${anton.variable} ${archivo.variable} ${hanken.variable} ${oswald.variable}`}
+      className="site-fonts"
     >
       <body>{children}</body>
     </html>
