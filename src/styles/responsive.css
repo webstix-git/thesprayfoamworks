@@ -283,7 +283,9 @@ body.mobile-nav-open .mobile-nav-toggle span:nth-child(3) {
   }
 
   .sfw-hero[style*='890px'] .sfw-hero-content,
-  .sfw-hero[style*='890px'] .hero-rise {
+  .sfw-hero[style*='890px'] .hero-rise,
+  .sfw-hero[style*='980px'] .sfw-hero-content,
+  .sfw-hero[style*='980px'] .hero-rise {
     justify-content: flex-start !important;
     min-height: 560px !important;
     padding: 160px 32px 48px !important;
@@ -406,7 +408,9 @@ body.mobile-nav-open .mobile-nav-toggle span:nth-child(3) {
   }
 
   .sfw-hero[style*='890px'] .sfw-hero-content,
-  .sfw-hero[style*='890px'] .hero-rise {
+  .sfw-hero[style*='890px'] .hero-rise,
+  .sfw-hero[style*='980px'] .sfw-hero-content,
+  .sfw-hero[style*='980px'] .hero-rise {
     min-height: 420px !important;
     padding: 148px 20px 36px !important;
     padding-left: 20px !important;
@@ -582,7 +586,9 @@ body.mobile-nav-open .mobile-nav-toggle span:nth-child(3) {
   }
 
   .sfw-hero[style*='890px'] .sfw-hero-content,
-  .sfw-hero[style*='890px'] .hero-rise {
+  .sfw-hero[style*='890px'] .hero-rise,
+  .sfw-hero[style*='980px'] .sfw-hero-content,
+  .sfw-hero[style*='980px'] .hero-rise {
     padding-top: 132px !important;
   }
 

@@ -56,9 +56,6 @@ function setupMobileNav(header: HTMLElement) {
     document.body.classList.add('mobile-nav-open');
     toggle.setAttribute('aria-expanded', 'true');
     toggle.setAttribute('aria-label', 'Close navigation menu');
-    header.style.background = 'rgba(11,11,12,.98)';
-    header.style.backdropFilter = 'blur(10px)';
-    header.style.boxShadow = '0 12px 34px rgba(0,0,0,.45)';
   };
 
   toggle.addEventListener('click', () => {
@@ -152,7 +149,7 @@ function markResponsiveTargets(page: HTMLElement) {
   });
 
   page.querySelectorAll(
-    '[style*="min-height: 890px"], [style*="min-height:890px"], [style*="min-height: 520px"], [style*="min-height:520px"]',
+    '[style*="min-height: 980px"], [style*="min-height:980px"], [style*="min-height: 890px"], [style*="min-height:890px"], [style*="min-height: 520px"], [style*="min-height:520px"]',
   ).forEach((node) => {
     const el = node as HTMLElement;
     if (el.querySelector('.hero-rise') || el.querySelector('h1')) {
@@ -166,7 +163,7 @@ function markResponsiveTargets(page: HTMLElement) {
 
     const hero = el.closest('.sfw-hero');
     const heroStyle = hero?.getAttribute('style') ?? '';
-    if (hero && !heroStyle.includes('890px')) {
+    if (hero && !heroStyle.includes('890px') && !heroStyle.includes('980px')) {
       hero.classList.add('sfw-inner-hero');
       el.classList.add('sfw-inner-hero-content');
     }
@@ -256,29 +253,28 @@ export function SiteEnhancements({ sticky = true }: SiteEnhancementsProps) {
       setupMobileNav(header);
 
       header.style.position = sticky ? 'sticky' : 'absolute';
+      header.style.background = '';
+      header.style.backdropFilter = '';
+      header.style.boxShadow = '';
+      (header.style as CSSStyleDeclaration & { webkitBackdropFilter?: string }).webkitBackdropFilter = '';
       if (!sticky) {
         header.style.left = '0';
         header.style.right = '0';
       }
 
+      const HEADER_SCROLL_ON = 100;
+      const HEADER_SCROLL_OFF = 36;
+
       const onScroll = () => {
         if (document.body.classList.contains('mobile-nav-open')) return;
 
-        if (window.scrollY > 90) {
+        const y = window.scrollY;
+        const isScrolled = header.classList.contains('sfw-header-scrolled');
+
+        if (!isScrolled && y > HEADER_SCROLL_ON) {
           header.classList.add('sfw-header-scrolled');
-          header.style.background = 'rgba(11,11,12,.92)';
-          header.style.backdropFilter = 'blur(10px)';
-          (header.style as CSSStyleDeclaration & { webkitBackdropFilter?: string }).webkitBackdropFilter =
-            'blur(10px)';
-          header.style.boxShadow = '0 12px 34px rgba(0,0,0,.45)';
-        } else {
+        } else if (isScrolled && y < HEADER_SCROLL_OFF) {
           header.classList.remove('sfw-header-scrolled');
-          header.style.background =
-            'linear-gradient(180deg, rgba(6,6,7,.55) 0%, rgba(6,6,7,0) 100%)';
-          header.style.backdropFilter = 'none';
-          (header.style as CSSStyleDeclaration & { webkitBackdropFilter?: string }).webkitBackdropFilter =
-            'none';
-          header.style.boxShadow = 'none';
         }
       };
 

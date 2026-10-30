@@ -19,6 +19,7 @@
   .hero-rise > *:nth-child(3){ animation-delay: .16s; }
   .hero-rise > *:nth-child(4){ animation-delay: .24s; }
   .hero-rise > *:nth-child(5){ animation-delay: .32s; }
+  .hero-rise > *:nth-child(6){ animation-delay: .4s; }
 
   .sfw-hero-slides {
     position: absolute;

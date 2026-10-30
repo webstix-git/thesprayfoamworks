@@ -10,16 +10,7 @@ import { siteConfig } from '@/lib/site';
 
 export function SiteHeader() {
   return (
-    <header
-      id="siteHeader"
-      style={{
-        position: 'sticky',
-        top: 0,
-        zIndex: 100,
-        background: 'linear-gradient(180deg,rgba(6,6,7,.55) 0%,rgba(6,6,7,0) 100%)',
-        transition: 'background .3s ease,box-shadow .3s ease,backdrop-filter .3s ease',
-      }}
-    >
+    <header id="siteHeader" className="sfw-site-header">
       <div className="sfw-nav-shell">
         <div className="site-nav-logo">
           <Link href="/">
@@ -90,6 +81,9 @@ export function SiteHeader() {
           <Link href="/gallery" className="navlink">
             Gallery
           </Link>
+          <Link href="/contact" className="navlink">
+            Contact
+          </Link>
           <div className="has-dd" hidden>
             <Link href="/locations" className="navlink">
               Locations <span className="sfw-dd-caret">▼</span>
@@ -105,9 +99,13 @@ export function SiteHeader() {
               ))}
             </div>
           </div>
-          <Link href="/get-a-quote" className="btnfx sfw-nav-cta">
+          <a
+            href={siteConfig.quoteForm.href}
+            download={siteConfig.quoteForm.download}
+            className="btnfx sfw-nav-cta"
+          >
             Get a Quote
-          </Link>
+          </a>
         </nav>
       </div>
     </header>

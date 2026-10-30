@@ -71,6 +71,7 @@ export const htmlLinkRoutes: Record<string, string> = {
   Mission: '/mission',
   'Mission & Values': '/mission',
   Testimonials: '/testimonials',
+  Contact: '/contact',
   'Contact SFW': '/contact',
   'Contact Us': '/contact',
   'Get a Free Quote': '/get-a-quote',

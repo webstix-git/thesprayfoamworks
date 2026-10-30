@@ -273,6 +273,10 @@ export const siteConfig = {
   phoneTel: 'tel:6082790088',
   email: 'sprayfoamworks@gmail.com',
   url: process.env.NEXT_PUBLIC_SITE_URL || 'https://www.sprayfoamworks.com',
+  quoteForm: {
+    href: '/documents/request-a-quote-form.docx',
+    download: 'Request-a-Quote-Form.docx',
+  },
 };
 
 export type SiteTrustStat = {

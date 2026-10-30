@@ -4,15 +4,46 @@
   font-family: var(--font-hanken), sans-serif;
 }
 
+.sfw-site-header,
+#siteHeader {
+  background: linear-gradient(180deg, rgba(6, 6, 7, 0.55) 0%, rgba(6, 6, 7, 0) 100%);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+#siteHeader::before {
+  background: #111214;
+  content: '';
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  transition: opacity 0.2s ease;
+  z-index: 0;
+}
+
+#siteHeader.sfw-header-scrolled,
+body.mobile-nav-open #siteHeader {
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.45);
+}
+
+#siteHeader.sfw-header-scrolled::before,
+body.mobile-nav-open #siteHeader::before {
+  opacity: 1;
+}
+
 .sfw-nav-shell {
   align-items: center;
   box-sizing: border-box;
   display: flex;
   font-family: var(--font-archivo), sans-serif;
-  height: auto;
+  height: 150px;
   justify-content: space-between;
-  min-height: 104px;
+  min-height: 150px;
   padding: 0 max(44px, calc((100% - 1380px) / 2));
+  position: relative;
+  z-index: 1;
 }
 
 .sfw-logo {
@@ -22,10 +53,6 @@
   padding: 10px;
   padding-top: 15px;
   width: auto;
-}
-
-#siteHeader.sfw-header-scrolled .sfw-logo {
-  height: 110px;
 }
 
 .sfw-nav-links {
@@ -862,12 +889,9 @@
 }
 
 @media (max-width: 1024px) {
-  #siteHeader.sfw-header-scrolled .sfw-logo {
-    height: 72px !important;
-  }
-
   .sfw-nav-shell {
     height: 80px !important;
+    min-height: 80px !important;
     overflow: visible !important;
     padding-left: 20px !important;
     padding-right: 20px !important;
