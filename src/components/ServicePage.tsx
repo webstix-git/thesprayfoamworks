@@ -6,6 +6,7 @@ import { SiteFooter } from '@/components/SiteFooter';
 import { SiteHeader } from '@/components/SiteHeader';
 import type { ServicePageData } from '@/lib/service-pages';
 import { siteConfig } from '@/lib/site';
+import { QuoteFormLink } from '@/components/QuoteFormLink';
 
 export function ServicePage({ page }: { page: ServicePageData }) {
   return (
@@ -150,9 +151,7 @@ export function ServicePage({ page }: { page: ServicePageData }) {
               <p>{page.ctaBody}</p>
             </div>
             <div>
-              <Link href="/get-a-quote" className="btnfx">
-                Request a Quote
-              </Link>
+              <QuoteFormLink className="btnfx">Request a Quote</QuoteFormLink>
               <a href={siteConfig.phoneTel} className="btnfx">
                 {siteConfig.phone}
               </a>

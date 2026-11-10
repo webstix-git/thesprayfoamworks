@@ -43,7 +43,13 @@ body.mobile-nav-open #siteHeader::before {
   min-height: 150px;
   padding: 0 max(44px, calc((100% - 1380px) / 2));
   position: relative;
+  transition: height 0.25s ease, min-height 0.25s ease;
   z-index: 1;
+}
+
+#siteHeader.sfw-header-scrolled .sfw-nav-shell {
+  height: 84px;
+  min-height: 84px;
 }
 
 .sfw-logo {
@@ -52,7 +58,13 @@ body.mobile-nav-open #siteHeader::before {
   mix-blend-mode: screen;
   padding: 10px;
   padding-top: 15px;
+  transition: height 0.25s ease, padding 0.25s ease;
   width: auto;
+}
+
+#siteHeader.sfw-header-scrolled .sfw-logo {
+  height: 72px;
+  padding: 6px;
 }
 
 .sfw-nav-links {
@@ -70,12 +82,12 @@ body.mobile-nav-open #siteHeader::before {
   font-size: 16px;
   font-weight: 600;
   gap: 6px;
-  height: 100%;
-  padding: 0 12px;
+  height: auto;
+  padding: 10px 12px;
 }
 
 .sfw-nav-links .has-dd {
-  height: 100%;
+  height: auto;
   position: relative;
 }
 
@@ -87,7 +99,7 @@ body.mobile-nav-open #siteHeader::before {
   left: 0;
   padding: 10px;
   position: absolute;
-  top: calc(100% - 6px);
+  top: calc(100% - 2px);
   width: 280px;
   z-index: 40;
 }
@@ -655,10 +667,11 @@ body.mobile-nav-open #siteHeader::before {
   gap: 10px;
 }
 
-.sfw-site-footer .sfw-footer-contact span:first-child {
+.sfw-site-footer .sfw-footer-contact-icon {
   color: #e4141b;
-  font-size: 16px;
-  text-align: center;
+  display: block;
+  flex-shrink: 0;
+  height: 18px;
   width: 18px;
 }
 

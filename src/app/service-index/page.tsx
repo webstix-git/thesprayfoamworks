@@ -1,7 +1,11 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { LegalPage } from '@/components/LegalPage';
-import { serviceNavLinks } from '@/lib/nav-links';
+import {
+  commercialNavLinks,
+  residentialNavLinks,
+  serviceNavLinks,
+} from '@/lib/nav-links';
 import { siteConfig } from '@/lib/site';
 
 export const metadata: Metadata = {
@@ -36,23 +40,27 @@ export default function ServiceIndex() {
         </div>
 
         <div className="sfw-sitemap-group">
-          <h2>Project Types</h2>
+          <h2>Residential</h2>
           <ul>
             <li>
-              <Link href="/residential">Residential</Link>
+              <Link href="/residential">All Residential</Link>
             </li>
-            <li>
-              <Link href="/retrofitting">Retrofit</Link>
-            </li>
-            <li>
-              <Link href="/commercial">Commercial</Link>
-            </li>
-            <li>
-              <Link href="/new-construction">New Construction</Link>
-            </li>
-            <li>
-              <Link href="/remodels">Remodels</Link>
-            </li>
+            {residentialNavLinks.map((item) => (
+              <li key={item.href}>
+                <Link href={item.href}>{item.label}</Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="sfw-sitemap-group">
+          <h2>Commercial</h2>
+          <ul>
+            {commercialNavLinks.map((item) => (
+              <li key={`${item.label}-${item.href}`}>
+                <Link href={item.href}>{item.label}</Link>
+              </li>
+            ))}
           </ul>
         </div>
       </div>

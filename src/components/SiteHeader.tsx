@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import {
   aboutNavLinks,
-  locationNavLinks,
+  commercialNavLinks,
   residentialNavLinks,
   serviceNavLinks,
 } from '@/lib/nav-links';
@@ -33,9 +33,6 @@ export function SiteHeader() {
               Services <span className="sfw-dd-caret">▼</span>
             </Link>
             <div className="dd">
-              <Link href="/services" className="ddlink sfw-dd-parent">
-                All Services
-              </Link>
               {serviceNavLinks.map((item) => (
                 <Link key={item.href} href={item.href} className="ddlink">
                   {item.label}
@@ -44,30 +41,10 @@ export function SiteHeader() {
             </div>
           </div>
           <div className="has-dd">
-            <Link href="/about" className="navlink">
-              About SFW <span className="sfw-dd-caret">▼</span>
-            </Link>
-            <div className="dd">
-              <Link href="/about" className="ddlink sfw-dd-parent">
-                About SFW
-              </Link>
-              {aboutNavLinks
-                .filter((item) => item.href !== '/about')
-                .map((item) => (
-                  <Link key={item.href} href={item.href} className="ddlink">
-                    {item.label}
-                  </Link>
-                ))}
-            </div>
-          </div>
-          <div className="has-dd">
             <Link href="/residential" className="navlink">
               Residential <span className="sfw-dd-caret">▼</span>
             </Link>
             <div className="dd">
-              <Link href="/residential" className="ddlink sfw-dd-parent">
-                All Residential
-              </Link>
               {residentialNavLinks.map((item) => (
                 <Link key={item.href} href={item.href} className="ddlink">
                   {item.label}
@@ -75,30 +52,39 @@ export function SiteHeader() {
               ))}
             </div>
           </div>
-          <Link href="/commercial" className="navlink">
-            Commercial
+          <div className="has-dd">
+            <Link href="/commercial" className="navlink">
+              Commercial <span className="sfw-dd-caret">▼</span>
+            </Link>
+            <div className="dd">
+              {commercialNavLinks.map((item) => (
+                <Link key={`${item.label}-${item.href}`} href={item.href} className="ddlink">
+                  {item.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+          <Link href="/faqs" className="navlink">
+            FAQs
           </Link>
           <Link href="/gallery" className="navlink">
             Gallery
           </Link>
-          <Link href="/contact" className="navlink">
-            Contact
-          </Link>
-          <div className="has-dd" hidden>
-            <Link href="/locations" className="navlink">
-              Locations <span className="sfw-dd-caret">▼</span>
+          <div className="has-dd">
+            <Link href="/about" className="navlink">
+              About <span className="sfw-dd-caret">▼</span>
             </Link>
             <div className="dd">
-              <Link href="/locations" className="ddlink sfw-dd-parent">
-                All Locations
-              </Link>
-              {locationNavLinks.map((item) => (
+              {aboutNavLinks.map((item) => (
                 <Link key={item.label} href={item.href} className="ddlink">
                   {item.label}
                 </Link>
               ))}
             </div>
           </div>
+          <Link href="/contact" className="navlink">
+            Contact
+          </Link>
           <a
             href={siteConfig.quoteForm.href}
             download={siteConfig.quoteForm.download}

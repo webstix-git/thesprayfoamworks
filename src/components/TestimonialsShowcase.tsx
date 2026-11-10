@@ -6,6 +6,7 @@ import { SiteFooter } from '@/components/SiteFooter';
 import { SiteHeader } from '@/components/SiteHeader';
 import { testimonialReviews } from '@/lib/testimonials';
 import { siteConfig } from '@/lib/site';
+import { QuoteFormLink } from '@/components/QuoteFormLink';
 
 const googleReviewsUrl = 'https://www.google.com/search?q=The+Sprayfoam+Works+Inc+reviews';
 
@@ -30,9 +31,7 @@ export function TestimonialsShowcase() {
               Sprayfoam Works with their insulation.
             </p>
             <div className="sfw-project-hero-actions">
-              <Link href="/get-a-quote" className="btnfx sfw-project-cta-primary">
-                Get a Free Quote
-              </Link>
+              <QuoteFormLink className="btnfx sfw-project-cta-primary">Get a Free Quote</QuoteFormLink>
               <a
                 href={googleReviewsUrl}
                 target="_blank"
@@ -116,9 +115,7 @@ export function TestimonialsShowcase() {
               <p>Get direct pricing on spray foam &amp; fiberglass, no middleman, no pressure.</p>
             </div>
             <div className="sfw-project-final-actions">
-              <Link href="/get-a-quote" className="btnfx sfw-project-final-primary">
-                Request a Quote
-              </Link>
+              <QuoteFormLink className="btnfx sfw-project-final-primary">Request a Quote</QuoteFormLink>
               <a href={siteConfig.phoneTel} className="btnfx sfw-project-final-secondary">
                 {siteConfig.phone}
               </a>

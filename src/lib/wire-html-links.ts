@@ -9,21 +9,24 @@ const titleRoutes: Record<string, string> = {
 };
 
 /** Button copy → route (checked as substring of link text) */
+const QUOTE_FORM_HREF = '/documents/request-a-quote-form.docx';
+
 const buttonPhrases: [string, string][] = [
-  ['Get a Free Quote', '/get-a-quote'],
-  ['Get a Quote', '/get-a-quote'],
-  ['Request a Quote', '/get-a-quote'],
-  ['Request Your Free Quote', '/get-a-quote'],
-  ['Free Quote', '/get-a-quote'],
+  ['Get a Free Quote', QUOTE_FORM_HREF],
+  ['Get a Quote', QUOTE_FORM_HREF],
+  ['Request a Quote', QUOTE_FORM_HREF],
+  ['Request Your Free Quote', QUOTE_FORM_HREF],
+  ['Free Quote', QUOTE_FORM_HREF],
   ['Meet the Team', '/our-team'],
-  ['Ask about your space', '/get-a-quote'],
-  ['Get a commercial quote', '/get-a-quote'],
+  ['Ask about your space', QUOTE_FORM_HREF],
+  ['Get a commercial quote', QUOTE_FORM_HREF],
   ['Explore Residential', '/residential'],
   ['Explore Retrofit', '/retrofitting'],
   ['Explore Commercial', '/commercial'],
   ['View all services', '/services'],
   ['View more photos', '/gallery'],
-  ['View all locations', '/locations'],
+  ['View all locations', '/about#areas-we-serve'],
+  ['Areas we serve', '/about#areas-we-serve'],
   ['Privacy', '/privacy-policy'],
 ];
 

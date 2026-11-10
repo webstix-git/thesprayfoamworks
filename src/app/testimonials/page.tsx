@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   description:
     'Read what Dane County homeowners and contractors say about The Sprayfoam Works. Real 5-star Google reviews from Madison, Cottage Grove, and beyond.',
   alternates: { canonical: `${siteConfig.url}/testimonials` },
+  robots: { index: false, follow: false },
   openGraph: {
     title: 'Testimonials | The Sprayfoam Works',
     description:

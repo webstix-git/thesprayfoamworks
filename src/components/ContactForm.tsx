@@ -83,7 +83,7 @@ export function ContactForm() {
             <span>
               Phone <em className="sfw-contact-required">*</em>
             </span>
-            <input type="tel" name="phone" required autoComplete="tel" placeholder="(608) 279-0088" />
+            <input type="tel" name="phone" required autoComplete="tel" placeholder="608-279-0088" />
           </label>
 
           <label className="sfw-contact-field">

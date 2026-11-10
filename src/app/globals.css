@@ -64,6 +64,25 @@ a {
   text-decoration: none;
 }
 
+/* Avoid single-word widows at the end of lines/paragraphs */
+p,
+li,
+blockquote,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.sfw-page [style*='line-height'],
+.sfw-company-page [style*='line-height'],
+.sfw-project-page [style*='line-height'],
+.sfw-service-page [style*='line-height'] {
+  orphans: 2;
+  text-wrap: pretty;
+  widows: 2;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

@@ -7,6 +7,12 @@ export type TestimonialReview = {
 
 export const testimonialReviews: TestimonialReview[] = [
   {
+    initials: 'DB',
+    name: 'Dan B.',
+    role: 'Business Owner',
+    text: "I hired Aaron for four projects over the years, and every one was completed on time, on budget, and with excellent attention to detail. He leaves the job site clean and treats every project professionally. I highly recommend The Sprayfoam Works, Inc. If you're considering insulation, spray foam is the way to go. It turns your project into a Yeti cooler.",
+  },
+  {
     initials: 'MD',
     name: 'Michael Drews',
     role: 'Homeowner',

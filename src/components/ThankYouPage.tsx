@@ -40,7 +40,7 @@ export function ThankYouPage({ form }: ThankYouPageProps) {
           <div className="sfw-project-hero-overlay" />
           <div className="sfw-project-hero-content hero-rise sfw-thank-you-content">
             <h1 id="thank-you-heading">
-              {content.title} <span className="sfw-project-accent">– Thank You</span>
+              {content.title} <span className="sfw-project-accent">- Thank You</span>
             </h1>
           </div>
         </section>

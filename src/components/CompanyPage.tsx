@@ -17,6 +17,7 @@ import {
 } from '@/lib/company-pages';
 import { siteConfig } from '@/lib/site';
 import { photos } from '@/lib/project-photos';
+import { QuoteFormLink } from '@/components/QuoteFormLink';
 
 function ValueIcon({ icon }: { icon: ValueCard['icon'] }) {
   const props = {
@@ -139,9 +140,7 @@ function CtaBand() {
           <p>Get direct pricing on spray foam & fiberglass, no middleman, no pressure.</p>
         </div>
         <div className="sfw-company-cta-actions">
-          <Link href="/get-a-quote" className="btnfx sfw-company-cta-primary">
-            Request a Quote
-          </Link>
+          <QuoteFormLink className="btnfx sfw-company-cta-primary">Request a Quote</QuoteFormLink>
           <a href={siteConfig.phoneTel} className="btnfx sfw-company-cta-secondary">
             {siteConfig.phone}
           </a>
@@ -209,9 +208,7 @@ function OurTeamContent() {
               is building the kind of company he would want to hire himself, honest, prepared, and
               easy to reach.
             </p>
-            <Link href="/get-a-quote" className="btnfx sfw-company-button">
-              Work with our team →
-            </Link>
+            <QuoteFormLink className="btnfx sfw-company-button">Work with our team →</QuoteFormLink>
           </div>
         </div>
       </section>

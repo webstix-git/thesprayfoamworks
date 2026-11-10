@@ -7,6 +7,7 @@ import { SiteHeader } from '@/components/SiteHeader';
 import { locationNavLinks } from '@/lib/nav-links';
 import { photos } from '@/lib/project-photos';
 import { siteConfig } from '@/lib/site';
+import { QuoteFormLink } from '@/components/QuoteFormLink';
 
 const img = {
   hero: photos.vaultedNewBuild,
@@ -213,9 +214,7 @@ export function LocationsPage() {
               </p>
             </div>
             <div className="sfw-project-final-actions">
-              <Link href="/get-a-quote" className="btnfx sfw-project-final-primary">
-                Request a Quote
-              </Link>
+              <QuoteFormLink className="btnfx sfw-project-final-primary">Request a Quote</QuoteFormLink>
               <a href={siteConfig.phoneTel} className="btnfx sfw-project-final-secondary">
                 {siteConfig.phone}
               </a>

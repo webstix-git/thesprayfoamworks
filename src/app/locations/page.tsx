@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   description:
     'Spray foam and fiberglass insulation across Dane County, WI. Serving Madison, Cottage Grove, Sun Prairie, Middleton, Verona, Fitchburg, and surrounding communities.',
   alternates: { canonical: `${siteConfig.url}/locations` },
+  robots: { index: false, follow: false },
   openGraph: {
     title: 'Service Areas & Locations | The Sprayfoam Works',
     description:

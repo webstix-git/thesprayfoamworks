@@ -152,7 +152,7 @@ function buildLocation(input: LocationInput): ProjectPageData {
         {
           question: 'How do I get a quote?',
           answer:
-            'Give us a call or text at (608) 279-0088, or use our contact page. We will set up a quick assessment and get you a straightforward price.',
+            'Give us a call or text at 608-279-0088, or use our contact page. We will set up a quick assessment and get you a straightforward price.',
         },
       ],
     },

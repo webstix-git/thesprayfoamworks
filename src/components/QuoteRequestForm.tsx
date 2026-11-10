@@ -4,7 +4,7 @@ import { useState, type FormEvent } from 'react';
 
 const FORM_SUBMIT_ACTION =
   'https://ywwxvriolxwuqcwjaluh.supabase.co/functions/v1/form-submit/37471101-5436-487b-a7a2-9bbf7ebd2793';
-const PHONE = '(608) 279-0088';
+const PHONE = '608-279-0088';
 const PHONE_TEL = 'tel:6082790088';
 
 export function QuoteRequestForm() {

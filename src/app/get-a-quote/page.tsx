@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   description:
     'Request a free insulation quote from The Sprayfoam Works. Spray foam and fiberglass for homes, pole barns, and commercial builds across Dane County, WI.',
   alternates: { canonical: `${siteConfig.url}/get-a-quote` },
+  robots: { index: false, follow: false },
   openGraph: {
     title: 'Get a Quote | The Sprayfoam Works',
     description:

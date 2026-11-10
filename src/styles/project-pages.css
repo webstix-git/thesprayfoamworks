@@ -1092,7 +1092,24 @@
   color: #b7bac1;
   font-size: 18px;
   line-height: 1.65;
-  margin: 0;
+  margin: 0 0 16px;
+}
+
+.sfw-contact-sidebar-about p:last-child {
+  margin-bottom: 0;
+}
+
+.sfw-contact-sidebar-about a {
+  color: #e4141b;
+  font-weight: 700;
+}
+
+.sfw-contact-sidebar-about a:hover {
+  color: #fff;
+}
+
+.sfw-contact-sidebar-phone-inline {
+  white-space: nowrap;
 }
 
 .sfw-contact-methods {

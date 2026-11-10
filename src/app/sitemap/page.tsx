@@ -3,7 +3,9 @@ import Link from 'next/link';
 import { LegalPage } from '@/components/LegalPage';
 import {
   aboutNavLinks,
+  commercialNavLinks,
   locationNavLinks,
+  residentialNavLinks,
   serviceNavLinks,
 } from '@/lib/nav-links';
 import { siteConfig } from '@/lib/site';
@@ -24,7 +26,7 @@ const sitemapGroups: { heading: string; links: { label: string; href: string }[]
       { label: 'Residential', href: '/residential' },
       { label: 'Commercial', href: '/commercial' },
       { label: 'Gallery', href: '/gallery' },
-      { label: 'Get a Quote', href: '/get-a-quote' },
+      { label: 'FAQs', href: '/faqs' },
       { label: 'Contact Us', href: '/contact' },
     ],
   },
@@ -33,21 +35,26 @@ const sitemapGroups: { heading: string; links: { label: string; href: string }[]
     links: serviceNavLinks,
   },
   {
+    heading: 'Residential',
+    links: [{ label: 'All Residential', href: '/residential' }, ...residentialNavLinks],
+  },
+  {
+    heading: 'Commercial',
+    links: commercialNavLinks,
+  },
+  {
     heading: 'Company',
-    links: aboutNavLinks,
+    links: [
+      { label: 'About', href: '/about' },
+      ...aboutNavLinks,
+      { label: 'Our Team', href: '/our-team' },
+      { label: 'FAQs', href: '/faqs' },
+      { label: 'Contact Us', href: '/contact' },
+    ],
   },
   {
     heading: 'Service Areas',
-    links: [{ label: 'All Locations', href: '/locations' }, ...locationNavLinks],
-  },
-  {
-    heading: 'Legal',
-    links: [
-      { label: 'Sitemap', href: '/sitemap' },
-      { label: 'Service Index', href: '/service-index' },
-      { label: 'AI Policy', href: '/ai-policy' },
-      { label: 'Privacy Policy', href: '/privacy-policy' },
-    ],
+    links: locationNavLinks,
   },
 ];
 
@@ -60,7 +67,7 @@ export default function Sitemap() {
             <h2>{group.heading}</h2>
             <ul>
               {group.links.map((link) => (
-                <li key={link.href}>
+                <li key={`${link.label}-${link.href}`}>
                   <Link href={link.href}>{link.label}</Link>
                 </li>
               ))}

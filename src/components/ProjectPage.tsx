@@ -6,6 +6,7 @@ import { SiteFooter } from '@/components/SiteFooter';
 import { SiteHeader } from '@/components/SiteHeader';
 import type { ProjectFeatureIcon, ProjectPageData } from '@/lib/project-pages';
 import { siteConfig } from '@/lib/site';
+import { QuoteFormLink } from '@/components/QuoteFormLink';
 
 function FeatureIcon({ icon }: { icon: ProjectFeatureIcon }) {
   const props = {
@@ -242,9 +243,7 @@ export function ProjectPage({ page }: { page: ProjectPageData }) {
                 Every project runs on the same three priorities: the right material, a clean
                 install window, and direct communication from a local crew.
               </p>
-              <Link href="/get-a-quote" className="btnfx sfw-project-button">
-                Talk to us →
-              </Link>
+              <QuoteFormLink className="btnfx sfw-project-button">Talk to us →</QuoteFormLink>
             </div>
             <div className="sfw-project-steps">
               {page.process.steps.map((step, index) => (
@@ -296,9 +295,7 @@ export function ProjectPage({ page }: { page: ProjectPageData }) {
               <p>{page.cta.body}</p>
             </div>
             <div className="sfw-project-final-actions">
-              <Link href="/get-a-quote" className="btnfx sfw-project-final-primary">
-                Request a Quote
-              </Link>
+              <QuoteFormLink className="btnfx sfw-project-final-primary">Request a Quote</QuoteFormLink>
               <a href={siteConfig.phoneTel} className="btnfx sfw-project-final-secondary">
                 {siteConfig.phone}
               </a>

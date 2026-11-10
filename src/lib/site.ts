@@ -78,9 +78,9 @@ const PAGES: PageMeta[] = [
   {
     slug: 'about',
     route: '/about',
-    title: 'About SFW | The Sprayfoam Works',
+    title: 'Our Story | The Sprayfoam Works',
     description:
-      'Meet The Sprayfoam Works, a family-owned Wisconsin insulation contractor serving Dane County for 17 years.',
+      'Locally owned and owner-operated since 2015, The Sprayfoam Works brings nearly 20 years of insulation experience to Greater Dane County and South-Central Wisconsin.',
     showTrustBar: false,
   },
   {
@@ -168,7 +168,7 @@ const PAGES: PageMeta[] = [
     route: '/contact',
     title: 'Contact Us | The Sprayfoam Works',
     description:
-      'Contact The Sprayfoam Works for spray foam and fiberglass insulation across Dane County, WI. Call or text (608) 279-0088.',
+      'Contact The Sprayfoam Works for spray foam and fiberglass insulation across Dane County, WI. Call or text 608-279-0088.',
     showTrustBar: false,
   },
   {
@@ -269,7 +269,7 @@ export function readPageHtml(slug: string): string {
 
 export const siteConfig = {
   name: 'The Sprayfoam Works, Inc.',
-  phone: '(608) 279-0088',
+  phone: '608-279-0088',
   phoneTel: 'tel:6082790088',
   email: 'sprayfoamworks@gmail.com',
   url: process.env.NEXT_PUBLIC_SITE_URL || 'https://www.sprayfoamworks.com',
