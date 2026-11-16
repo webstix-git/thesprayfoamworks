@@ -3,19 +3,19 @@ import { ServicePage } from '@/components/ServicePage';
 import { getServicePage } from '@/lib/service-pages';
 import { siteConfig } from '@/lib/site';
 
-const page = getServicePage('pole-barns')!;
+const page = getServicePage('post-frame-construction')!;
 
 export const metadata: Metadata = {
-  title: 'Pole Barn Insulation | The Sprayfoam Works',
+  title: 'Post-frame Construction Insulation',
   description: page.metaDescription,
   alternates: { canonical: `${siteConfig.url}${page.route}` },
   openGraph: {
-    title: 'Pole Barn Insulation | The Sprayfoam Works',
+    title: 'Post-frame Construction Insulation | The Sprayfoam Works',
     description: page.metaDescription,
     url: `${siteConfig.url}${page.route}`,
   },
 };
 
-export default function PoleBarnsPage() {
+export default function PostFrameConstructionPage() {
   return <ServicePage page={page} />;
 }

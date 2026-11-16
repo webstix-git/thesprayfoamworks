@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { TrustStatsBar } from '@/components/TrustStatsBar';
 import { SiteEnhancements } from '@/components/SiteEnhancements';
 import { SiteFooter } from '@/components/SiteFooter';
+import { ArrowIcon } from '@/components/ArrowIcon';
 import { SiteHeader } from '@/components/SiteHeader';
 import type { ProjectFeatureIcon, ProjectPageData } from '@/lib/project-pages';
 import { siteConfig } from '@/lib/site';
@@ -147,7 +147,6 @@ export function ProjectPage({ page }: { page: ProjectPageData }) {
       <main>
         <Hero page={page} />
         <Breadcrumb items={page.breadcrumb} />
-        <TrustStatsBar />
 
         <section className="sfw-project-section sfw-project-section-light">
           <div className="sfw-project-inner sfw-project-intro">
@@ -243,7 +242,7 @@ export function ProjectPage({ page }: { page: ProjectPageData }) {
                 Every project runs on the same three priorities: the right material, a clean
                 install window, and direct communication from a local crew.
               </p>
-              <QuoteFormLink className="btnfx sfw-project-button">Talk to us →</QuoteFormLink>
+              <QuoteFormLink className="btnfx sfw-project-button">Talk to us<ArrowIcon /></QuoteFormLink>
             </div>
             <div className="sfw-project-steps">
               {page.process.steps.map((step, index) => (

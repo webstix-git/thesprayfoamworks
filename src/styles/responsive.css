@@ -52,9 +52,9 @@ body.mobile-nav-open #siteHeader {
 
   .site-nav-logo img,
   .site-nav-logo .sfw-logo {
-    height: 72px !important;
+    height: 78px !important;
     margin-top: 0 !important;
-    padding: 6px !important;
+    padding: 4px !important;
     width: auto !important;
   }
 
@@ -274,6 +274,13 @@ body.mobile-nav-open .mobile-nav-toggle span:nth-child(3) {
     margin-top: -80px !important;
   }
 
+  .sfw-project-hero,
+  .sfw-company-hero,
+  .sfw-loc-hero,
+  .sfw-legal-hero {
+    margin-top: -80px !important;
+  }
+
   .sfw-hero-dots {
     bottom: 20px;
   }
@@ -383,7 +390,7 @@ body.mobile-nav-open .mobile-nav-toggle span:nth-child(3) {
 
   .sfw-h1 {
     font-size: 40px !important;
-    line-height: 1.02 !important;
+    line-height: calc(1em + 10px) !important;
   }
 
   .sfw-h2 {
@@ -392,7 +399,7 @@ body.mobile-nav-open .mobile-nav-toggle span:nth-child(3) {
 
   .sfw-hero {
     min-height: 480px !important;
-    margin-top: -72px !important;
+    margin-top: -80px !important;
   }
 
   .sfw-hero-slideshow .hero-rise {
@@ -574,7 +581,7 @@ body.mobile-nav-open .mobile-nav-toggle span:nth-child(3) {
   }
 
   .site-nav-logo img {
-    height: 60px !important;
+    height: 66px !important;
   }
 
   .sfw-h1 {

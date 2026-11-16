@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { TrustStatsBar } from '@/components/TrustStatsBar';
 import { SiteEnhancements } from '@/components/SiteEnhancements';
 import { SiteFooter } from '@/components/SiteFooter';
 import { SiteHeader } from '@/components/SiteHeader';
@@ -34,7 +33,6 @@ export function GetAQuotePage() {
           </div>
         </div>
 
-        <TrustStatsBar />
 
         <section className="sfw-project-section sfw-project-section-light">
           <div className="sfw-project-inner sfw-contact-grid">

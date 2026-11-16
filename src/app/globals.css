@@ -60,8 +60,35 @@ body {
   font-family: var(--font-hanken), sans-serif;
 }
 
+/* Line height is always font size + 10px; set per element so it tracks each element's own font size. */
+*,
+*::before,
+*::after,
+button,
+input,
+optgroup,
+select,
+textarea {
+  line-height: calc(1em + 10px);
+}
+
 a {
   text-decoration: none;
+}
+
+.sfw-arrow-icon {
+  display: inline-block;
+  flex-shrink: 0;
+  height: 1em;
+  margin-left: 0.4em;
+  transition: transform 0.2s ease;
+  vertical-align: -0.125em;
+  width: 1em;
+}
+
+a:hover .sfw-arrow-icon,
+a:focus-visible .sfw-arrow-icon {
+  transform: translateX(3px);
 }
 
 /* Avoid single-word widows at the end of lines/paragraphs */

@@ -58,8 +58,9 @@ export type CompanyPageData = {
   breadcrumb: BreadcrumbItem[];
 };
 
+/** The Spray Foam Works, Inc Google Maps listing; `!9m1!1b1` opens it on the Reviews tab. */
 const GOOGLE_REVIEWS_URL =
-  'https://www.google.com/search?q=The+Spray+Foam+Works,+Inc+Reviews';
+  'https://www.google.com/maps/place/The+Spray+Foam+Works,+Inc/@44.900771,-89.5694905,7z/data=!4m8!3m7!1s0x88065b1879b7f7a1:0x7a5202d98256ce35!8m2!3d44.900771!4d-89.5694906!9m1!1b1!16s%2Fg%2F11g8cmyhjt';
 
 export const googleReviews: Testimonial[] = testimonialReviews.map((review) => ({
   name: review.name,

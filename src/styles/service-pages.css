@@ -56,15 +56,15 @@ body.mobile-nav-open #siteHeader::before {
   display: block;
   height: 150px;
   mix-blend-mode: screen;
-  padding: 10px;
-  padding-top: 15px;
+  padding: 4px;
+  padding-top: 8px;
   transition: height 0.25s ease, padding 0.25s ease;
   width: auto;
 }
 
 #siteHeader.sfw-header-scrolled .sfw-logo {
-  height: 72px;
-  padding: 6px;
+  height: 80px;
+  padding: 4px;
 }
 
 .sfw-nav-links {
@@ -227,7 +227,7 @@ body.mobile-nav-open #siteHeader::before {
   font-size: 72px;
   font-weight: 400;
   letter-spacing: 0.01em;
-  line-height: 0.96;
+  line-height: calc(1em + 10px);
   margin: 0;
   text-transform: uppercase;
 }
@@ -239,7 +239,7 @@ body.mobile-nav-open #siteHeader::before {
 .sfw-service-hero p {
   color: #d3d5da;
   font-size: 20px;
-  line-height: 1.55;
+  line-height: calc(1em + 10px);
   margin: 24px 0 0;
   max-width: 660px;
 }
@@ -293,7 +293,7 @@ body.mobile-nav-open #siteHeader::before {
   display: block;
   font-family: var(--font-archivo), sans-serif;
   font-size: 32px;
-  line-height: 1;
+  line-height: calc(1em + 10px);
 }
 
 .sfw-service-stats span {
@@ -328,7 +328,7 @@ body.mobile-nav-open #siteHeader::before {
   font-size: 44px;
   font-weight: 600;
   letter-spacing: -0.01em;
-  line-height: 1.04;
+  line-height: calc(1em + 10px);
   margin: 0 0 20px;
   text-transform: uppercase;
 }
@@ -338,7 +338,7 @@ body.mobile-nav-open #siteHeader::before {
 .sfw-service-faq p {
   color: #4a4c52;
   font-size: 18px;
-  line-height: 1.7;
+  line-height: calc(1em + 10px);
   margin: 0 0 18px;
 }
 
@@ -358,13 +358,13 @@ body.mobile-nav-open #siteHeader::before {
 .sfw-check-list span {
   color: #e4141b;
   font-size: 18px;
-  line-height: 1.3;
+  line-height: calc(1em + 10px);
 }
 
 .sfw-check-list strong {
   color: #2a2c31;
   font-size: 18px;
-  line-height: 1.5;
+  line-height: calc(1em + 10px);
 }
 
 .sfw-service-image-card {
@@ -427,7 +427,7 @@ body.mobile-nav-open #siteHeader::before {
 .sfw-card-grid p {
   color: #6b6e76;
   font-size: 18px;
-  line-height: 1.55;
+  line-height: calc(1em + 10px);
   margin: 0;
 }
 
@@ -502,7 +502,7 @@ body.mobile-nav-open #siteHeader::before {
 .sfw-image-grid p {
   color: #cbcdd2;
   font-size: 18px;
-  line-height: 1.45;
+  line-height: calc(1em + 10px);
   margin: 0;
 }
 
@@ -546,7 +546,7 @@ body.mobile-nav-open #siteHeader::before {
 .sfw-process-list p {
   color: #b7bac1;
   font-size: 18px;
-  line-height: 1.6;
+  line-height: calc(1em + 10px);
   margin: 0;
 }
 
@@ -579,7 +579,7 @@ body.mobile-nav-open #siteHeader::before {
   font-family: var(--font-anton), sans-serif;
   font-size: 58px;
   font-weight: 400;
-  line-height: 0.98;
+  line-height: calc(1em + 10px);
   margin: 0;
   text-transform: uppercase;
 }
@@ -587,7 +587,7 @@ body.mobile-nav-open #siteHeader::before {
 .sfw-service-cta p {
   color: #ffdedf;
   font-size: 20px;
-  line-height: 1.5;
+  line-height: calc(1em + 10px);
   margin: 20px 0 0;
   max-width: 680px;
 }
@@ -658,7 +658,7 @@ body.mobile-nav-open #siteHeader::before {
   flex-direction: column;
   font-size: 16px;
   gap: 8px;
-  line-height: 1.9;
+  line-height: calc(1em + 10px);
 }
 
 .sfw-site-footer .sfw-footer-contact > div {
@@ -797,7 +797,7 @@ body.mobile-nav-open #siteHeader::before {
 .sfw-service-footer p {
   color: #8a8d94;
   font-size: 16px;
-  line-height: 1.6;
+  line-height: calc(1em + 10px);
   margin: 0 0 18px;
 }
 

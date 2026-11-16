@@ -113,10 +113,10 @@ export function SiteFooter() {
             <Link href="/residential" className="navlink">
               Residential
             </Link>
-            <Link href="/retrofitting" className="navlink">
-              Retrofit
+            <Link href="/existing-homes" className="navlink">
+              Existing Homes
             </Link>
-            <Link href="/commercial" className="navlink">
+            <Link href="/commercial-buildings" className="navlink">
               Commercial
             </Link>
           </div>

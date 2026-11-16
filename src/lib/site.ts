@@ -28,24 +28,32 @@ const PAGES: PageMeta[] = [
     showTrustBar: false,
   },
   {
-    slug: 'retrofitting',
-    route: '/retrofitting',
+    slug: 'existing-homes',
+    route: '/existing-homes',
     title: 'Retrofitting Insulation | The Sprayfoam Works',
     description:
       'Insulation retrofitting for existing homes in Madison and Dane County. Improve comfort, drafts, and energy performance without a major remodel.',
     showTrustBar: false,
   },
   {
-    slug: 'pole-barns',
-    route: '/pole-barns',
-    title: 'Pole Barn Insulation | The Sprayfoam Works',
+    slug: 'pole-barns-agricultural-buildings',
+    route: '/pole-barns-agricultural-buildings',
+    title: 'Pole Barn & Agricultural Building Insulation',
     description:
-      'Pole barn insulation in Dane County. Spray foam and fiberglass options for shops, garages, steel buildings, and post-frame buildings.',
+      'Pole barn and agricultural building insulation in Dane County. Spray foam and fiberglass for shops, livestock barns, machine sheds, steel buildings, and post-frame buildings.',
     showTrustBar: false,
   },
   {
-    slug: 'remodels',
-    route: '/remodels',
+    slug: 'post-frame-construction',
+    route: '/post-frame-construction',
+    title: 'Post-frame Construction Insulation',
+    description:
+      'Post-frame construction insulation in Madison and Dane County. Spray foam and fiberglass for new post-frame shops, garages, offices, and farm buildings, coordinated with your builder.',
+    showTrustBar: false,
+  },
+  {
+    slug: 'remodels-additions',
+    route: '/remodels-additions',
     title: 'Remodel Insulation | The Sprayfoam Works',
     description:
       'Insulation for remodels and renovations in Madison, WI. Spray foam and fiberglass installed during kitchen, basement, attic, and whole-home projects.',
@@ -68,11 +76,11 @@ const PAGES: PageMeta[] = [
     showTrustBar: false,
   },
   {
-    slug: 'fiberglass',
-    route: '/fiberglass',
-    title: 'Fiberglass Insulation | The Sprayfoam Works',
+    slug: 'fiberglass-blow-in-insulation',
+    route: '/fiberglass-blow-in-insulation',
+    title: 'Fiberglass & Blow-in Insulation',
     description:
-      'Fiberglass insulation installation in Madison and Dane County. Batt and blown-in insulation for attics, walls, remodels, and new construction.',
+      'Fiberglass & blow-in insulation installation in Madison and Dane County. Fiberglass batts and blow-in insulation for attics, walls, remodels, and new construction.',
     showTrustBar: false,
   },
   {
@@ -93,10 +101,10 @@ const PAGES: PageMeta[] = [
   },
   {
     slug: 'commercial',
-    route: '/commercial',
-    title: 'Commercial Insulation | The Sprayfoam Works',
+    route: '/commercial-buildings',
+    title: 'Commercial Building Insulation',
     description:
-      'Commercial spray foam insulation for warehouses, shops, and new construction across Dane County, Wisconsin.',
+      'Commercial building insulation for warehouses, shops, offices, and steel buildings across Dane County, Wisconsin. Spray foam and fiberglass installed to spec and on schedule.',
     showTrustBar: false,
   },
   {
@@ -273,20 +281,7 @@ export const siteConfig = {
   phoneTel: 'tel:6082790088',
   email: 'sprayfoamworks@gmail.com',
   url: process.env.NEXT_PUBLIC_SITE_URL || 'https://www.sprayfoamworks.com',
-  quoteForm: {
-    href: '/documents/request-a-quote-form.docx',
-    download: 'Request-a-Quote-Form.docx',
+  quotePage: {
+    href: '/get-a-quote',
   },
 };
-
-export type SiteTrustStat = {
-  value: string;
-  label: string;
-};
-
-export const siteTrustStats: SiteTrustStat[] = [
-  { value: '17', label: 'Years of hands-on experience' },
-  { value: '100%', label: 'Commitment to Better Results' },
-  { value: '2', label: 'Madison & Cottage Grove' },
-  { value: '$0', label: 'Middleman markup, direct pricing' },
-];

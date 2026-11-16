@@ -1,10 +1,8 @@
 import Link from 'next/link';
-import { TrustStatsBar } from '@/components/TrustStatsBar';
 import { SiteEnhancements } from '@/components/SiteEnhancements';
 import { SiteFooter } from '@/components/SiteFooter';
 import { SiteHeader } from '@/components/SiteHeader';
 import { ContactForm } from '@/components/ContactForm';
-import { ContactSidebar } from '@/components/ContactSidebar';
 
 export function ContactPage() {
   return (
@@ -34,14 +32,12 @@ export function ContactPage() {
           </div>
         </div>
 
-        <TrustStatsBar />
 
         <section className="sfw-project-section sfw-project-section-light">
-          <div className="sfw-project-inner sfw-contact-grid">
+          <div className="sfw-project-inner sfw-contact-single">
             <div className="sfw-contact-form-card">
               <ContactForm />
             </div>
-            <ContactSidebar />
           </div>
         </section>
       </main>

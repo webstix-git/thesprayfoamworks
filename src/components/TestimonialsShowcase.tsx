@@ -1,14 +1,14 @@
 import Link from 'next/link';
 import { GoogleReviewIcon } from '@/components/GoogleReviewIcon';
-import { TrustStatsBar } from '@/components/TrustStatsBar';
 import { SiteEnhancements } from '@/components/SiteEnhancements';
 import { SiteFooter } from '@/components/SiteFooter';
+import { ArrowIcon } from '@/components/ArrowIcon';
 import { SiteHeader } from '@/components/SiteHeader';
 import { testimonialReviews } from '@/lib/testimonials';
+import { GOOGLE_REVIEWS_URL } from '@/lib/company-pages';
 import { siteConfig } from '@/lib/site';
 import { QuoteFormLink } from '@/components/QuoteFormLink';
 
-const googleReviewsUrl = 'https://www.google.com/search?q=The+Sprayfoam+Works+Inc+reviews';
 
 export function TestimonialsShowcase() {
   return (
@@ -33,7 +33,7 @@ export function TestimonialsShowcase() {
             <div className="sfw-project-hero-actions">
               <QuoteFormLink className="btnfx sfw-project-cta-primary">Get a Free Quote</QuoteFormLink>
               <a
-                href={googleReviewsUrl}
+                href={GOOGLE_REVIEWS_URL}
                 target="_blank"
                 rel="noopener"
                 className="btnfx sfw-project-cta-ghost"
@@ -58,7 +58,6 @@ export function TestimonialsShowcase() {
           </div>
         </div>
 
-        <TrustStatsBar />
 
         <section className="sfw-tm-statbar">
           <div className="sfw-tm-statbar-inner">
@@ -102,8 +101,8 @@ export function TestimonialsShowcase() {
             ))}
           </div>
           <div className="sfw-tm-more">
-            <a href={googleReviewsUrl} target="_blank" rel="noopener" className="btnfx">
-              <GoogleReviewIcon size={20} /> Read more reviews on Google →
+            <a href={GOOGLE_REVIEWS_URL} target="_blank" rel="noopener" className="btnfx">
+              <GoogleReviewIcon size={20} /> Read more reviews on Google<ArrowIcon />
             </a>
           </div>
         </section>

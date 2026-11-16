@@ -1,9 +1,12 @@
 'use client';
 
+import Link from 'next/link';
 import { useState, type FormEvent } from 'react';
 
 const FORM_SUBMIT_ACTION =
   'https://ywwxvriolxwuqcwjaluh.supabase.co/functions/v1/form-submit/37471101-5436-487b-a7a2-9bbf7ebd2793';
+const EMAIL = 'sprayfoamworks@gmail.com';
+const PHONE_TEL = 'tel:6082790088';
 
 export function ContactForm() {
   const [submitting, setSubmitting] = useState(false);
@@ -43,11 +46,24 @@ export function ContactForm() {
 
   return (
     <>
-      <span className="sfw-project-label">Contact Us</span>
-      <h2>Send us a message</h2>
+      <span className="sfw-project-label">Contact</span>
+      <h2>Have a question or ready to request a quote?</h2>
       <p className="sfw-contact-form-intro">
-        Have a question? Fill out the form below and we&apos;ll get back to you. Prefer to talk?
-        Call or text us anytime.
+        Contact us through our online{' '}
+        <Link href="/get-a-quote" className="sfw-contact-phone-link">
+          Get a Quote
+        </Link>{' '}
+        form (preferred), email{' '}
+        <a href={`mailto:${EMAIL}`} className="sfw-contact-phone-link">
+          {EMAIL}
+        </a>
+        , or call/text{' '}
+        <a href={PHONE_TEL} className="sfw-contact-phone-link">
+          (608) 279-0088
+        </a>
+        .
+        <br />
+        We look forward to discussing your project.
       </p>
 
       {submitError && (

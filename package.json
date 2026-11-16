@@ -7,8 +7,7 @@
     "dev:clean": "node scripts/ensure-dev.js",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "extract": "node extract-bundle.js && node extract-assets.js && node convert-pages.js"
+    "lint": "next lint"
   },
   "dependencies": {
     "next": "^15.5.20",

@@ -179,7 +179,7 @@ export const locationPages: ProjectPageData[] = [
     testimonial: {
       quote:
         'Aaron did an excellent job on our project that included spray foam in our exterior walls and attic. Pleasant to work with, high quality, and timely, all for a good price. Highly recommend!',
-      name: 'Abby Sporel',
+      name: 'Abby Spoerl',
       role: 'Homeowner · Cottage Grove area',
     },
   }),

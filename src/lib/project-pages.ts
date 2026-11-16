@@ -12,7 +12,7 @@ export type ProjectFeatureIcon =
   | 'shield'
   | 'leaf';
 
-export type ProjectPageSlug = 'retrofitting' | 'remodels' | 'new-construction';
+export type ProjectPageSlug = 'existing-homes' | 'remodels-additions' | 'new-construction';
 
 export type ProjectPageData = {
   slug: ProjectPageSlug;
@@ -73,14 +73,14 @@ export type ProjectPageData = {
 
 export const projectPages: ProjectPageData[] = [
   {
-    slug: 'retrofitting',
-    route: '/retrofitting',
-    metaTitle: 'Retrofit Insulation for Existing Homes | The Sprayfoam Works',
+    slug: 'existing-homes',
+    route: '/existing-homes',
+    metaTitle: 'Existing Home Insulation',
     metaDescription:
       'Retrofit insulation in Madison and Dane County. We air seal and add insulation to existing homes to stop drafts and cut energy bills, no full remodel required.',
     hero: {
       eyebrow: 'Existing Homes',
-      title: 'Retrofit',
+      title: 'Existing Home',
       titleAccent: 'Insulation',
       subtitle:
         'Got an older Dane County home that never quite feels comfortable? We track down the drafts, seal the leaks, and add insulation where it actually counts, no full remodel required.',
@@ -90,7 +90,7 @@ export const projectPages: ProjectPageData[] = [
     breadcrumb: [
       { label: 'Home', href: '/' },
       { label: 'Residential', href: '/residential' },
-      { label: 'Retrofit' },
+      { label: 'Existing Homes' },
     ],
     intro: {
       eyebrow: 'Why Retrofit',
@@ -212,14 +212,14 @@ export const projectPages: ProjectPageData[] = [
     },
   },
   {
-    slug: 'remodels',
-    route: '/remodels',
-    metaTitle: 'Remodel Insulation in Madison, WI | The Sprayfoam Works',
+    slug: 'remodels-additions',
+    route: '/remodels-additions',
+    metaTitle: 'Remodel & Addition Insulation',
     metaDescription:
-      'Insulation for remodels and renovations in Madison and Dane County. Spray foam and fiberglass installed at the right stage, before drywall and finishes go up.',
+      'Insulation for remodels, renovations, and home additions in Madison and Dane County. Spray foam and fiberglass installed at the right stage, before drywall and finishes go up.',
     hero: {
       eyebrow: 'Renovations',
-      title: 'Remodel',
+      title: 'Remodel & Addition',
       titleAccent: 'Insulation',
       subtitle:
         'A remodel is your one clean shot at getting insulation right. While the walls are open, we seal and insulate so your finished space performs for decades, not just looks good on day one.',
@@ -229,7 +229,7 @@ export const projectPages: ProjectPageData[] = [
     breadcrumb: [
       { label: 'Home', href: '/' },
       { label: 'Residential', href: '/residential' },
-      { label: 'Remodels' },
+      { label: 'Remodels & Additions' },
     ],
     intro: {
       eyebrow: 'Timing Matters',
@@ -341,8 +341,8 @@ export const projectPages: ProjectPageData[] = [
     },
     testimonial: {
       quote:
-        'Aaron did an excellent job adding spray foam to our exterior walls and attic in a seasonal cottage we are converting to year-round use. High quality work and materials, timely, and a good price. We\u2019d highly recommend him for any project!',
-      name: 'Abby Sporel',
+        "Aaron did an excellent job on our project that included adding spray foam to our exterior walls and attic in a seasonal cottage we are converting to year-round use. He was very pleasant to work with, high quality work and materials and timely in getting the job done, all for a good price. We'd highly recommend Aaron for any project!!",
+      name: 'Abby Spoerl',
       role: 'Homeowner · Dane County',
     },
     cta: {
@@ -355,13 +355,13 @@ export const projectPages: ProjectPageData[] = [
     route: '/new-construction',
     metaTitle: 'New Construction Insulation | The Sprayfoam Works',
     metaDescription:
-      'New construction insulation in Madison and Dane County. Spray foam, fiberglass, and hybrid packages for efficient new homes, additions, and commercial builds.',
+      'New construction insulation in Madison and Dane County. Spray foam, fiberglass, and hybrid packages for efficient new custom homes and residential builds.',
     hero: {
       eyebrow: 'Build Right From Day One',
       title: 'New Construction',
       titleAccent: 'Insulation',
       subtitle:
-        'The best time to solve comfort and energy problems is before they ever start. We build high-performance insulation into the shell of your new home or building, clean, on schedule, and ready for inspection.',
+        'The best time to solve comfort and energy problems is before they ever start. We build high-performance insulation into the shell of your new home, clean, on schedule, and ready for inspection.',
       image: photos.vaultedNewBuild,
       imageAlt: 'Spray foam insulation being installed in new construction',
     },
@@ -375,13 +375,13 @@ export const projectPages: ProjectPageData[] = [
       title: 'Build the envelope before you decorate it',
       paragraphs: [
         'New construction is your chance to get insulation right the first time, before a single comfort complaint or high energy bill ever shows up. We help builders and owners choose the right mix of spray foam, fiberglass, and air sealing for the building and the budget.',
-        'From custom homes to additions, post-frame buildings, and light commercial interiors, our focus is clean coverage, builder-friendly scheduling, and assemblies that keep performing long after move-in day.',
+        'From custom homes to finished basements and bonus rooms, our focus is clean coverage, builder-friendly scheduling, and assemblies that keep performing long after move-in day.',
       ],
       bullets: [
         'Walls, attics, roof decks, rim joists, and ceilings',
         'Hybrid assemblies that balance performance and budget',
         'Builder-friendly scheduling and documentation',
-        'Residential and light commercial projects',
+        'Custom homes and residential builds',
       ],
       image: photos.vaultedTruss,
       imageAlt: 'New construction attic insulated with spray foam',
@@ -418,7 +418,7 @@ export const projectPages: ProjectPageData[] = [
     },
     projectTypes: {
       eyebrow: 'What We Build',
-      title: 'From custom homes to commercial shells',
+      title: 'From custom homes to finished basements',
       subtitle:
         'We scope every project around its plans, assemblies, and performance goals, not a one-size-fits-all spec.',
       items: [
@@ -428,14 +428,14 @@ export const projectPages: ProjectPageData[] = [
           image: photos.newBuildRoom,
         },
         {
-          title: 'Additions',
-          body: 'New square footage insulated correctly before finishes go in, so it matches the main house.',
-          image: photos.vaultedAttic,
+          title: 'Bonus Rooms & Attics',
+          body: 'Finished attics and rooms over the garage sealed and insulated so they stay as comfortable as the rest of the house.',
+          image: photos.atticRoom,
         },
         {
-          title: 'Commercial Shells',
-          body: 'Warehouses, offices, and shop spaces air sealed and insulated to practical, real-world specs.',
-          image: photos.poleBarn,
+          title: 'Finished Basements',
+          body: 'Basement walls and rim joists insulated before framing is closed in, for a warmer, drier lower level.',
+          image: photos.basementWalls,
         },
       ],
     },

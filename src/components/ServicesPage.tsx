@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { TrustStatsBar } from '@/components/TrustStatsBar';
 import { SiteEnhancements } from '@/components/SiteEnhancements';
 import { SiteFooter } from '@/components/SiteFooter';
+import { ArrowIcon } from '@/components/ArrowIcon';
 import { SiteHeader } from '@/components/SiteHeader';
 import { photos } from '@/lib/project-photos';
 import { siteConfig } from '@/lib/site';
@@ -23,8 +23,8 @@ const coreServices = [
     body: 'Open & closed-cell foam that air-seals and insulates in a single step for the tightest, highest-performing envelope.',
   },
   {
-    href: '/fiberglass',
-    title: 'Fiberglass Insulation',
+    href: '/fiberglass-blow-in-insulation',
+    title: 'Fiberglass & Blow-in Insulation',
     image: img.fiberglass,
     alt: 'Fiberglass batt insulation installed in a wall',
     body: 'Cost-effective batt & blown-in coverage for attics, walls, and floors, expertly and evenly installed.',
@@ -35,20 +35,20 @@ type SpecIcon = 'retrofit' | 'barn' | 'remodel' | 'new' | 'removal' | 'help';
 
 const specialties: { href: string; title: string; body: string; icon: SpecIcon }[] = [
   {
-    href: '/retrofitting',
-    title: 'Retrofitting',
+    href: '/existing-homes',
+    title: 'Existing Homes',
     body: 'Upgrade existing homes and buildings without tearing them apart.',
     icon: 'retrofit',
   },
   {
-    href: '/pole-barns',
-    title: 'Pole Barns',
-    body: 'Climate-control shops, barns, and steel buildings year-round.',
+    href: '/pole-barns-agricultural-buildings',
+    title: 'Pole Barns & Agricultural Buildings',
+    body: 'Climate-control shops, farm buildings, and post-frame buildings year-round.',
     icon: 'barn',
   },
   {
-    href: '/remodels',
-    title: 'Remodels',
+    href: '/remodels-additions',
+    title: 'Remodels & Additions',
     body: 'Insulation dialed in during your renovation or addition.',
     icon: 'remodel',
   },
@@ -207,7 +207,6 @@ export function ServicesPage() {
           </div>
         </div>
 
-        <TrustStatsBar />
 
         <section className="sfw-project-section sfw-project-section-light">
           <div className="sfw-project-inner">
@@ -229,7 +228,7 @@ export function ServicesPage() {
                     <div className="sfw-srv-tag">CORE SERVICE</div>
                     <h3>{service.title}</h3>
                     <p>{service.body}</p>
-                    <span className="sfw-srv-learn">Learn more →</span>
+                    <span className="sfw-srv-learn">Learn more<ArrowIcon /></span>
                   </div>
                 </Link>
               ))}

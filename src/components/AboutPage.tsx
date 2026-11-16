@@ -1,9 +1,11 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { ArrowIcon } from '@/components/ArrowIcon';
 import { GoogleReviewIcon } from '@/components/GoogleReviewIcon';
 import { SiteEnhancements } from '@/components/SiteEnhancements';
 import { SiteFooter } from '@/components/SiteFooter';
 import { SiteHeader } from '@/components/SiteHeader';
+import { GOOGLE_REVIEWS_URL } from '@/lib/company-pages';
 import { photos } from '@/lib/project-photos';
 import { testimonialReviews } from '@/lib/testimonials';
 
@@ -94,7 +96,7 @@ export function AboutPage() {
 
         <section id="customer-reviews" className="sfw-company-section sfw-company-section-dark">
           <div className="sfw-company-section-inner">
-            <div className="sfw-company-section-heading sfw-company-section-heading-center">
+            <div className="sfw-company-section-heading sfw-about-heading">
               <span className="sfw-company-label">Customer Reviews</span>
               <h2>Why Customers Trust Us</h2>
               <p>
@@ -122,6 +124,18 @@ export function AboutPage() {
                   </div>
                 </article>
               ))}
+            </div>
+
+            <div className="sfw-company-google-cta sfw-about-google-cta">
+              <a
+                href={GOOGLE_REVIEWS_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btnfx sfw-company-google-button"
+              >
+                <GoogleReviewIcon className="sfw-company-google-g" size={24} />
+                Read more reviews on Google<ArrowIcon />
+              </a>
             </div>
           </div>
         </section>

@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { TrustStatsBar } from '@/components/TrustStatsBar';
 import { SiteEnhancements } from '@/components/SiteEnhancements';
 import { SiteFooter } from '@/components/SiteFooter';
+import { ArrowIcon } from '@/components/ArrowIcon';
 import { SiteHeader } from '@/components/SiteHeader';
 import type { ServicePageData } from '@/lib/service-pages';
 import { siteConfig } from '@/lib/site';
@@ -32,15 +32,14 @@ export function ServicePage({ page }: { page: ServicePageData }) {
                 Home
               </Link>
               <span>/</span>
-              <span className="sfw-breadcrumb-muted">Services</span>
+              <span className="sfw-breadcrumb-muted">{page.breadcrumb?.parent ?? 'Services'}</span>
               <span>/</span>
               <span className="sfw-breadcrumb-current">
-                {page.title} {page.accent}
+                {page.breadcrumb?.label ?? `${page.title} ${page.accent}`}
               </span>
             </div>
           </section>
 
-          <TrustStatsBar />
 
           <section className="sfw-service-intro sfw-section sfw-grid sfw-grid-2">
             <div>
@@ -86,7 +85,7 @@ export function ServicePage({ page }: { page: ServicePageData }) {
                 <h2 className="sfw-h2">Practical applications</h2>
               </div>
               <a href={siteConfig.phoneTel} className="navlink">
-                Ask what fits your project →
+                Ask what fits your project<ArrowIcon />
               </a>
             </div>
             <div className="sfw-image-grid sfw-grid sfw-grid-3">
@@ -133,7 +132,7 @@ export function ServicePage({ page }: { page: ServicePageData }) {
           <section className="sfw-service-faq sfw-section">
             <div className="sfw-centered-heading">
               <span className="sfw-section-label">Questions</span>
-              <h2 className="sfw-h2">What homeowners ask us</h2>
+              <h2 className="sfw-h2">{page.faqTitle ?? 'What homeowners ask us'}</h2>
             </div>
             <div className="sfw-faq-list">
               {page.faq.map((item) => (

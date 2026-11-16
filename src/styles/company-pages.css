@@ -5,7 +5,7 @@
 }
 
 .sfw-company-hero {
-  margin-top: -104px;
+  margin-top: -152px;
   min-height: 520px;
   overflow: hidden;
   position: relative;
@@ -60,7 +60,7 @@
   font-size: 70px;
   font-weight: 400;
   letter-spacing: 0.01em;
-  line-height: 0.96;
+  line-height: calc(1em + 10px);
   margin: 0;
   text-transform: uppercase;
 }
@@ -72,7 +72,7 @@
 .sfw-company-hero-content p {
   color: #d3d5da;
   font-size: 20px;
-  line-height: 1.55;
+  line-height: calc(1em + 10px);
   margin: 24px 0 0;
   max-width: 640px;
 }
@@ -150,7 +150,7 @@
   font-size: 44px;
   font-weight: 600;
   letter-spacing: -0.01em;
-  line-height: 1.04;
+  line-height: calc(1em + 10px);
   margin: 0 0 18px;
   text-transform: uppercase;
 }
@@ -159,14 +159,14 @@
 .sfw-company-mission-intro p {
   color: #4a4c52;
   font-size: 18px;
-  line-height: 1.7;
+  line-height: calc(1em + 10px);
   margin: 0 0 16px;
 }
 
 .sfw-company-section-dark p {
   color: #b7bac1;
   font-size: 18px;
-  line-height: 1.7;
+  line-height: calc(1em + 10px);
   margin: 0 0 16px;
 }
 
@@ -203,7 +203,7 @@
 .sfw-company-mini-card span {
   color: #6b6e76;
   font-size: 18px;
-  line-height: 1.5;
+  line-height: calc(1em + 10px);
 }
 
 .sfw-company-intro-image,
@@ -265,7 +265,7 @@
   color: #d3d5da;
   font-size: 18px;
   font-style: italic;
-  line-height: 1.6;
+  line-height: calc(1em + 10px);
   margin: 24px 0;
   padding-left: 20px;
 }
@@ -376,7 +376,7 @@
 .sfw-company-crew-card p {
   color: #4a4c52;
   font-size: 18px;
-  line-height: 1.65;
+  line-height: calc(1em + 10px);
   margin: 0;
 }
 
@@ -400,7 +400,7 @@
   color: #fff;
   font-family: var(--font-anton), sans-serif;
   font-size: 44px;
-  line-height: 1;
+  line-height: calc(1em + 10px);
 }
 
 .sfw-company-stat-value-text {
@@ -507,7 +507,7 @@
 .sfw-company-timeline-card p {
   color: #4a4c52;
   font-size: 18px;
-  line-height: 1.65;
+  line-height: calc(1em + 10px);
   margin: 0;
 }
 
@@ -520,7 +520,7 @@
   color: #fff;
   font-size: 24px;
   font-style: italic;
-  line-height: 1.55;
+  line-height: calc(1em + 10px);
   margin: 0 0 20px;
 }
 
@@ -561,14 +561,14 @@
   display: block;
   font-family: var(--font-anton), sans-serif;
   font-size: 30px;
-  line-height: 1;
+  line-height: calc(1em + 10px);
 }
 
 .sfw-company-mission-stat span {
   color: #6b6e76;
   display: block;
   font-size: 13.5px;
-  line-height: 1.45;
+  line-height: calc(1em + 10px);
   margin-top: 8px;
 }
 
@@ -607,7 +607,7 @@
   color: #f1f2f4 !important;
   font-size: 24px;
   font-style: italic;
-  line-height: 1.5;
+  line-height: calc(1em + 10px);
   margin: 0 0 28px !important;
 }
 
@@ -664,7 +664,7 @@
   color: #e6e7ea;
   font-family: var(--font-anton), sans-serif;
   font-size: 40px;
-  line-height: 1;
+  line-height: calc(1em + 10px);
 }
 
 .sfw-company-value-card h3 {
@@ -679,7 +679,7 @@
 .sfw-company-value-card p {
   color: #6b6e76;
   font-size: 18px;
-  line-height: 1.55;
+  line-height: calc(1em + 10px);
   margin: 0;
 }
 
@@ -731,7 +731,7 @@
   color: #0b0b0c;
   font-family: var(--font-archivo), sans-serif;
   font-size: 22px;
-  line-height: 1;
+  line-height: calc(1em + 10px);
 }
 
 .sfw-company-google-rating span {
@@ -810,7 +810,7 @@
   color: #f1f2f4;
   font-size: 23px;
   font-style: italic;
-  line-height: 1.55;
+  line-height: calc(1em + 10px);
   margin: 0 0 26px;
 }
 
@@ -843,7 +843,7 @@
 .sfw-company-review p {
   color: #2a2c31;
   font-size: 18px;
-  line-height: 1.6;
+  line-height: calc(1em + 10px);
   margin: 0 0 24px;
 }
 
@@ -892,6 +892,10 @@
   margin-top: 40px;
 }
 
+.sfw-company-google-cta.sfw-about-google-cta {
+  justify-content: flex-start;
+}
+
 .sfw-company-google-button {
   align-items: center;
   background: #fff;
@@ -929,7 +933,7 @@
   font-size: 62px;
   font-weight: 400;
   letter-spacing: 0.005em;
-  line-height: 0.98;
+  line-height: calc(1em + 10px);
   margin: 0;
   text-transform: uppercase;
 }
@@ -937,7 +941,7 @@
 .sfw-company-cta p {
   color: #ffdedf;
   font-size: 20px;
-  line-height: 1.5;
+  line-height: calc(1em + 10px);
   margin: 22px 0 0;
 }
 
@@ -976,8 +980,8 @@
 
 .sfw-legal-hero {
   background: #0b0b0c;
-  margin-top: -104px;
-  padding: 168px max(56px, calc((100% - 1380px) / 2)) 64px;
+  margin-top: -152px;
+  padding: 216px max(56px, calc((100% - 1380px) / 2)) 64px;
 }
 
 .sfw-legal-hero-inner {
@@ -991,7 +995,7 @@
   font-size: 64px;
   font-weight: 400;
   letter-spacing: 0.01em;
-  line-height: 0.98;
+  line-height: calc(1em + 10px);
   margin: 0;
   text-transform: uppercase;
 }
@@ -1013,7 +1017,7 @@
 .sfw-legal-body p {
   color: #4a4c52;
   font-size: 18px;
-  line-height: 1.75;
+  line-height: calc(1em + 10px);
   margin: 0 0 16px;
 }
 
@@ -1030,7 +1034,7 @@
 .sfw-legal-body .sfw-faq-list ul {
   color: #4a4c52;
   font-size: 18px;
-  line-height: 1.6;
+  line-height: calc(1em + 10px);
   margin: 0 0 16px;
   padding-left: 1.2em;
 }
@@ -1083,14 +1087,15 @@
   font-size: 14px;
   height: 44px;
   justify-content: center;
-  line-height: 1;
+  line-height: calc(1em + 10px);
   min-height: 44px;
   min-width: 44px;
   width: 44px;
 }
 
-.sfw-company-about-copy {
-  max-width: 860px;
+.sfw-company-about-copy > *,
+.sfw-company-section-heading.sfw-about-heading {
+  max-width: 80%;
 }
 
 .sfw-company-about-copy a {
@@ -1213,6 +1218,11 @@
 @media (max-width: 768px) {
   .sfw-sitemap-grid {
     grid-template-columns: 1fr;
+  }
+
+  .sfw-company-about-copy > *,
+  .sfw-company-section-heading.sfw-about-heading {
+    max-width: 100%;
   }
 
   .sfw-legal-hero {

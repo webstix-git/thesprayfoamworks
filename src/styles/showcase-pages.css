@@ -51,7 +51,7 @@
   font-family: var(--font-archivo), sans-serif;
   font-size: 24px;
   font-weight: 800;
-  line-height: 1;
+  line-height: calc(1em + 10px);
 }
 
 .sfw-tm-stars {
@@ -78,7 +78,7 @@
   font-family: var(--font-anton), sans-serif;
   font-size: 40px;
   font-weight: 400;
-  line-height: 1;
+  line-height: calc(1em + 10px);
 }
 
 .sfw-tm-metric span {
@@ -135,7 +135,7 @@
 .sfw-tm-card p {
   color: #2a2c31;
   font-size: 17px;
-  line-height: 1.6;
+  line-height: calc(1em + 10px);
   margin: 0 0 24px;
 }
 
@@ -234,7 +234,7 @@
   font-size: 44px;
   font-weight: 600;
   letter-spacing: -0.01em;
-  line-height: 1.04;
+  line-height: calc(1em + 10px);
   margin: 0;
   text-transform: uppercase;
 }
@@ -246,7 +246,7 @@
 .sfw-srv-head p {
   color: #55575e;
   font-size: 17px;
-  line-height: 1.6;
+  line-height: calc(1em + 10px);
   margin: 16px 0 0;
 }
 
@@ -316,7 +316,7 @@
 .sfw-srv-core-body p {
   color: #55575e;
   font-size: 18px;
-  line-height: 1.55;
+  line-height: calc(1em + 10px);
   margin: 0 0 16px;
 }
 
@@ -366,7 +366,7 @@
 .sfw-srv-spec-card p {
   color: #6b6e76;
   font-size: 18px;
-  line-height: 1.5;
+  line-height: calc(1em + 10px);
   margin: 0;
 }
 
@@ -392,7 +392,7 @@
   color: #e4141b;
   font-family: var(--font-anton), sans-serif;
   font-size: 40px;
-  line-height: 1;
+  line-height: calc(1em + 10px);
   margin-bottom: 14px;
 }
 
@@ -407,7 +407,7 @@
 .sfw-srv-step p {
   color: #9a9da4;
   font-size: 18px;
-  line-height: 1.55;
+  line-height: calc(1em + 10px);
   margin: 0;
 }
 
@@ -499,7 +499,7 @@
   font-family: var(--font-anton), sans-serif;
   font-size: 44px;
   font-weight: 400;
-  line-height: 1;
+  line-height: calc(1em + 10px);
 }
 
 .sfw-gal-stat span {

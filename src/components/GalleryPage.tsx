@@ -4,7 +4,6 @@ import { GalleryGrid } from '@/components/GalleryGrid';
 import { SiteEnhancements } from '@/components/SiteEnhancements';
 import { SiteFooter } from '@/components/SiteFooter';
 import { SiteHeader } from '@/components/SiteHeader';
-import { TrustStatsBar } from '@/components/TrustStatsBar';
 import { galleryPhotos, photos } from '@/lib/project-photos';
 import { siteConfig } from '@/lib/site';
 import { QuoteFormLink } from '@/components/QuoteFormLink';
@@ -62,8 +61,6 @@ export function GalleryPage() {
         <section className="sfw-gal-wrap">
           <GalleryGrid items={galleryPhotos} />
         </section>
-
-        <TrustStatsBar />
 
         <section id="quote" className="sfw-project-final-cta">
           <div className="sfw-project-final-inner">

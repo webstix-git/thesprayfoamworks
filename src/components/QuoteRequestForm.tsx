@@ -7,13 +7,82 @@ const FORM_SUBMIT_ACTION =
 const PHONE = '608-279-0088';
 const PHONE_TEL = 'tel:6082790088';
 
+type FieldErrors = Partial<Record<string, string>>;
+
+const REQUIRED_MESSAGES: Record<string, string> = {
+  phone: 'Please enter your full phone number.',
+};
+
+/** The three phone inputs share one error message. */
+function errorKey(name: string) {
+  return name.startsWith('phone_') ? 'phone' : name;
+}
+
+function validate(form: HTMLFormElement) {
+  const errors: FieldErrors = {};
+  let firstInvalid: HTMLElement | null = null;
+
+  for (const element of Array.from(form.elements)) {
+    if (!(element instanceof HTMLInputElement || element instanceof HTMLTextAreaElement)) continue;
+    if (!element.name || element.validity.valid) continue;
+
+    const key = errorKey(element.name);
+    if (errors[key]) continue;
+
+    errors[key] =
+      key === 'email' && element.validity.typeMismatch
+        ? 'Please enter a valid email address.'
+        : REQUIRED_MESSAGES[key] ?? 'This field is required.';
+    firstInvalid ??= element;
+  }
+
+  return { errors, firstInvalid };
+}
+
+function FieldError({ name, errors }: { name: string; errors: FieldErrors }) {
+  if (!errors[name]) return null;
+  return (
+    <span id={`${name}-error`} className="sfw-contact-field-error" role="alert">
+      {errors[name]}
+    </span>
+  );
+}
+
 export function QuoteRequestForm() {
   const [submitting, setSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState(false);
+  const [errors, setErrors] = useState<FieldErrors>({});
+
+  const invalidProps = (key: string) =>
+    errors[key] ? { 'aria-invalid': true, 'aria-describedby': `${key}-error` } : {};
+
+  function clearError(event: FormEvent<HTMLFormElement>) {
+    const target = event.target as HTMLInputElement;
+    if (!target.name) return;
+    const key = errorKey(target.name);
+    if (!errors[key]) return;
+    const form = event.currentTarget;
+    const stillInvalid = Array.from(form.elements).some(
+      (el) =>
+        (el instanceof HTMLInputElement || el instanceof HTMLTextAreaElement) &&
+        el.name &&
+        errorKey(el.name) === key &&
+        !el.validity.valid,
+    );
+    if (!stillInvalid) setErrors((prev) => ({ ...prev, [key]: undefined }));
+  }
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const form = event.currentTarget;
+
+    const { errors: nextErrors, firstInvalid } = validate(form);
+    setErrors(nextErrors);
+    if (firstInvalid) {
+      firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      firstInvalid.focus({ preventScroll: true });
+      return;
+    }
 
     setSubmitting(true);
     setSubmitError(false);
@@ -71,6 +140,8 @@ export function QuoteRequestForm() {
         className="sfw-contact-form"
         action={FORM_SUBMIT_ACTION}
         method="post"
+        noValidate
+        onChange={clearError}
         onSubmit={handleSubmit}
       >
         <fieldset className="sfw-contact-form-section">
@@ -154,7 +225,14 @@ export function QuoteRequestForm() {
           <div className="sfw-contact-field-row sfw-contact-email-phone-row">
             <label className="sfw-contact-field">
               <span>Email</span>
-              <input type="email" name="email" maxLength={255} autoComplete="email" />
+              <input
+                type="email"
+                name="email"
+                maxLength={255}
+                autoComplete="email"
+                {...invalidProps('email')}
+              />
+              <FieldError name="email" errors={errors} />
             </label>
 
             <div className="sfw-contact-field">
@@ -170,6 +248,7 @@ export function QuoteRequestForm() {
                   inputMode="numeric"
                   placeholder="608"
                   aria-label="Area code"
+                  {...invalidProps('phone')}
                 />
                 <span className="sfw-contact-phone-sep" aria-hidden="true">
                   -
@@ -182,6 +261,7 @@ export function QuoteRequestForm() {
                   inputMode="numeric"
                   placeholder="279"
                   aria-label="Phone prefix"
+                  {...invalidProps('phone')}
                 />
                 <span className="sfw-contact-phone-sep" aria-hidden="true">
                   -
@@ -194,8 +274,10 @@ export function QuoteRequestForm() {
                   inputMode="numeric"
                   placeholder="0088"
                   aria-label="Phone line number"
+                  {...invalidProps('phone')}
                 />
               </div>
+              <FieldError name="phone" errors={errors} />
             </div>
           </div>
 

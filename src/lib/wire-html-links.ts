@@ -5,24 +5,26 @@ const PHONE_TEL = 'tel:6082790088';
 /** Card / section titles that differ from nav label keys */
 const titleRoutes: Record<string, string> = {
   'Spray Foam Insulation': '/spray-foam-insulation',
-  'Fiberglass Insulation': '/fiberglass',
+  'Fiberglass Insulation': '/fiberglass-blow-in-insulation',
+  'Pole Barns &amp; Agricultural Buildings': '/pole-barns-agricultural-buildings',
 };
 
 /** Button copy → route (checked as substring of link text) */
-const QUOTE_FORM_HREF = '/documents/request-a-quote-form.docx';
+const QUOTE_PAGE_HREF = '/get-a-quote';
 
 const buttonPhrases: [string, string][] = [
-  ['Get a Free Quote', QUOTE_FORM_HREF],
-  ['Get a Quote', QUOTE_FORM_HREF],
-  ['Request a Quote', QUOTE_FORM_HREF],
-  ['Request Your Free Quote', QUOTE_FORM_HREF],
-  ['Free Quote', QUOTE_FORM_HREF],
+  ['Get a Free Quote', QUOTE_PAGE_HREF],
+  ['Get a Quote', QUOTE_PAGE_HREF],
+  ['Request a Quote', QUOTE_PAGE_HREF],
+  ['Request Your Free Quote', QUOTE_PAGE_HREF],
+  ['Free Quote', QUOTE_PAGE_HREF],
   ['Meet the Team', '/our-team'],
-  ['Ask about your space', QUOTE_FORM_HREF],
-  ['Get a commercial quote', QUOTE_FORM_HREF],
+  ['Ask about your space', QUOTE_PAGE_HREF],
+  ['Get a commercial quote', QUOTE_PAGE_HREF],
   ['Explore Residential', '/residential'],
-  ['Explore Retrofit', '/retrofitting'],
-  ['Explore Commercial', '/commercial'],
+  ['Explore Existing Homes', '/existing-homes'],
+  ['Explore Retrofit', '/existing-homes'],
+  ['Explore Commercial', '/commercial-buildings'],
   ['View all services', '/services'],
   ['View more photos', '/gallery'],
   ['View all locations', '/about#areas-we-serve'],

@@ -53,7 +53,7 @@ export function SiteHeader() {
             </div>
           </div>
           <div className="has-dd">
-            <Link href="/commercial" className="navlink">
+            <Link href="/commercial-buildings" className="navlink">
               Commercial <span className="sfw-dd-caret">▼</span>
             </Link>
             <div className="dd">
@@ -85,13 +85,9 @@ export function SiteHeader() {
           <Link href="/contact" className="navlink">
             Contact
           </Link>
-          <a
-            href={siteConfig.quoteForm.href}
-            download={siteConfig.quoteForm.download}
-            className="btnfx sfw-nav-cta"
-          >
+          <Link href={siteConfig.quotePage.href} className="btnfx sfw-nav-cta">
             Get a Quote
-          </a>
+          </Link>
         </nav>
       </div>
     </header>

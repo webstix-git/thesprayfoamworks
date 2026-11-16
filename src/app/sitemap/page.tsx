@@ -24,7 +24,7 @@ const sitemapGroups: { heading: string; links: { label: string; href: string }[]
       { label: 'Home', href: '/' },
       { label: 'All Services', href: '/services' },
       { label: 'Residential', href: '/residential' },
-      { label: 'Commercial', href: '/commercial' },
+      { label: 'Commercial', href: '/commercial-buildings' },
       { label: 'Gallery', href: '/gallery' },
       { label: 'FAQs', href: '/faqs' },
       { label: 'Contact Us', href: '/contact' },

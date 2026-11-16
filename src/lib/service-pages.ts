@@ -6,6 +6,7 @@ export type ServicePageData = {
   eyebrow: string;
   title: string;
   accent: string;
+  breadcrumb?: { parent: string; label: string };
   description: string;
   metaDescription: string;
   heroImage: string;
@@ -22,14 +23,15 @@ export type ServicePageData = {
   applications: Array<{ title: string; body: string; image: string }>;
   process: Array<{ title: string; body: string }>;
   faq: Array<{ question: string; answer: string }>;
+  faqTitle?: string;
   ctaTitle: string;
   ctaBody: string;
 };
 
 export const servicePages: ServicePageData[] = [
   {
-    slug: 'retrofitting',
-    route: '/retrofitting',
+    slug: 'existing-homes',
+    route: '/existing-homes',
     eyebrow: 'Existing Homes',
     title: 'Retrofitting',
     accent: 'Insulation',
@@ -102,17 +104,18 @@ export const servicePages: ServicePageData[] = [
     ctaBody: 'Tell us what feels uncomfortable and we will help you find the right retrofit plan.',
   },
   {
-    slug: 'pole-barns',
-    route: '/pole-barns',
-    eyebrow: 'Shops & Outbuildings',
-    title: 'Pole Barn',
+    slug: 'pole-barns-agricultural-buildings',
+    route: '/pole-barns-agricultural-buildings',
+    eyebrow: 'Barns, Shops & Farm Buildings',
+    title: 'Pole Barn & Agricultural Building',
     accent: 'Insulation',
+    breadcrumb: { parent: 'Commercial', label: 'Pole Barns & Agricultural Buildings' },
     description:
-      'Turn a cold metal or post-frame building into a usable, efficient shop, storage space, or work area year-round.',
+      'Turn a cold pole barn, post-frame, or agricultural building into a usable, efficient shop, barn, or work area year-round.',
     metaDescription:
-      'Pole barn insulation in Dane County. Spray foam and fiberglass options for shops, garages, steel buildings, and post-frame buildings.',
-    heroImage: photos.poleBarn,
-    imageAlt: 'Insulated pole barn shop',
+      'Pole barn and agricultural building insulation in Dane County. Spray foam and fiberglass for shops, livestock barns, machine sheds, steel buildings, and post-frame buildings.',
+    heroImage: photos.garageShop,
+    imageAlt: 'Spray foam insulated pole building shop',
     stats: [
       { value: 'Year-Round', label: 'Usable shops and workspaces' },
       { value: 'Condensation', label: 'Control for metal buildings' },
@@ -120,30 +123,30 @@ export const servicePages: ServicePageData[] = [
       { value: 'Big Spaces', label: 'Crews equipped for large bays' },
     ],
     intro: {
-      eyebrow: 'Built For Wisconsin Shops',
-      title: 'Comfortable work space, not just storage',
+      eyebrow: 'Built For Wisconsin Farms & Shops',
+      title: 'Comfortable, dry space, not just storage',
       body: [
-        'Pole barns and metal buildings lose heat quickly when insulation is treated like an afterthought. We build the insulation plan around the way you use the space: heated shop, equipment storage, hobby garage, kennel, or mixed-use building.',
+        'Pole barns, post-frame, and agricultural buildings lose heat quickly when insulation is treated like an afterthought. We build the insulation plan around the way you use the space: heated shop, livestock barn, machine shed, equipment storage, kennel, or mixed-use building.',
         'Spray foam is often the right answer for roof decks, steel walls, and condensation control. Fiberglass can also be a smart option in framed cavities when the assembly is designed correctly.',
       ],
       bullets: [
         'Closed-cell foam for steel panels and roof decks',
-        'Wall and ceiling insulation packages',
+        'Livestock barns, machine sheds, and farm shops',
         'Condensation and air leakage control',
-        'Direct pricing for owner-builders and contractors',
+        'New post-frame builds and existing barns',
       ],
-      image: photos.garageShop,
+      image: photos.metalRoof,
     },
     benefits: [
       { title: 'Controls condensation', body: 'Closed-cell foam helps stop warm interior air from hitting cold steel and dripping back into the building.' },
       { title: 'Holds heat longer', body: 'A tight envelope makes large open spaces easier and less expensive to heat.' },
-      { title: 'Protects what you store', body: 'Better temperature and moisture control helps protect tools, vehicles, equipment, and materials.' },
+      { title: 'Protects animals and equipment', body: 'Steadier temperatures and moisture control help protect livestock, feed, tools, vehicles, and equipment.' },
       { title: 'Built for large areas', body: 'Our equipment and crews are set up for open spans, tall walls, and high-volume insulation work.' },
     ],
     applications: [
       { title: 'Heated Shops', body: 'Insulation packages for workshops, garages, and hobby buildings.', image: photos.garageShop },
-      { title: 'Equipment Storage', body: 'Protect farm equipment, trailers, tools, and seasonal gear.', image: photos.poleBarn },
-      { title: 'Steel Buildings', body: 'Foam directly to metal panels for air sealing and condensation control.', image: photos.metalRoof },
+      { title: 'Agricultural Buildings', body: 'Livestock barns, poultry buildings, and machine sheds kept drier and more even in temperature.', image: photos.quonset },
+      { title: 'Steel Buildings', body: 'Foam directly to metal panels for air sealing and condensation control.', image: photos.slopedRoof },
     ],
     process: [
       { title: 'Confirm Usage', body: 'We ask how the building will be heated, ventilated, and used before recommending materials.' },
@@ -159,13 +162,86 @@ export const servicePages: ServicePageData[] = [
         question: 'Can you insulate an existing pole barn?',
         answer: 'Yes. Existing buildings can often be upgraded, especially if wall and roof surfaces are accessible.',
       },
+      {
+        question: 'Is spray foam safe for barns and agricultural buildings?',
+        answer: 'Yes. Spray foam is widely used in agricultural buildings because it helps maintain steadier temperatures, reduces drafts, and minimizes moisture and condensation, which supports healthier conditions for livestock and protects feed and equipment.',
+      },
     ],
-    ctaTitle: 'Make your pole barn usable all year.',
+    faqTitle: 'What customers ask us',
+    ctaTitle: 'Make your barn or shop usable all year.',
     ctaBody: 'Send us the size, photos, and how you plan to use it. We will help scope the right package.',
   },
   {
-    slug: 'remodels',
-    route: '/remodels',
+    slug: 'post-frame-construction',
+    route: '/post-frame-construction',
+    eyebrow: 'Post-frame Builds',
+    title: 'Post-frame Construction',
+    accent: 'Insulation',
+    breadcrumb: { parent: 'Commercial', label: 'Post-frame Construction' },
+    description:
+      'Insulation for new post-frame buildings, planned with your builder so the walls, roof, and ceiling are sealed at the right stage of construction.',
+    metaDescription:
+      'Post-frame construction insulation in Madison and Dane County. Spray foam and fiberglass for new post-frame shops, garages, offices, and farm buildings, coordinated with your builder.',
+    heroImage: photos.metalRoof,
+    imageAlt: 'Spray foam insulation on the walls of a new post-frame building',
+    stats: [
+      { value: 'Builder-Ready', label: 'Scheduled around your build' },
+      { value: 'Walls + Roof', label: 'Insulated as one system' },
+      { value: 'Foam + Fiberglass', label: 'Options by budget' },
+      { value: 'Condensation', label: 'Control on steel panels' },
+    ],
+    intro: {
+      eyebrow: 'Insulate It Right The First Time',
+      title: 'Plan the insulation before the liner goes up',
+      body: [
+        'Post-frame buildings go up fast, and the best time to insulate is while the girts, purlins, and steel panels are still open. We work with owners and builders to choose the insulation approach before interior liner panels, drywall, or ceilings are installed.',
+        'Closed-cell spray foam applied to the steel skin air seals, insulates, and controls condensation in one step. Where the budget calls for it, fiberglass in framed walls and blow-in insulation above a ceiling can be part of the plan.',
+      ],
+      bullets: [
+        'Spray foam on steel wall and roof panels',
+        'Fiberglass in framed walls',
+        'Blow-in insulation above ceilings',
+        'Scheduling coordinated with your builder',
+      ],
+      image: photos.vaultedTruss,
+    },
+    benefits: [
+      { title: 'Right stage, less rework', body: 'Insulating before liners and finishes go in avoids tearing out work later.' },
+      { title: 'Stops condensation', body: 'Foam on cold steel keeps warm, moist air from dripping back into the building.' },
+      { title: 'Lower heating costs', body: 'A sealed shell makes tall walls and open spans easier and less expensive to heat.' },
+      { title: 'One plan for the whole shell', body: 'Walls, roof, and ceiling are planned together so there are no weak spots.' },
+    ],
+    applications: [
+      { title: 'Shops & Garages', body: 'New post-frame workshops, garages, and hobby buildings insulated for year-round use.', image: photos.garageShop },
+      { title: 'Offices & Living Quarters', body: 'Finished offices and living spaces inside post-frame buildings sealed for everyday comfort.', image: photos.newBuildRoom },
+      { title: 'Commercial & Farm Buildings', body: 'Retail, storage, and farm buildings framed on posts, insulated to match how the space is heated.', image: photos.metalStuds },
+    ],
+    process: [
+      { title: 'Review The Plans', body: 'We look at the building size, framing, and how it will be heated before recommending materials.' },
+      { title: 'Schedule With Your Builder', body: 'We time the install after framing and rough electrical, before liner panels or drywall go up.' },
+      { title: 'Insulate And Clean Up', body: 'We spray or install, then leave the space ready for the next trade.' },
+    ],
+    faq: [
+      {
+        question: 'When should insulation go in on a post-frame build?',
+        answer: 'After the building is enclosed and rough electrical is done, but before interior liner panels, drywall, or ceilings are installed.',
+      },
+      {
+        question: 'Spray foam or fiberglass for a post-frame building?',
+        answer: 'Spray foam applied to steel panels is usually best for air sealing and condensation control. Fiberglass can work in framed walls and ceilings when budget is the priority, and many buildings use both.',
+      },
+      {
+        question: 'Do you work with post-frame builders?',
+        answer: 'Yes. We work with owner-builders and post-frame contractors and schedule around their construction timeline.',
+      },
+    ],
+    faqTitle: 'What customers ask us',
+    ctaTitle: 'Building post-frame? Plan the insulation now.',
+    ctaBody: 'Send us the plans or building size and how you will use it. We will recommend the right package before construction gets ahead of you.',
+  },
+  {
+    slug: 'remodels-additions',
+    route: '/remodels-additions',
     eyebrow: 'Renovations',
     title: 'Remodel',
     accent: 'Insulation',
@@ -350,15 +426,15 @@ export const servicePages: ServicePageData[] = [
     ctaBody: 'We can inspect the space and tell you whether removal is worth it before replacement.',
   },
   {
-    slug: 'fiberglass',
-    route: '/fiberglass',
+    slug: 'fiberglass-blow-in-insulation',
+    route: '/fiberglass-blow-in-insulation',
     eyebrow: 'Efficient Coverage',
-    title: 'Fiberglass',
+    title: 'Fiberglass & Blow-in',
     accent: 'Insulation',
     description:
       'A practical, cost-effective insulation option for attics, walls, ceilings, and sound control when installed with care.',
     metaDescription:
-      'Fiberglass insulation installation in Madison and Dane County. Batt and blown-in insulation for attics, walls, remodels, and new construction.',
+      'Fiberglass & blow-in insulation installation in Madison and Dane County. Fiberglass batts and blow-in insulation for attics, walls, remodels, and new construction.',
     heroImage: photos.foamAndFiberglass,
     imageAlt: 'Fiberglass insulation installed in framing',
     stats: [

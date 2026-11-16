@@ -45,12 +45,22 @@ if (fs.existsSync(nextDir)) {
   console.log('Removed .next cache');
 }
 
+const requiredPackages = ['next', 'react', 'react-dom'];
+const missing = requiredPackages.filter(
+  (pkg) => !fs.existsSync(path.join(root, 'node_modules', pkg, 'package.json'))
+);
+if (missing.length > 0) {
+  console.log(`Missing ${missing.join(', ')} — running npm install...`);
+  execSync('npm install', { cwd: root, stdio: 'inherit' });
+}
+
 console.log(`Starting dev server at http://localhost:${PORT}`);
 
-const child = spawn('npx', ['next', 'dev', '-p', String(PORT)], {
+// Run the project-local Next binary; `npx next` would fetch the latest Next when node_modules is missing.
+const nextBin = path.join(root, 'node_modules', 'next', 'dist', 'bin', 'next');
+const child = spawn(process.execPath, [nextBin, 'dev', '-p', String(PORT)], {
   cwd: root,
   stdio: 'inherit',
-  shell: true,
 });
 
 child.on('exit', (code) => process.exit(code ?? 0));

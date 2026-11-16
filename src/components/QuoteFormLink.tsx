@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { siteConfig } from '@/lib/site';
 
 type QuoteFormLinkProps = {
@@ -7,12 +8,8 @@ type QuoteFormLinkProps = {
 
 export function QuoteFormLink({ children, className }: QuoteFormLinkProps) {
   return (
-    <a
-      href={siteConfig.quoteForm.href}
-      download={siteConfig.quoteForm.download}
-      className={className}
-    >
+    <Link href={siteConfig.quotePage.href} className={className}>
       {children}
-    </a>
+    </Link>
   );
 }

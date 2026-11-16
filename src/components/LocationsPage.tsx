@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { TrustStatsBar } from '@/components/TrustStatsBar';
 import { SiteEnhancements } from '@/components/SiteEnhancements';
 import { SiteFooter } from '@/components/SiteFooter';
+import { ArrowIcon } from '@/components/ArrowIcon';
 import { SiteHeader } from '@/components/SiteHeader';
 import { locationNavLinks } from '@/lib/nav-links';
 import { photos } from '@/lib/project-photos';
@@ -109,7 +109,6 @@ export function LocationsPage() {
           </div>
         </div>
 
-        <TrustStatsBar />
 
         <section className="sfw-loc-offices">
           <div className="sfw-loc-offices-inner">
@@ -167,7 +166,7 @@ export function LocationsPage() {
                     </span>
                     <h3>{location.label}</h3>
                   </div>
-                  <span className="sfw-loc-community-link">View area page →</span>
+                  <span className="sfw-loc-community-link">View area page<ArrowIcon /></span>
                 </div>
               </Link>
             ))}

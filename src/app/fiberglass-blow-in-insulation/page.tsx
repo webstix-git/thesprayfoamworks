@@ -3,14 +3,14 @@ import { ServicePage } from '@/components/ServicePage';
 import { getServicePage } from '@/lib/service-pages';
 import { siteConfig } from '@/lib/site';
 
-const page = getServicePage('fiberglass')!;
+const page = getServicePage('fiberglass-blow-in-insulation')!;
 
 export const metadata: Metadata = {
-  title: 'Fiberglass Insulation | The Sprayfoam Works',
+  title: 'Fiberglass & Blow-in Insulation',
   description: page.metaDescription,
   alternates: { canonical: `${siteConfig.url}${page.route}` },
   openGraph: {
-    title: 'Fiberglass Insulation | The Sprayfoam Works',
+    title: 'Fiberglass & Blow-in Insulation | The Sprayfoam Works',
     description: page.metaDescription,
     url: `${siteConfig.url}${page.route}`,
   },

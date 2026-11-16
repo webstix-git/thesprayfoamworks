@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { GoogleReviewIcon } from '@/components/GoogleReviewIcon';
-import { TrustStatsBar } from '@/components/TrustStatsBar';
 import { SiteEnhancements } from '@/components/SiteEnhancements';
 import { SiteFooter } from '@/components/SiteFooter';
+import { ArrowIcon } from '@/components/ArrowIcon';
 import { SiteHeader } from '@/components/SiteHeader';
 import {
   GOOGLE_REVIEWS_URL,
@@ -123,10 +123,6 @@ function Breadcrumb({ items }: { items: CompanyPageData['breadcrumb'] }) {
   );
 }
 
-function StatsBar() {
-  return <TrustStatsBar />;
-}
-
 function CtaBand() {
   return (
     <section id="quote" className="sfw-company-cta">
@@ -208,7 +204,7 @@ function OurTeamContent() {
               is building the kind of company he would want to hire himself, honest, prepared, and
               easy to reach.
             </p>
-            <QuoteFormLink className="btnfx sfw-company-button">Work with our team →</QuoteFormLink>
+            <QuoteFormLink className="btnfx sfw-company-button">Work with our team<ArrowIcon /></QuoteFormLink>
           </div>
         </div>
       </section>
@@ -270,7 +266,6 @@ function HistoryContent() {
         </div>
       </section>
 
-      <StatsBar />
 
       <section className="sfw-company-section sfw-company-section-light">
         <div className="sfw-company-section-inner">
@@ -443,7 +438,7 @@ function TestimonialsContent() {
               className="btnfx sfw-company-google-button"
             >
               <GoogleReviewIcon className="sfw-company-google-g" size={24} />
-              Read more reviews on Google →
+              Read more reviews on Google<ArrowIcon />
             </a>
           </div>
         </div>
