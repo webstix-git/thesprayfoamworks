@@ -43,6 +43,14 @@
   src: url('/images/49dea1f2-d0d8-491e-a335-f75687e9c583.woff2') format('woff2');
 }
 
+html {
+  overflow-x: clip;
+}
+
+body {
+  overflow-x: clip;
+}
+
 :root {
   --font-anton: 'Anton', sans-serif;
   --font-archivo: 'Archivo', sans-serif;

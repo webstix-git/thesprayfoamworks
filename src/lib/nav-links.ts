@@ -1,26 +1,51 @@
-export const serviceNavLinks = [
+export type NavLink = {
+  label: string;
+  href: string;
+};
+
+export type NavDropdown = {
+  label: string;
+  href: string;
+  children: NavLink[];
+};
+
+export const serviceNavLinks: NavLink[] = [
   { label: 'Spray Foam Insulation', href: '/spray-foam-insulation' },
   { label: 'Fiberglass & Blow-in Insulation', href: '/fiberglass-blow-in-insulation' },
   { label: 'Insulation Removal', href: '/insulation-removal' },
 ];
 
-export const residentialNavLinks = [
+export const residentialNavLinks: NavLink[] = [
   { label: 'New Construction', href: '/new-construction' },
   { label: 'Existing Homes', href: '/existing-homes' },
   { label: 'Remodels & Additions', href: '/remodels-additions' },
 ];
 
-export const commercialNavLinks = [
+export const commercialNavLinks: NavLink[] = [
   { label: 'Commercial Buildings', href: '/commercial-buildings' },
   { label: 'Pole barns & Agricultural Buildings', href: '/pole-barns-agricultural-buildings' },
   { label: 'Post-frame Construction', href: '/post-frame-construction' },
 ];
 
-export const aboutNavLinks = [
+export const aboutNavLinks: NavLink[] = [
   { label: 'Our Story', href: '/about#our-story' },
   { label: 'Customer Reviews', href: '/about#customer-reviews' },
   { label: 'Areas We Serve', href: '/about#areas-we-serve' },
 ];
+
+export const headerDropdowns: NavDropdown[] = [
+  { label: 'Services', href: '/services', children: serviceNavLinks },
+  { label: 'Residential', href: '/residential', children: residentialNavLinks },
+  { label: 'Commercial', href: '/commercial-buildings', children: commercialNavLinks },
+  { label: 'About', href: '/about', children: aboutNavLinks },
+];
+
+/** Parent overview link first, then children (skipping duplicate hrefs). */
+export function dropdownMenuItems(dropdown: NavDropdown): NavLink[] {
+  const parent = { label: dropdown.label, href: dropdown.href };
+  const children = dropdown.children.filter((item) => item.href !== dropdown.href);
+  return [parent, ...children];
+}
 
 export const locationNavLinks = [
   { label: 'Madison', href: '/madison' },

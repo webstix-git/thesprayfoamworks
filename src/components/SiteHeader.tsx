@@ -1,14 +1,37 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import {
-  aboutNavLinks,
-  commercialNavLinks,
-  residentialNavLinks,
-  serviceNavLinks,
-} from '@/lib/nav-links';
+import { HeaderSearch } from '@/components/SiteSearch';
+import { dropdownMenuItems, headerDropdowns } from '@/lib/nav-links';
 import { siteConfig } from '@/lib/site';
 
+function NavDropdown({
+  dropdown,
+}: {
+  dropdown: (typeof headerDropdowns)[number];
+}) {
+  return (
+    <div className="has-dd">
+      <button type="button" className="navlink" aria-haspopup="true" aria-expanded="false">
+        {dropdown.label} <span className="sfw-dd-caret">▼</span>
+      </button>
+      <div className="dd">
+        {dropdownMenuItems(dropdown).map((item, index) => (
+          <Link
+            key={`${item.label}-${item.href}`}
+            href={item.href}
+            className={index === 0 ? 'ddlink sfw-dd-parent' : 'ddlink'}
+          >
+            {item.label}
+          </Link>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export function SiteHeader() {
+  const [services, residential, commercial, about] = headerDropdowns;
+
   return (
     <header id="siteHeader" className="sfw-site-header">
       <div className="sfw-nav-shell">
@@ -24,67 +47,26 @@ export function SiteHeader() {
           </Link>
         </div>
 
+        <HeaderSearch className="sfw-header-search-mobile" />
+
         <nav className="sfw-nav-links" aria-label="Primary navigation">
           <Link href="/" className="navlink">
             Home
           </Link>
-          <div className="has-dd">
-            <Link href="/services" className="navlink">
-              Services <span className="sfw-dd-caret">▼</span>
-            </Link>
-            <div className="dd">
-              {serviceNavLinks.map((item) => (
-                <Link key={item.href} href={item.href} className="ddlink">
-                  {item.label}
-                </Link>
-              ))}
-            </div>
-          </div>
-          <div className="has-dd">
-            <Link href="/residential" className="navlink">
-              Residential <span className="sfw-dd-caret">▼</span>
-            </Link>
-            <div className="dd">
-              {residentialNavLinks.map((item) => (
-                <Link key={item.href} href={item.href} className="ddlink">
-                  {item.label}
-                </Link>
-              ))}
-            </div>
-          </div>
-          <div className="has-dd">
-            <Link href="/commercial-buildings" className="navlink">
-              Commercial <span className="sfw-dd-caret">▼</span>
-            </Link>
-            <div className="dd">
-              {commercialNavLinks.map((item) => (
-                <Link key={`${item.label}-${item.href}`} href={item.href} className="ddlink">
-                  {item.label}
-                </Link>
-              ))}
-            </div>
-          </div>
+          <NavDropdown dropdown={services} />
+          <NavDropdown dropdown={residential} />
+          <NavDropdown dropdown={commercial} />
           <Link href="/faqs" className="navlink">
             FAQs
           </Link>
           <Link href="/gallery" className="navlink">
             Gallery
           </Link>
-          <div className="has-dd">
-            <Link href="/about" className="navlink">
-              About <span className="sfw-dd-caret">▼</span>
-            </Link>
-            <div className="dd">
-              {aboutNavLinks.map((item) => (
-                <Link key={item.label} href={item.href} className="ddlink">
-                  {item.label}
-                </Link>
-              ))}
-            </div>
-          </div>
+          <NavDropdown dropdown={about} />
           <Link href="/contact" className="navlink">
             Contact
           </Link>
+          <HeaderSearch className="sfw-header-search-desktop" />
           <Link href={siteConfig.quotePage.href} className="btnfx sfw-nav-cta">
             Get a Quote
           </Link>

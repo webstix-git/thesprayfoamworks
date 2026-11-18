@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { LegalPage } from '@/components/LegalPage';
+import { photos } from '@/lib/project-photos';
 import { siteConfig } from '@/lib/site';
 
 export const metadata: Metadata = {
@@ -11,7 +12,11 @@ export const metadata: Metadata = {
 
 export default function AiPolicy() {
   return (
-    <LegalPage title="AI Policy">
+    <LegalPage
+      title="AI Policy"
+      bannerImage={photos.wallAndFiberglassCeiling}
+      bannerAlt="Wall spray foam and fiberglass ceiling insulation"
+    >
       <p>
         The Sprayfoam Works, Inc. (&ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;) may use
         artificial intelligence (AI) tools to improve our website, respond to inquiries, and support

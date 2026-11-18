@@ -246,10 +246,12 @@ export function ServicesPage() {
             <div className="sfw-srv-spec-grid">
               {specialties.map((item) => (
                 <Link key={item.title} href={item.href} className="sfw-srv-spec-card">
-                  <div className="sfw-srv-icon">
-                    <SpecIconSvg icon={item.icon} />
+                  <div className="sfw-srv-spec-heading">
+                    <div className="sfw-srv-icon" aria-hidden="true">
+                      <SpecIconSvg icon={item.icon} />
+                    </div>
+                    <h3>{item.title}</h3>
                   </div>
-                  <h3>{item.title}</h3>
                   <p>{item.body}</p>
                 </Link>
               ))}

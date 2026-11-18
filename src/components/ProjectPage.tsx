@@ -193,10 +193,12 @@ export function ProjectPage({ page }: { page: ProjectPageData }) {
             <div className="sfw-project-feature-grid">
               {page.features.items.map((item) => (
                 <article key={item.title} className="sfw-project-feature-card">
-                  <div className="sfw-project-feature-icon">
-                    <FeatureIcon icon={item.icon} />
+                  <div className="sfw-project-feature-heading">
+                    <div className="sfw-project-feature-icon" aria-hidden="true">
+                      <FeatureIcon icon={item.icon} />
+                    </div>
+                    <h3>{item.title}</h3>
                   </div>
-                  <h3>{item.title}</h3>
                   <p>{item.body}</p>
                 </article>
               ))}

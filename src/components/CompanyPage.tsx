@@ -348,15 +348,13 @@ function MissionContent() {
           <div className="sfw-company-card-grid sfw-company-value-grid">
             {missionValues.map((card, index) => (
               <article key={card.title} className="sfw-company-value-card">
-                <div className="sfw-company-value-top">
-                  <div className="sfw-company-value-icon">
+                <div className="sfw-company-value-heading">
+                  <div className="sfw-company-value-icon" aria-hidden="true">
                     <ValueIcon icon={card.icon} />
                   </div>
-                  <span className="sfw-company-value-num">
-                    {index + 1}
-                  </span>
+                  <h3>{card.title}</h3>
+                  <span className="sfw-company-value-num">{index + 1}</span>
                 </div>
-                <h3>{card.title}</h3>
                 <p>{card.description}</p>
               </article>
             ))}

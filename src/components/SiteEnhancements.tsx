@@ -27,8 +27,11 @@ function setupMobileNav(header: HTMLElement) {
   navPanel?.querySelectorAll('.has-dd').forEach((dropdown) => {
     dropdown.classList.add('mobile-dd');
     const trigger = dropdown.querySelector(':scope > .navlink');
-    trigger?.setAttribute('role', 'button');
-    trigger?.setAttribute('tabindex', '0');
+    if (!trigger) return;
+    if (trigger.tagName !== 'BUTTON') {
+      trigger.setAttribute('role', 'button');
+      trigger.setAttribute('tabindex', '0');
+    }
   });
 
   if (navRow.querySelector('.mobile-nav-toggle')) return;
@@ -106,7 +109,12 @@ function setupMobileNav(header: HTMLElement) {
     if (window.innerWidth > 1024) closeMenu();
   });
 
-  navRow.insertBefore(toggle, navPanel ?? null);
+  const mobileSearch = navRow.querySelector('.sfw-header-search-mobile');
+  if (mobileSearch) {
+    mobileSearch.after(toggle);
+  } else {
+    navRow.insertBefore(toggle, navPanel ?? null);
+  }
 }
 
 function wireServiceLinks(page: HTMLElement) {
@@ -124,6 +132,14 @@ function markResponsiveTargets(page: HTMLElement) {
     const style = el.getAttribute('style') ?? '';
     el.classList.add('sfw-grid');
 
+    if (
+      style.includes('repeat(6,1fr)') ||
+      style.includes('repeat(6, 1fr)') ||
+      style.includes('repeat(5,1fr)') ||
+      style.includes('repeat(5, 1fr)')
+    ) {
+      el.classList.add('sfw-grid-6');
+    }
     if (style.includes('repeat(4,1fr)') || style.includes('repeat(4, 1fr)')) {
       el.classList.add('sfw-grid-4');
     }
@@ -149,10 +165,12 @@ function markResponsiveTargets(page: HTMLElement) {
   });
 
   page.querySelectorAll(
-    '[style*="min-height: 980px"], [style*="min-height:980px"], [style*="min-height: 890px"], [style*="min-height:890px"], [style*="min-height: 520px"], [style*="min-height:520px"]',
+    '[style*="min-height: 980px"], [style*="min-height:980px"], [style*="min-height: 890px"], [style*="min-height:890px"], [style*="min-height: 560px"], [style*="min-height:560px"], [style*="min-height: 520px"], [style*="min-height:520px"]',
   ).forEach((node) => {
     const el = node as HTMLElement;
-    if (el.querySelector('.hero-rise') || el.querySelector('h1')) {
+    // Only mark the outer hero shell, not the nested .hero-rise content block.
+    if (el.classList.contains('hero-rise')) return;
+    if (el.querySelector(':scope > .hero-rise') || el.querySelector(':scope > img') || el.querySelector('h1')) {
       el.classList.add('sfw-hero');
     }
   });
@@ -163,7 +181,7 @@ function markResponsiveTargets(page: HTMLElement) {
 
     const hero = el.closest('.sfw-hero');
     const heroStyle = hero?.getAttribute('style') ?? '';
-    if (hero && !heroStyle.includes('890px') && !heroStyle.includes('980px')) {
+    if (hero && hero !== el && !heroStyle.includes('890px') && !heroStyle.includes('980px')) {
       hero.classList.add('sfw-inner-hero');
       el.classList.add('sfw-inner-hero-content');
     }

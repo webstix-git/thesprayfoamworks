@@ -70,8 +70,12 @@ export function ServicePage({ page }: { page: ServicePageData }) {
             <div className="sfw-card-grid sfw-grid sfw-grid-4">
               {page.benefits.map((benefit) => (
                 <article className="scard" key={benefit.title}>
-                  <div className="sfw-card-icon">◆</div>
-                  <h3>{benefit.title}</h3>
+                  <div className="sfw-card-heading">
+                    <div className="sfw-card-icon" aria-hidden="true">
+                      ◆
+                    </div>
+                    <h3>{benefit.title}</h3>
+                  </div>
                   <p>{benefit.body}</p>
                 </article>
               ))}

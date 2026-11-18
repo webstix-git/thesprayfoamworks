@@ -256,7 +256,7 @@ const PAGES: PageMeta[] = [
     route: '/service-index',
     title: 'Service Index | The Sprayfoam Works',
     description:
-      'Index of insulation services from The Sprayfoam Works: spray foam, fiberglass, retrofitting, pole barns, remodels, new construction, and insulation removal.',
+      'Complete index of insulation services from The Sprayfoam Works, Inc. in Madison and Dane County, WI: spray foam, fiberglass, insulation removal, residential, commercial, pole barns, and post-frame projects.',
     showTrustBar: false,
   },
 ];

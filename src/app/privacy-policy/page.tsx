@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { LegalPage } from '@/components/LegalPage';
+import { photos } from '@/lib/project-photos';
 import { siteConfig } from '@/lib/site';
 
 export const metadata: Metadata = {
@@ -11,7 +12,11 @@ export const metadata: Metadata = {
 
 export default function PrivacyPolicy() {
   return (
-    <LegalPage title="Privacy Policy">
+    <LegalPage
+      title="Privacy Policy"
+      bannerImage={photos.peakedAttic}
+      bannerAlt="Spray foam insulation in a peaked attic"
+    >
       <p>
         The Sprayfoam Works, Inc. (&ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;)
         respects your privacy. This policy explains what information we collect when you use our

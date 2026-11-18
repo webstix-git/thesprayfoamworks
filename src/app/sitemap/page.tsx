@@ -4,16 +4,16 @@ import { LegalPage } from '@/components/LegalPage';
 import {
   aboutNavLinks,
   commercialNavLinks,
-  locationNavLinks,
   residentialNavLinks,
   serviceNavLinks,
 } from '@/lib/nav-links';
+import { photos } from '@/lib/project-photos';
 import { siteConfig } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'Sitemap | The Sprayfoam Works',
   description:
-    'Browse every page on The Sprayfoam Works website, services, service areas, company pages, and more.',
+    'Browse every page linked from The Sprayfoam Works site navigation: services, residential, commercial, about, and more.',
   alternates: { canonical: `${siteConfig.url}/sitemap` },
 };
 
@@ -22,12 +22,14 @@ const sitemapGroups: { heading: string; links: { label: string; href: string }[]
     heading: 'Main',
     links: [
       { label: 'Home', href: '/' },
-      { label: 'All Services', href: '/services' },
+      { label: 'Services', href: '/services' },
       { label: 'Residential', href: '/residential' },
       { label: 'Commercial', href: '/commercial-buildings' },
-      { label: 'Gallery', href: '/gallery' },
       { label: 'FAQs', href: '/faqs' },
-      { label: 'Contact Us', href: '/contact' },
+      { label: 'Gallery', href: '/gallery' },
+      { label: 'About', href: '/about' },
+      { label: 'Contact', href: '/contact' },
+      { label: 'Get a Quote', href: siteConfig.quotePage.href },
     ],
   },
   {
@@ -36,31 +38,25 @@ const sitemapGroups: { heading: string; links: { label: string; href: string }[]
   },
   {
     heading: 'Residential',
-    links: [{ label: 'All Residential', href: '/residential' }, ...residentialNavLinks],
+    links: residentialNavLinks,
   },
   {
     heading: 'Commercial',
     links: commercialNavLinks,
   },
   {
-    heading: 'Company',
-    links: [
-      { label: 'About', href: '/about' },
-      ...aboutNavLinks,
-      { label: 'Our Team', href: '/our-team' },
-      { label: 'FAQs', href: '/faqs' },
-      { label: 'Contact Us', href: '/contact' },
-    ],
-  },
-  {
-    heading: 'Service Areas',
-    links: locationNavLinks,
+    heading: 'About',
+    links: aboutNavLinks,
   },
 ];
 
 export default function Sitemap() {
   return (
-    <LegalPage title="Sitemap">
+    <LegalPage
+      title="Sitemap"
+      bannerImage={photos.commercialWall}
+      bannerAlt="Spray foam insulation on a commercial wall"
+    >
       <div className="sfw-sitemap-grid">
         {sitemapGroups.map((group) => (
           <div key={group.heading} className="sfw-sitemap-group">

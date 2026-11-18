@@ -310,10 +310,18 @@
   transform: translateY(-4px);
 }
 
+.sfw-project-feature-heading {
+  align-items: center;
+  display: flex;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
 .sfw-project-feature-icon {
   color: #ff5158;
+  flex-shrink: 0;
   line-height: 0;
-  margin-bottom: 22px;
+  margin-bottom: 0;
 }
 
 .sfw-project-feature-card h3 {
@@ -321,7 +329,7 @@
   font-family: var(--font-oswald), sans-serif;
   font-size: 21px;
   font-weight: 600;
-  margin: 0 0 10px;
+  margin: 0;
   text-transform: uppercase;
 }
 
